@@ -1,0 +1,40 @@
+.subscribe {
+  &__container {
+    position: relative;
+    max-width: 1170px;
+    padding: 70px 65px 90px 70px;
+    background-color: $blue1;
+  }
+  &__bg-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  &__title {
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  &__description {
+    margin-bottom: 60px;
+    color: #fff;
+  }
+  &__form {
+    max-width: 700px;
+  }
+  &__dropdown-search {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  &__dropdown {}
+  &__search-with-button {
+    flex: 0 1 470px;
+  }
+  &__button {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  &__checkbox {
+    margin-left: 230px;
+  }
+
+}

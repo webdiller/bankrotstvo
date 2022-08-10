@@ -1,0 +1,28 @@
+.we-will-help {
+  &__container {
+  }
+
+  &__title {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid $grey3;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: minmax(300px, 400px) minmax(400px, 570px);
+    justify-content: space-between;
+    column-gap: 30px;
+    color: $black2;
+   }
+
+  &__content-left {
+    flex: 0 0 400px;
+  }
+
+  &__content-right {
+    display: grid;
+    row-gap: 50px;
+    flex: 1 1 570px;
+  }
+}

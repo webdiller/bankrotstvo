@@ -16,7 +16,7 @@
 
 html {
   font-family: "Mulish", "sans-serif";
-  line-height: 1.15;
+  line-height: 26.4px;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
@@ -52,16 +52,13 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
-  margin: 0.67em 0;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
+p,
 ul {
   margin: 0;
   padding: 0;
@@ -113,6 +110,7 @@ button {
   background-color: transparent;
   border: 0;
   outline: 0;
+  cursor: pointer;
 }
 
 /**

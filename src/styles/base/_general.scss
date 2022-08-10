@@ -7,7 +7,6 @@ $borderLink: ".border-link";
 $borderLinkWithIcon: ".border-link-with-icon";
 $linkTag: ".link-tag";
 $pagination: ".pagination";
-$dropdownList: ".dropdown-list";
 
 $uiCheckbox: ".ui-checkbox";
 $container: ".container";
@@ -256,6 +255,10 @@ $container: ".container";
       color: #fff;
     }
   }
+
+  &_lg {
+    font-size: 18px;
+  }
 }
 
 #{$borderLinkWithIcon} {
@@ -344,69 +347,6 @@ $container: ".container";
   }
 }
 
-// TODO: Доделать
-#{$dropdownList} {
-  position: relative;
-
-  max-width: 260px;
-  max-height: 46px;
-
-  border-bottom: 1px solid $blue1;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  cursor: pointer;
-
-  &__main-item {
-    display: none;
-  }
-
-  &__icon {
-    position: absolute;
-    top: 20px;
-    right: 7px;
-    fill: $blue1;
-    transition: inherit;
-    z-index: 10;
-  }
-
-  &__navigation {
-    position: relative;
-    transform: translateY(10px);
-  }
-
-  &__navigation-item {
-    display: block;
-    line-height: 26px;
-    &:first-child ~ * {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      margin-top: 0;
-    }
-    &::selection {
-      background-color: transparent;
-    }
-  }
-
-  &.active {
-    max-height: 100%;
-    #{$dropdownList} {
-      &__navigation-item {
-        &:first-child ~ * {
-          max-height: 100%;
-          opacity: 1;
-          visibility: visible;
-          pointer-events: all;
-          margin-top: 10px;
-        }
-      }
-      &__icon {
-        transform: rotate(-180deg);
-      }
-    }
-  }
-}
-
 #{$uiCheckbox} {
   display: inline-flex;
   transition: all 0.3s ease;
@@ -458,6 +398,7 @@ $container: ".container";
     position: relative;
     color: $grey4;
     font-size: 12px;
+    line-height: 18px;
     transition: inherit;
     a {
       color: $grey4;
@@ -577,8 +518,18 @@ $container: ".container";
 }
 
 #{$container} {
-  max-width: 1170px;
+  max-width: calc(1170px + 40px);
   padding: 0 20px;
   margin: 0 auto;
-  box-sizing: content-box;
+}
+
+.search-with-button {
+  display: flex;
+  &__search {
+    flex: 1 0 300px;
+    align-self: flex-end;
+  }
+  &__button {
+    font-size: 16px;
+  }
 }

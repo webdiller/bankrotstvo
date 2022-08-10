@@ -1,5 +1,8 @@
 .footer {
   background-color: $grey5;
+  &_margin {
+    margin-top: 180px;
+  }
   &__container {
     padding-top: 73px;
     padding-bottom: 25px;
