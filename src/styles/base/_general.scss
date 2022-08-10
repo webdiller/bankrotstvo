@@ -1,4 +1,584 @@
-h1, h2, h3, h4, h5, h6, ul {
-    margin: 0;
-    padding: 0;
+$title: ".title";
+$text: ".text";
+$linkTextWithIcon: ".link-text-with-icon";
+$linkWithIcon: ".link-with-icon";
+$socialLink: ".social-link";
+$borderLink: ".border-link";
+$borderLinkWithIcon: ".border-link-with-icon";
+$linkTag: ".link-tag";
+$pagination: ".pagination";
+$dropdownList: ".dropdown-list";
+
+$uiCheckbox: ".ui-checkbox";
+$container: ".container";
+
+#{$title} {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 48px;
+  &_2 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 42px;
+  }
+  &_3 {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 36px;
+  }
+  &_4 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+  }
+  &_5 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  &_6 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+
+#{$text} {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: $black2;
+  &_md {
+    font-size: 16px;
+    line-height: 26px;
+    color: $grey1;
+  }
+  &_sm {
+    font-size: 14px;
+    line-height: 23px;
+    color: $grey1;
+  }
+}
+
+#{$linkTextWithIcon} {
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  &:hover,
+  &:focus {
+    #{$linkTextWithIcon} {
+      &__text {
+        color: $blue1;
+      }
+    }
+  }
+  &:active {
+    #{$linkTextWithIcon} {
+      &__text {
+        text-decoration-color: $blue1;
+      }
+    }
+  }
+  &__text {
+    margin-right: 21px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    transition: inherit;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 2px;
+  }
+  &__img {
+    transition: inherit;
+  }
+  &_white {
+    color: #fff;
+    &:hover,
+    &:focus {
+      #{$linkTextWithIcon} {
+        &__text {
+          color: #fff;
+        }
+      }
+    }
+    &:active {
+      #{$linkTextWithIcon} {
+        &__text {
+          text-decoration-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+#{$linkWithIcon} {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 46px;
+  min-height: 46px;
+  max-width: 46px;
+  max-height: 46px;
+
+  border: 1px solid $grey3;
+  border-radius: 50%;
+
+  transition: all 0.3s ease;
+  &__icon {
+    stroke: $black1;
+    transition: inherit;
+  }
+  &:hover,
+  &:focus {
+    background: $blue1;
+    border-color: $blue1;
+    #{$linkWithIcon} {
+      &__icon {
+        stroke: #fff;
+      }
+    }
+  }
+  &:active {
+    background: transparent;
+    border-color: $grey3;
+    #{$linkWithIcon} {
+      &__icon {
+        stroke: $black1;
+      }
+    }
+  }
+}
+
+#{$socialLink} {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+
+  border: 1px solid $black2;
+  border-radius: 50%;
+
+  transition: all 0.3s ease;
+  &__icon {
+    transition: inherit;
+    fill: $black2;
+  }
+  &:hover,
+  &:focus {
+    background: $blue1;
+    border-color: $blue1;
+    #{$socialLink} {
+      &__icon {
+        fill: #fff;
+      }
+    }
+  }
+  &:active {
+    background: transparent;
+    border-color: $black2;
+    #{$socialLink} {
+      &__icon {
+        fill: $black2;
+      }
+    }
+  }
+}
+
+#{$borderLink} {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 17px 40px;
+  min-height: 60px;
+
+  border: 1px solid $blue1;
+
+  color: $blue1;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $blue1;
+    color: #fff;
+  }
+
+  &:active {
+    background-color: transparent;
+    color: $blue1;
+  }
+
+  &_pagination {
+    min-height: 42px;
+    padding: 8px;
+    min-width: 42px;
+    max-width: 42px;
+
+    color: $black1;
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: $blue1;
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    &:active {
+      color: $black1;
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    &.active {
+      color: #fff;
+      background-color: $blue1;
+      border-color: $blue1;
+    }
+  }
+
+  &_white {
+    border-color: #fff;
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+      color: $blue1;
+    }
+
+    &:active {
+      background-color: transparent;
+      color: #fff;
+    }
+  }
+}
+
+#{$borderLinkWithIcon} {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 11px 13px;
+  min-height: 46px;
+
+  border: 1px solid $grey3;
+
+  transition: all 0.3s ease;
+
+  &__text {
+    display: inline-block;
+    margin-right: 12px;
+    color: $blue1;
+    font-size: 14px;
+  }
+
+  &__icon {
+    stroke: $blue1;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $blue1;
+  }
+
+  &:active {
+    border-color: $grey3;
+  }
+}
+
+#{$linkTag} {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 30px;
+  min-height: 46px;
+
+  border: 1px solid $grey3;
+  border-radius: 30px;
+  color: $blue1;
+
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    border-color: $blue1;
+  }
+
+  &:active {
+    border-color: $blue1;
+    background-color: $blue1;
+    color: #fff;
+  }
+
+  &_sm {
+    min-height: 26px;
+    padding: 3px 10px;
+    font-size: 12px;
+  }
+}
+
+#{$pagination} {
+  display: inline-flex;
+  align-items: center;
+
+  &__step {
+    &_prev {
+      margin-right: 24px;
+    }
+    &_next {
+      margin-left: 24px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 18px;
+  }
+}
+
+// TODO: Доделать
+#{$dropdownList} {
+  position: relative;
+
+  max-width: 260px;
+  max-height: 46px;
+
+  border-bottom: 1px solid $blue1;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &__main-item {
+    display: none;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 20px;
+    right: 7px;
+    fill: $blue1;
+    transition: inherit;
+    z-index: 10;
+  }
+
+  &__navigation {
+    position: relative;
+    transform: translateY(10px);
+  }
+
+  &__navigation-item {
+    display: block;
+    line-height: 26px;
+    &:first-child ~ * {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      margin-top: 0;
+    }
+    &::selection {
+      background-color: transparent;
+    }
+  }
+
+  &.active {
+    max-height: 100%;
+    #{$dropdownList} {
+      &__navigation-item {
+        &:first-child ~ * {
+          max-height: 100%;
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+          margin-top: 10px;
+        }
+      }
+      &__icon {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+#{$uiCheckbox} {
+  display: inline-flex;
+  transition: all 0.3s ease;
+
+  &__input {
+    position: absolute;
+    pointer-events: none;
+    max-width: 0;
+    opacity: 0;
+    margin-top: 5px;
+    align-self: flex-start;
+    &:checked {
+      ~ #{$uiCheckbox} {
+        &__button {
+          background-color: $blue1;
+          #{$uiCheckbox} {
+            &__icon {
+              opacity: 1;
+              stroke: #fff;
+            }
+          }
+        }
+      }
+    }
+    &:not(:checked) {
+      &:hover,
+      &:focus {
+        ~ #{$uiCheckbox} {
+          &__button {
+            #{$uiCheckbox} {
+              &__icon {
+                opacity: 1;
+                stroke: $blue1;
+              }
+            }
+          }
+          &__label {
+            color: $blue2;
+            a {
+              color: $blue2;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    color: $grey4;
+    font-size: 12px;
+    transition: inherit;
+    a {
+      color: $grey4;
+      text-decoration: underline;
+      transition: inherit;
+    }
+    &::selection,
+    a::selection {
+      background-color: transparent;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -30px;
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+    }
+  }
+
+  &__icon {
+    display: block;
+    stroke: transparent;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  &__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    min-height: 16px;
+
+    margin-top: 2px;
+    margin-right: 16px;
+
+    border: 1px solid $blue1;
+    transition: all 0.3s ease;
+  }
+
+  &_lg {
+    #{$uiCheckbox} {
+      &__button {
+        margin-right: 20px;
+      }
+      &__label {
+        font-size: 16px;
+        color: $black2;
+      }
+      &__input {
+        &:hover,
+        &:focus {
+          ~ #{$uiCheckbox} {
+            &__label {
+              color: $blue1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_white {
+    #{$uiCheckbox} {
+      &__input {
+        &:checked {
+          ~ #{$uiCheckbox} {
+            &__button {
+              background-color: #fff;
+              #{$uiCheckbox} {
+                &__icon {
+                  opacity: 1;
+                  stroke: $blue1;
+                }
+              }
+            }
+          }
+        }
+        &:not(:checked) {
+          &:hover,
+          &:focus {
+            ~ #{$uiCheckbox} {
+              &__button {
+                #{$uiCheckbox} {
+                  &__icon {
+                    opacity: 1;
+                    stroke: #fff;
+                  }
+                }
+              }
+              &__label {
+                color: #cedffb;
+                a {
+                  color: #cedffb;
+                }
+              }
+            }
+          }
+        }
+      }
+      &__label {
+        color: #cedffb;
+        a {
+          color: #cedffb;
+        }
+      }
+      &__button {
+        border-color: #fff;
+      }
+    }
+  }
+}
+
+#{$container} {
+  max-width: 1170px;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: content-box;
 }

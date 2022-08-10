@@ -1,0 +1,72 @@
+$uiSearch: ".ui-search";
+
+#{$uiSearch} {
+  position: relative;
+  display: inline-block;
+  height: 45px;
+  transition: all 0.3s ease;
+
+  &__input {
+    display: block;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid $grey2;
+    background-color: transparent;
+    transition: inherit;
+    padding: 15px 10px 5px 0;
+    color: $black2;
+
+    &:hover,
+    &:focus {
+      border-bottom-color: $blue1;
+      + label {
+        top: 0;
+        font-size: 12px;
+        color: $grey2;
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    transition: inherit;
+    top: 10px;
+    font-size: 18px;
+    pointer-events: none;
+  }
+
+  &.active {
+    #{$uiSearch}__label {
+      top: 0;
+      font-size: 12px;
+      color: $grey2;
+    }
+  }
+
+  &_white {
+    #{$uiSearch} {
+      &__input {
+        color: #fff;
+        border-bottom-color: #fff;
+        &:hover,
+        &:focus {
+          border-bottom-color: #fff;
+          + label {
+            color: #85aef6;
+          }
+        }
+      }
+      &__label {
+        color: #fff;
+      }
+    }
+  }
+  &.active {
+    #{$uiSearch}__label {
+      color: #85aef6;
+    }
+  }
+}

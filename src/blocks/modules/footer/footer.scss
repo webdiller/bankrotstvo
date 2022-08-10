@@ -1,0 +1,101 @@
+.footer {
+  background-color: $grey5;
+  &__container {
+    padding-top: 73px;
+    padding-bottom: 25px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 81px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid $grey2;
+  }
+
+  &__logo-address-description {
+    margin-right: 30px;
+    flex: 0 1 475px;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+  &__logo-icon {
+  }
+
+  &__address {
+    margin-bottom: 40px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &__description {
+    color: $grey1;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &__navigation-callback {
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    flex: 1 1 500px;
+    margin-top: -10px;
+  }
+
+  &__navigation {
+    margin-right: 30px;
+  }
+
+  &__navigation-item {
+    display: block;
+    line-height: 20px;
+    font-weight: 500;
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__callback {
+  }
+
+  &__callback-text {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &__callback-phone {
+    display: inline-block;
+    margin-bottom: 4px;
+    font-size: 26px;
+    line-height: 43px;
+  }
+
+  &__social-politic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+  }
+
+  &__social-item {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  &__politic {
+    font-size: 12px;
+    line-height: 20px;
+    color: $grey1;
+  }
+}
