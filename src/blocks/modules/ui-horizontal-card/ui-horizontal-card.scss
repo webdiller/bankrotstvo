@@ -1,0 +1,179 @@
+$uiHorizontalCard: ".ui-horizontal-card";
+
+#{$uiHorizontalCard} {
+  &__wrapper {
+    display: flex;
+  }
+
+  &__img-wrapper {
+    position: relative;
+    max-width: 270px;
+    flex: 0 1 270px;
+  }
+
+  &__img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 0 30px;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    margin-bottom: 15px;
+  }
+
+  &__city-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  &__city {
+    margin-right: 33px;
+    font-weight: 600;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+  }
+
+  &__rating-icon {
+    margin-right: 13px;
+  }
+
+  &__rating-number {
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid #c4c8d2;
+  }
+
+  &__rating-count {
+  }
+
+  &__description {
+    margin-bottom: 25px;
+  }
+
+  &__link {
+    font-weight: 600;
+  }
+
+  &__link-icon {
+    margin-left: 20px;
+  }
+  &__features {
+    margin-top: auto;
+    padding: 14px 30px;
+    list-style-type: none;
+    background-color: #f9f9fb;
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      line-height: 23px;
+      span {
+        display: inline-block;
+        &:nth-child(1) {
+          font-weight: 700;
+        }
+        &:nth-child(2) {
+          text-align: right;
+          color: #525252;
+        }
+      }
+    }
+  }
+
+  &_features {
+    #{$uiHorizontalCard} {
+      &__content {
+        padding-top: 5px;
+      }
+    }
+  }
+
+  &__tags-date {
+    display: flex;
+    align-items: center;
+  }
+
+  &__tags {
+    margin-right: auto;
+  }
+
+  &__tag {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  &__date {
+    font-size: 12px;
+    line-height: 20px;
+    color: #adb4c6;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0 20px 30px 30px;
+    padding-right: 20px;
+
+    color: #fff;
+    background: linear-gradient(
+      180deg,
+      rgba(37, 39, 46, 0) 35.71%,
+      rgba(37, 39, 46, 0.05) 44.92%,
+      rgba(37, 39, 46, 0.5) 58.79%,
+      rgba(37, 39, 46, 0.8) 76.45%,
+      #25272e 100%
+    );
+    &-title {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+    &-subtitle {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  &_overlay {
+    #{$uiHorizontalCard} {
+      &__title {
+        margin-bottom: 10px;
+        font-size: 20px;
+        line-height: 30px;
+      }
+      &__content {
+        padding-top: 25px;
+        padding-right: 30px;
+        background-color: #f9f9fb;
+      }
+    }
+  }
+}

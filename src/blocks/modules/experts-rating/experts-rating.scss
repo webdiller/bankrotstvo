@@ -1,0 +1,32 @@
+.experts-rating {
+
+  &__container {}
+
+  &__title {
+    padding-bottom: 38px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #DBE0E4;
+  }
+
+  &__content {
+    max-width: 770px;
+    margin-left: auto;
+    color: $black2;
+  }
+
+  &__description {
+    margin-bottom: 80px;
+  }
+
+  &__personals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  &__personal-item {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #DBE0E4;
+  }
+
+  &__personal {}
+}

@@ -1,0 +1,87 @@
+.contacts {
+
+  &__container {}
+
+  &__title {
+    margin-bottom: 50px;
+    font-weight: 700;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__item-icon {
+    width: 18px;
+    max-width: 18px;
+    align-self: flex-start;
+    margin-right: 23px;
+  }
+
+  &__item-content {}
+
+  &__item-title {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+    &_tel {}
+  }
+
+  &__item-description {}
+
+  &__item-list {
+  }
+
+  &__item-list-element {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    justify-content: space-between;
+    span {
+      &:last-child {
+        text-align: right;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid $grey3;
+    }
+  }
+
+  &__form-map {
+    display: grid;
+    grid-template-columns: 370px 1fr;
+    column-gap: 30px;
+  }
+
+  &__form {
+    padding: 50px;
+    background-color: $grey5;
+    &-title {
+      margin-bottom: 40px;
+    }
+    &-group {
+      width: 100%;
+      &_button {
+        margin-bottom: 35px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__map {
+    background-color: $grey5;
+    height: 100%;
+  }
+}

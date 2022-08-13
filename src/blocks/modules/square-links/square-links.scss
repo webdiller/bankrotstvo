@@ -1,0 +1,93 @@
+$squareLinks: ".square-links";
+
+.square-links {
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(300px, 370px) minmax(650px, 770px);
+    column-gap: 30px;
+  }
+
+  &__title-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+  }
+
+  &__link {
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__links-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 40px;
+    aspect-ratio: 1;
+    color: $black1;
+    transition: all 0.3s ease;
+    &:nth-child(1),
+    &:nth-child(4) {
+      border: 1px solid #c4c8d2;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      background-color: $blue1;
+      color: #fff;
+      #{$squareLinks} {
+        &__links-icon {
+          stroke: #fff;
+        }
+      }
+      &:hover,
+      &:focus {
+        #{$squareLinks} {
+          &__links-text {
+            text-decoration-color: #fff;
+          }
+        }
+      }
+    }
+    &:hover,
+    &:focus {
+      #{$squareLinks} {
+        &__links-text {
+          text-decoration-color: $black1;
+        }
+      }
+    }
+  }
+
+  &__links-text {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.3s ease;
+    text-underline-offset: 2px;
+  }
+
+  &__links-icon {
+    stroke: $blue1;
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+  }
+
+  &_ui-vertical-card {
+    #{$squareLinks} {
+      &__title {
+        padding-top: 20px;
+        border-top: 1px solid $grey3;
+      }
+      &__links {
+        gap: 30px;
+      }
+    }
+  }
+}

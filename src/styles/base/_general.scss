@@ -278,6 +278,7 @@ $container: ".container";
     margin-right: 12px;
     color: $blue1;
     font-size: 14px;
+    line-height: normal;
   }
 
   &__icon {
@@ -304,6 +305,7 @@ $container: ".container";
 
   border: 1px solid $grey3;
   border-radius: 30px;
+  line-height: normal;
   color: $blue1;
 
   transition: all 0.3s ease;
@@ -438,7 +440,7 @@ $container: ".container";
     min-height: 16px;
 
     margin-top: 2px;
-    margin-right: 16px;
+    margin-right: 14px;
 
     border: 1px solid $blue1;
     transition: all 0.3s ease;
@@ -448,17 +450,51 @@ $container: ".container";
     #{$uiCheckbox} {
       &__button {
         margin-right: 20px;
+        border-color: $black1;
       }
       &__label {
         font-size: 16px;
         color: $black2;
       }
       &__input {
-        &:hover,
-        &:focus {
+        // &:hover,
+        // &:focus {
+        //   ~ #{$uiCheckbox} {
+        //     &__label {
+        //       color: $blue1;
+        //     }
+        //   }
+        // }
+        &:checked {
           ~ #{$uiCheckbox} {
-            &__label {
-              color: $blue1;
+            &__button {
+              background-color: $blue1;
+              border-color: $blue1;
+              #{$uiCheckbox} {
+                &__icon {
+                  opacity: 1;
+                  stroke: #fff;
+                }
+              }
+            }
+          }
+        }
+        &:not(:checked) {
+          &:hover,
+          &:focus {
+            ~ #{$uiCheckbox} {
+              &__button {
+                border-color: $blue1;
+                #{$uiCheckbox} {
+                  &__icon {
+                    opacity: 1;
+                    stroke: #fff;
+                  }
+                }
+              }
+              &__label {
+                color: $blue1;
+              }
             }
           }
         }

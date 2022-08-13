@@ -21,7 +21,7 @@ $uiSearch: ".ui-search";
     &:focus {
       border-bottom-color: $blue1;
       + label {
-        top: 0;
+        top: -5px;
         font-size: 12px;
         color: $grey2;
       }
@@ -40,7 +40,7 @@ $uiSearch: ".ui-search";
 
   &.active {
     #{$uiSearch}__label {
-      top: 0;
+      top: -5px;
       font-size: 12px;
       color: $grey2;
     }
@@ -63,10 +63,10 @@ $uiSearch: ".ui-search";
         color: #fff;
       }
     }
-  }
-  &.active {
-    #{$uiSearch}__label {
-      color: #85aef6;
+    &.active {
+      #{$uiSearch}__label {
+        color: #85aef6;
+      }
     }
   }
 }

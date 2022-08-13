@@ -1,0 +1,21 @@
+.search-form {
+  padding: 50px;
+  background-color: $grey5;
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__group {
+    width: 100%;
+
+    &_button {
+      margin-bottom: 35px;
+    }
+    
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+}

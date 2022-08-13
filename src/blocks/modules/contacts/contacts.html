@@ -1,36 +1,84 @@
 <div class="contacts">
   <div class="container contacts__container">
-    <p class="title title_2 contacts__title">КОНТАКТЫ</p>
+    <p class="title contacts__title">КОНТАКТЫ</p>
+
     <div class="contacts__items">
 
       <div class="contacts__item">
         <img src="./img/icons/icon-location.svg" alt="Юридический адрес:" class="contacts__item-icon">
         <div class="contacts__item-content">
-          <p class="contacts__item-title">Юридический адрес:</p>
-          <p class="contacts__item-description">г. Москва, Холодильный пер, д. 3</p>
+          <p class="title title_5 contacts__item-title">Юридический адрес:</p>
+          <p class="text text_md contacts__item-description">г. Москва, Холодильный пер, д. 3</p>
         </div>
       </div>
 
       <div class="contacts__item">
         <img src="./img/icons/icon-phone.svg" alt="Бесплатно на территории РФ" class="contacts__item-icon">
         <div class="contacts__item-content">
-          <a href="tel:8 800 102 02 02" class="contacts__item-title contacts__item-title_tel">8 800 102 02 02</a>
-          <p class="contacts__item-description">Бесплатно на территории РФ</p>
+          <a href="tel:8 800 102 02 02" class="title title_5 contacts__item-title title title_5 contacts__item-title_tel">8 800 102 02 02</a>
+          <p class="text text_md contacts__item-description">Бесплатно на территории РФ</p>
         </div>
       </div>
 
       <div class="contacts__item">
-        <img src="./img/icons/icon-documents.svg" alt="Юридический адрес:" class="contacts__item-icon">
+        <img src="./img/icons/icon-document.svg" alt="Юридический адрес:" class="contacts__item-icon">
         <div class="contacts__item-content">
-          <p class="contacts__item-title">Реквизиты:</p>
+          <p class="title title_5 contacts__item-title">Реквизиты:</p>
           <ul class="contacts__item-list">
             <li class="contacts__item-list-element">
-              Юр. наименование:
-              ООО «БФЛ»
+              <span class="text text_md">Юр. наименование:</span>
+              <span class="text text_md">ООО «БФЛ»</span>
+            </li>
+            <li class="contacts__item-list-element">
+              <span class="text text_md">ИНН:</span>
+              <span class="text text_md">9999999999</span>
+            </li>
+            <li class="contacts__item-list-element">
+              <span class="text text_md">КПП:</span>
+              <span class="text text_md">77777777</span>
             </li>
           </ul>
         </div>
       </div>
+
+    </div>
+
+    <div class="contacts__form-map">
+
+      <form class="search-form contacts__form">
+  
+        <p class="search-form__title title title_4">Написать нам</p>
+      
+        <div data-component="search" class="ui-search search-form__group">
+          <input type="text" class="ui-search__input">
+          <label class="ui-search__label">Имя</label>
+        </div>
+
+        <div data-component="search" class="ui-search search-form__group">
+          <input type="text" class="ui-search__input">
+          <label class="ui-search__label">Телефон</label>
+        </div>
+
+        <div data-component="search" class="ui-search search-form__group">
+          <input type="text" class="ui-search__input">
+          <label class="ui-search__label">Сообщение</label>
+        </div>
+      
+        <button type="submit" class="border-link search-form__group search-form__group_button">Написать</button>
+      
+        <div class="ui-checkbox search-form__group">
+          <input id="contactsOferta" class="ui-checkbox__input" type="checkbox">
+          <button class="ui-checkbox__button"><svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5l3 2 5-6"/></svg></button>
+          <label for="contactsOferta" class="ui-checkbox__label">
+            Я принимаю условия <a href="/">Пользовательского <br>соглашения</a> 
+            и даю свое согласие на <br> обработку моих персональных данных в <br>
+            соответствии с <a href="/">Политикой <br> конфиденциальности</a>
+          </label>
+        </div>
+      
+      </form>
+
+      <div class="contacts__map"></div>
 
     </div>
   </div>
