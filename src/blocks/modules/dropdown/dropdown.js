@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const defaultDropdownTitle = 'Город';
     const dropdownTitle = component.querySelector('.dropdown__main-item');
-    const attributeValue = component.getAttribute('value');
+    const attributeValue = component.getAttribute('data-value');
     let currentCityName = null;
     let currentCityValue = null;
 
