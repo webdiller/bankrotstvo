@@ -151,7 +151,7 @@ $container: ".container";
     pointer-events: none;
     #{$linkWithIcon} {
       &__icon {
-        stroke: #C4C8D2;
+        stroke: #c4c8d2;
       }
     }
   }
@@ -207,6 +207,7 @@ $container: ".container";
   border: 1px solid $blue1;
 
   color: $blue1;
+  line-height: normal;
   transition: all 0.3s ease;
 
   &:hover,
@@ -267,6 +268,36 @@ $container: ".container";
 
   &_lg {
     font-size: 18px;
+  }
+
+  &_with-icon {
+    #{$borderLink} {
+      &__icon {
+        margin-left: 25px;
+        stroke: $blue1;
+        transition: all 0.3s ease;
+      }
+    }
+    &:hover,
+    &:focus {
+      background-color: $blue1;
+      color: #fff;
+      #{$borderLink} {
+        &__icon {
+          stroke: #fff;
+        }
+      }
+    }
+
+    &:active {
+      background-color: transparent;
+      color: $blue1;
+      #{$borderLink} {
+        &__icon {
+          stroke: $blue1;
+        }
+      }
+    }
   }
 }
 

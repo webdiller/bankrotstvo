@@ -1,10 +1,20 @@
-<div class="arbitrazhnye">
-  <div class="container arbitrazhnye__container">
-    <p class="title arbitrazhnye__title">АРБИТРАЖНЫЕ УПРАВЛЯЮЩИЕ</p>
-    <p class="arbitrazhnye__description">Более 1 000 управляющих с рейтингом</p>
-    <div class="arbitrazhnye__form-content">
-      <div class="arbitrazhnye__form-wrapper">
-        <form class="search-form arbitrazhnye__form">
+<div class="ui-form-with-items">
+  <div class="container ui-form-with-items__container">
+    <p class="title ui-form-with-items__title">АРБИТРАЖНЫЕ УПРАВЛЯЮЩИЕ</p>
+    <p class="ui-form-with-items__description">Более 1 000 управляющих с рейтингом</p>
+    <div class="ui-form-with-items__form-content">
+
+      <div class="ui-form-with-items__action-btn-wrapper">
+        <button class="ui-form-with-items__action-btn border-link border-link_with-icon">Добавить юриста
+          <svg class="border-link__icon" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 8L14.5 8" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M7.5 1L7.5 15" stroke-linecap="square" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="ui-form-with-items__form-wrapper">
+        <form class="search-form ui-form-with-items__form">
           <div
             value='{"name": "Томск", "value": "tomsk"}'
             data-component="dropdown"
@@ -79,26 +89,26 @@
           </button>
         </form>
       </div>
-      <div class="arbitrazhnye__content">
-        <div class="arbitrazhnye__content-sort">
+      <div class="ui-form-with-items__content">
+        <div class="ui-form-with-items__content-sort">
           <a
-            href="/arbitrazhnye?sortByRating"
-            class="text text_md arbitrazhnye__content-sort-item active"
+            href="/ui-form-with-items?sortByRating"
+            class="text text_md ui-form-with-items__content-sort-item active"
             >По рейтингу</a
           >
           <a
-            href="/arbitrazhnye?sortByReviews"
-            class="text text_md arbitrazhnye__content-sort-item"
+            href="/ui-form-with-items?sortByReviews"
+            class="text text_md ui-form-with-items__content-sort-item"
             >По отзывам</a
           >
           <a
-            href="/arbitrazhnye?sortByDateRegistration"
-            class="text text_md arbitrazhnye__content-sort-item"
+            href="/ui-form-with-items?sortByDateRegistration"
+            class="text text_md ui-form-with-items__content-sort-item"
             >По дате регистрации</a
           >
         </div>
-        <div class="arbitrazhnye__content-items">
-          <div class="ui-horizontal-card arbitrazhnye__content-item">
+        <div class="ui-form-with-items__content-items">
+          <div class="ui-horizontal-card ui-form-with-items__content-item">
             <div class="ui-horizontal-card__wrapper">
               <div class="ui-horizontal-card__img-wrapper">
                 <img
@@ -145,7 +155,7 @@
               </div>
             </div>
           </div>
-          <div class="ui-horizontal-card arbitrazhnye__content-item">
+          <div class="ui-horizontal-card ui-form-with-items__content-item">
             <div class="ui-horizontal-card__wrapper">
               <div class="ui-horizontal-card__img-wrapper">
                 <img
@@ -192,7 +202,7 @@
               </div>
             </div>
           </div>
-          <div class="ui-horizontal-card arbitrazhnye__content-item">
+          <div class="ui-horizontal-card ui-form-with-items__content-item">
             <div class="ui-horizontal-card__wrapper">
               <div class="ui-horizontal-card__img-wrapper">
                 <img
@@ -239,7 +249,7 @@
               </div>
             </div>
           </div>
-          <div class="ui-horizontal-card arbitrazhnye__content-item">
+          <div class="ui-horizontal-card ui-form-with-items__content-item">
             <div class="ui-horizontal-card__wrapper">
               <div class="ui-horizontal-card__img-wrapper">
                 <img
@@ -286,7 +296,7 @@
               </div>
             </div>
           </div>
-          <div class="ui-horizontal-card arbitrazhnye__content-item">
+          <div class="ui-horizontal-card ui-form-with-items__content-item">
             <div class="ui-horizontal-card__wrapper">
               <div class="ui-horizontal-card__img-wrapper">
                 <img
@@ -334,10 +344,10 @@
             </div>
           </div>
         </div>
-        <p class="text text_md arbitrazhnye__content-results">
+        <p class="text text_md ui-form-with-items__content-results">
           Показано с 1 по 20 (Всего: 1000)
         </p>
-        <div class="pagination arbitrazhnye__content-pagination">
+        <div class="pagination ui-form-with-items__content-pagination">
           <a
             href="/"
             class="link-with-icon pagination__step pagination__step_prev"

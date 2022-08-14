@@ -100,4 +100,27 @@ $horizontalSlider: ".horizontal-slider";
       }
     }
   }
+
+  &_clear-title {
+    #{$horizontalSlider} {
+      &__container {
+        &::before {
+          display: none;
+        }
+      }
+      &__title {
+        display: block;
+      }
+    }
+  }
+
+  &_kolonki {
+    #{$horizontalSlider} {
+      &__container {
+        margin-bottom: 40px;
+        padding-bottom: 120px;
+        border-bottom: 1px solid #dbe0e4;
+      }
+    }
+  }
 }
