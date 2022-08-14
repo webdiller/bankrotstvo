@@ -26,6 +26,13 @@ $uiVerticalCard: ".ui-vertical-card";
                 }
               }
             }
+            &__img-wrapper {
+              #{$uiVerticalCard} {
+                &__img {
+                  transform: scale(1.025);
+                }
+              }
+            }
           }
         }
       }
@@ -38,6 +45,7 @@ $uiVerticalCard: ".ui-vertical-card";
     position: relative;
     aspect-ratio: 1 / 1;
     margin-bottom: 20px;
+    overflow: hidden;
     &::before {
       content: "";
       background: #0c5eed;
@@ -56,7 +64,7 @@ $uiVerticalCard: ".ui-vertical-card";
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(12, 94, 237, .7);
+    background-color: rgba(12, 94, 237, 0.7);
 
     opacity: 0;
     pointer-events: none;
@@ -77,9 +85,26 @@ $uiVerticalCard: ".ui-vertical-card";
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all .3s ease;
   }
 
   &__content {
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    &-icon {
+      margin-right: 12px;
+    }
+    &-number {
+      padding-right: 20px;
+      margin-right: 20px;
+      border-right: 1px solid #c4c8d2;
+    }
+    &-count {
+    }
   }
 
   &__date-tag {
@@ -121,6 +146,64 @@ $uiVerticalCard: ".ui-vertical-card";
       &__description {
         font-size: 14px;
         line-height: 23px;
+      }
+    }
+  }
+  &_bg-gradient {
+    height: 490px;
+    #{$uiVerticalCard} {
+      &__wrapper {
+        height: 100%;
+      }
+      &__img-wrapper {
+        aspect-ratio: unset;
+        height: 100%;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            180deg,
+            rgba(37, 39, 46, 0) 35.71%,
+            rgba(37, 39, 46, 0.05) 44.92%,
+            rgba(37, 39, 46, 0.5) 58.79%,
+            rgba(37, 39, 46, 0.8) 76.45%,
+            #25272e 100%
+          );
+        }
+      }
+      &__content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0 30px 30px 30px;
+        width: 100%;
+
+        color: #fff;
+
+        z-index: 20;
+      }
+      &__title {
+        line-height: 28px;
+      }
+      &__overlay-link {
+        &:hover,
+        &:focus {
+          ~ #{$uiVerticalCard} {
+            &__wrapper {
+              #{$uiVerticalCard} {
+                &__title {
+                  color: #fff;
+                  text-decoration-color: #fff;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

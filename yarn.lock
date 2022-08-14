@@ -1382,7 +1382,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/selector-specificity@npm:^2.0.1":
+"@csstools/selector-specificity@npm:^2.0.2":
   version: 2.0.2
   resolution: "@csstools/selector-specificity@npm:2.0.2"
   peerDependencies:
@@ -1951,13 +1951,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jridgewell/trace-mapping@npm:^0.3.7, @jridgewell/trace-mapping@npm:^0.3.9":
-  version: 0.3.14
-  resolution: "@jridgewell/trace-mapping@npm:0.3.14"
+"@jridgewell/trace-mapping@npm:^0.3.14, @jridgewell/trace-mapping@npm:^0.3.9":
+  version: 0.3.15
+  resolution: "@jridgewell/trace-mapping@npm:0.3.15"
   dependencies:
     "@jridgewell/resolve-uri": ^3.0.3
     "@jridgewell/sourcemap-codec": ^1.4.10
-  checksum: b9537b9630ffb631aef9651a085fe361881cde1772cd482c257fe3c78c8fd5388d681f504a9c9fe1081b1c05e8f75edf55ee10fdb58d92bbaa8dbf6a7bd6b18c
+  checksum: 38917e9c2b014d469a9f51c016ed506acbe44dd16ec2f6f99b553ebf3764d22abadbf992f2367b6d2b3511f3eae8ed3a8963f6c1030093fda23efd35ecab2bae
   languageName: node
   linkType: hard
 
@@ -2132,9 +2132,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:>=10.0.0":
-  version: 18.6.5
-  resolution: "@types/node@npm:18.6.5"
-  checksum: e3e66c9a84b94010a57c1b9dac882c08484278d74f9d120dbe6a3e45d00740d178bd1d34a5deee28197c94b9f4359153b637bab9b305328e865027e9987a0f3d
+  version: 18.7.2
+  resolution: "@types/node@npm:18.7.2"
+  checksum: 422cf95dea09959d0e809d24280b76948f60ea805e20d38f07bf9eeafeb413513b9cc365404766f7752bef9cafb8301a882d9d097f780e13f2bedf507459ebc5
   languageName: node
   linkType: hard
 
@@ -3188,7 +3188,7 @@ __metadata:
 
 bem-tools-core@bem-tools/bem-tools-core:
   version: 0.0.3
-  resolution: "bem-tools-core@https://github.com/bem-tools/bem-tools-core.git#commit=9a5c91b198a7ce1f2a6b6e64c505aefead27fc8f"
+  resolution: "bem-tools-core@git+ssh://git@github.com/bem-tools/bem-tools-core.git#commit=9a5c91b198a7ce1f2a6b6e64c505aefead27fc8f"
   dependencies:
     coa: ^1.0.1
     global-modules: ^0.2.0
@@ -3200,7 +3200,7 @@ bem-tools-core@bem-tools/bem-tools-core:
 
 bem-tools-create@bem-tools/bem-tools-create:
   version: 2.3.0
-  resolution: "bem-tools-create@https://github.com/bem-tools/bem-tools-create.git#commit=bee9b839b6c89b956464be0cf8057d40f332f832"
+  resolution: "bem-tools-create@git+ssh://git@github.com/bem-tools/bem-tools-create.git#commit=bee9b839b6c89b956464be0cf8057d40f332f832"
   dependencies:
     "@bem/cell": ^0.2.5
     "@bem/entity-name": ^1.3.2
@@ -3791,9 +3791,9 @@ bem-tools-create@bem-tools/bem-tools-create:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001370, caniuse-lite@npm:^1.0.30001373":
-  version: 1.0.30001374
-  resolution: "caniuse-lite@npm:1.0.30001374"
-  checksum: a75656e971d7ef2af4d2f3529a4620ae1a45d09460601fbc34b26f6867f31bbca006f71d8840291c471a2f01fc1994044f319a5660241ffaf35a2d84535af442
+  version: 1.0.30001375
+  resolution: "caniuse-lite@npm:1.0.30001375"
+  checksum: 6ed9cf7a3f80f5880cb021105864b869dddfdda8490559aa623e77feeca5ce8958a3b7c1cf37322e519176dcb488c99e6358b8c2de2aa4a0e08846ac122c4e75
   languageName: node
   linkType: hard
 
@@ -4050,15 +4050,6 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
-"clone-regexp@npm:^2.1.0":
-  version: 2.2.0
-  resolution: "clone-regexp@npm:2.2.0"
-  dependencies:
-    is-regexp: ^2.0.0
-  checksum: 3624905a98920ad5c196080f4ea4379fa42b12f3b1d1272d958bb79c194508d2aec85160c25846f0016ca861a064316b213a565cf53b81a513047f89cf877803
-  languageName: node
-  linkType: hard
-
 "clone-response@npm:1.0.2":
   version: 1.0.2
   resolution: "clone-response@npm:1.0.2"
@@ -4231,9 +4222,9 @@ bem-tools-create@bem-tools/bem-tools-create:
   linkType: hard
 
 "colord@npm:^2.9.2":
-  version: 2.9.2
-  resolution: "colord@npm:2.9.2"
-  checksum: 2aa6a9b3abbce74ba3c563886cfeb433ea0d7df5ad6f4a560005eddab1ddf7c0fc98f39b09b599767a19c86dd3837b77f66f036e479515d4b17347006dbd6d9f
+  version: 2.9.3
+  resolution: "colord@npm:2.9.3"
+  checksum: 95d909bfbcfd8d5605cbb5af56f2d1ce2b323990258fd7c0d2eb0e6d3bb177254d7fb8213758db56bb4ede708964f78c6b992b326615f81a18a6aaf11d64c650
   languageName: node
   linkType: hard
 
@@ -5132,6 +5123,15 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"dom7@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "dom7@npm:4.0.4"
+  dependencies:
+    ssr-window: ^4.0.0
+  checksum: b38604f74e915b4d05b6634f9ff239a708c468180f498a28ff67f2a61233697d9bd7192703b788a24541c3591e7f1a6e83a2cbf70bc871a85e033f82e19abc31
+  languageName: node
+  linkType: hard
+
 "domelementtype@npm:1":
   version: 1.3.1
   resolution: "domelementtype@npm:1.3.1"
@@ -5330,9 +5330,9 @@ bem-tools-create@bem-tools/bem-tools-create:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.202":
-  version: 1.4.212
-  resolution: "electron-to-chromium@npm:1.4.212"
-  checksum: 972eb1b46bce2fa7fa19eb70779d27b84b7113daad01718a67cfbd92e2972c09eaf15bbe5e901467399e5e66c74a17a74891c7aeda8118b1ef655d8c1913ee2a
+  version: 1.4.218
+  resolution: "electron-to-chromium@npm:1.4.218"
+  checksum: 165c468dc82e6160257e278a8821ee921a74c832ce9f2b53fe41f1618573a81fcdf4abc596d7b47d793b9cfae4129f1f1a5d5fd0ae15fbd25f99131938571269
   languageName: node
   linkType: hard
 
@@ -5899,15 +5899,6 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
-"execall@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "execall@npm:2.0.0"
-  dependencies:
-    clone-regexp: ^2.1.0
-  checksum: d98ee3e33f6c9001e80970e927fb9f16c6a121d5e250b2f4d6764d4157974f58cbe88613bbf073db05d5342677012002c5de956f4f0c32d10d092b6ff03a085c
-  languageName: node
-  linkType: hard
-
 "executable@npm:^1.0.0":
   version: 1.1.0
   resolution: "executable@npm:1.1.0"
@@ -6175,7 +6166,7 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
-"fastest-levenshtein@npm:^1.0.12":
+"fastest-levenshtein@npm:^1.0.16":
   version: 1.0.16
   resolution: "fastest-levenshtein@npm:1.0.16"
   checksum: a78d44285c9e2ae2c25f3ef0f8a73f332c1247b7ea7fb4a191e6bb51aa6ee1ef0dfb3ed113616dcdc7023e18e35a8db41f61c8d88988e877cf510df8edafbc71
@@ -6901,13 +6892,6 @@ bem-tools-create@bem-tools/bem-tools-create:
   version: 4.0.1
   resolution: "get-stdin@npm:4.0.1"
   checksum: 4f73d3fe0516bc1f3dc7764466a68ad7c2ba809397a02f56c2a598120e028430fcff137a648a01876b2adfb486b4bc164119f98f1f7d7c0abd63385bdaa0113f
-  languageName: node
-  linkType: hard
-
-"get-stdin@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "get-stdin@npm:8.0.0"
-  checksum: 40128b6cd25781ddbd233344f1a1e4006d4284906191ed0a7d55ec2c1a3e44d650f280b2c9eeab79c03ac3037da80257476c0e4e5af38ddfb902d6ff06282d77
   languageName: node
   linkType: hard
 
@@ -7679,6 +7663,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     imagemin-pngquant: ^9.0.0
     imagemin-webp: ^6.0.0
     imagemin-zopfli: ^7.0.0
+    jquery: ^3.6.0
     lint-staged: ^12.3.5
     postcss: ^8.4.8
     postcss-scss: ^4.0.3
@@ -7688,6 +7673,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     stylelint-config-standard-scss: ^3.0.0
     stylelint-order: ^5.0.0
     stylelint-selector-bem-pattern: ^2.1.1
+    swiper: ^8.3.2
     webpack: ^5.70.0
     webpack-stream: ^7.0.0
     yargs: ^17.3.1
@@ -9012,13 +8998,6 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
-"is-regexp@npm:^2.0.0":
-  version: 2.1.0
-  resolution: "is-regexp@npm:2.1.0"
-  checksum: 502f8e09faddc2e360350d3fa88dfb3af47b3c8e0bea1d0fe9903a1265cb199547cc11c99e9ee27cb010f678f6b48e52e92273860b68f6339e463e034f21859c
-  languageName: node
-  linkType: hard
-
 "is-relative@npm:^0.1.0":
   version: 0.1.3
   resolution: "is-relative@npm:0.1.3"
@@ -9322,6 +9301,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   bin:
     jpeg-recompress: cli.js
   checksum: 4a8b0f57c742bc97e54b01f4f95bfd1f4d95844f7443cc1bbc1146b016d7c7d386ffd0581dfdbe29090c106a1c22eea8f88ebe7534cf738f1bf7f3b30c89c6db
+  languageName: node
+  linkType: hard
+
+"jquery@npm:^3.6.0":
+  version: 3.6.0
+  resolution: "jquery@npm:3.6.0"
+  checksum: 8fd5fef4aa48fd374ec716dd1c1df1af407814a228e15c1260ca140de3a697c2a77c30c54ff1d238b6a3ab4ddc445ddeef9adce6c6d28e4869d85eb9d3951c0e
   languageName: node
   linkType: hard
 
@@ -11973,7 +11959,7 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.3.0, postcss@npm:^8.3.11, postcss@npm:^8.3.6, postcss@npm:^8.4.14, postcss@npm:^8.4.8":
+"postcss@npm:^8.3.0, postcss@npm:^8.3.11, postcss@npm:^8.3.6, postcss@npm:^8.4.16, postcss@npm:^8.4.8":
   version: 8.4.16
   resolution: "postcss@npm:8.4.16"
   dependencies:
@@ -12933,15 +12919,15 @@ bem-tools-create@bem-tools/bem-tools-create:
   linkType: hard
 
 "sass@npm:^1.49.9":
-  version: 1.54.3
-  resolution: "sass@npm:1.54.3"
+  version: 1.54.4
+  resolution: "sass@npm:1.54.4"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
     immutable: ^4.0.0
     source-map-js: ">=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 9b405f602c0dcdad85e7f216cfa5ca9dfe3f7ded7b3928817cfe8dbfde0cd27b70f4cff724e229b233b3f51a06e71d3fcbbd7d3a0ff92b3e40ac57bc05b90b48
+  checksum: bb6aead09764de450a02b9a66e4ee538f0ba6bc8f2fc3905c71b2c302b5f47e089b510b86cfa7ef2d4139c210c8abf99fe157e7a5bd356c057f10d29e6c4b44c
   languageName: node
   linkType: hard
 
@@ -13613,6 +13599,13 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"ssr-window@npm:^4.0.0, ssr-window@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "ssr-window@npm:4.0.2"
+  checksum: df182600927f4f3225224cf8c02338ea637c9750519505bbfb9a9236741a2a7ec088386fb948bca7b447b8303d9109e7dc7672e3de041c79ac2a0e03665af7d2
+  languageName: node
+  linkType: hard
+
 "ssri@npm:^9.0.0":
   version: 9.0.1
   resolution: "ssri@npm:9.0.1"
@@ -14082,20 +14075,18 @@ bem-tools-create@bem-tools/bem-tools-create:
   linkType: hard
 
 "stylelint@npm:>=13.13.1, stylelint@npm:^14.5.3":
-  version: 14.9.1
-  resolution: "stylelint@npm:14.9.1"
+  version: 14.10.0
+  resolution: "stylelint@npm:14.10.0"
   dependencies:
-    "@csstools/selector-specificity": ^2.0.1
+    "@csstools/selector-specificity": ^2.0.2
     balanced-match: ^2.0.0
     colord: ^2.9.2
     cosmiconfig: ^7.0.1
     css-functions-list: ^3.1.0
     debug: ^4.3.4
-    execall: ^2.0.0
     fast-glob: ^3.2.11
-    fastest-levenshtein: ^1.0.12
+    fastest-levenshtein: ^1.0.16
     file-entry-cache: ^6.0.1
-    get-stdin: ^8.0.0
     global-modules: ^2.0.0
     globby: ^11.1.0
     globjoin: ^0.1.4
@@ -14110,7 +14101,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     micromatch: ^4.0.5
     normalize-path: ^3.0.0
     picocolors: ^1.0.0
-    postcss: ^8.4.14
+    postcss: ^8.4.16
     postcss-media-query-parser: ^0.2.3
     postcss-resolve-nested-selector: ^0.1.1
     postcss-safe-parser: ^6.0.0
@@ -14127,7 +14118,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     write-file-atomic: ^4.0.1
   bin:
     stylelint: bin/stylelint.js
-  checksum: 53c65c9a1d0009ba15847905afc34efc2f4820edc989f8c2aeecf6b7873b2de3040a1969761ef0983caca2e773947482962df5c25216cb9e3f21af241675bb50
+  checksum: e0c9f80064e02fdca253001650506d1ddc89bcfbbc86b2245ed90faa03ec4616239e179000c5fd288f6cae079463b2b724790872cf78fbeb08a68803eaf465fd
   languageName: node
   linkType: hard
 
@@ -14265,6 +14256,16 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"swiper@npm:^8.3.2":
+  version: 8.3.2
+  resolution: "swiper@npm:8.3.2"
+  dependencies:
+    dom7: ^4.0.4
+    ssr-window: ^4.0.2
+  checksum: 881d8e4fdedc391593c9ecee1ca0fddaebd16b2f6be493f80869fbaf848761cf7e41a7d7ba4b9fe4c4d61e9bef87ba33154d22bb6a8a8503c22c49f793bef1c1
+  languageName: node
+  linkType: hard
+
 "symbol-observable@npm:1.0.1":
   version: 1.0.1
   resolution: "symbol-observable@npm:1.0.1"
@@ -14386,14 +14387,14 @@ bem-tools-create@bem-tools/bem-tools-create:
   linkType: hard
 
 "terser-webpack-plugin@npm:^5.1.3":
-  version: 5.3.3
-  resolution: "terser-webpack-plugin@npm:5.3.3"
+  version: 5.3.4
+  resolution: "terser-webpack-plugin@npm:5.3.4"
   dependencies:
-    "@jridgewell/trace-mapping": ^0.3.7
+    "@jridgewell/trace-mapping": ^0.3.14
     jest-worker: ^27.4.5
     schema-utils: ^3.1.1
     serialize-javascript: ^6.0.0
-    terser: ^5.7.2
+    terser: ^5.14.1
   peerDependencies:
     webpack: ^5.1.0
   peerDependenciesMeta:
@@ -14403,11 +14404,11 @@ bem-tools-create@bem-tools/bem-tools-create:
       optional: true
     uglify-js:
       optional: true
-  checksum: 4b8d508d8a0f6e604addb286975f1fa670f8c3964a67abc03a7cfcfd4cdeca4b07dda6655e1c4425427fb62e4d2b0ca59d84f1b2cd83262ff73616d5d3ccdeb5
+  checksum: 37f65cf0a3fd24c7ce48268e387e50d3315136c9afd27952e1c299995a951aa61c0d34d8eb07cf2eb667078176b5e0d56e7f7400b09984eaa74712d0c1e39203
   languageName: node
   linkType: hard
 
-"terser@npm:^5.7.2":
+"terser@npm:^5.14.1":
   version: 5.14.2
   resolution: "terser@npm:5.14.2"
   dependencies:

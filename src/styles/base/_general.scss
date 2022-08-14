@@ -146,6 +146,15 @@ $container: ".container";
       }
     }
   }
+  &.swiper-button-disabled {
+    background-color: #fff;
+    pointer-events: none;
+    #{$linkWithIcon} {
+      &__icon {
+        stroke: #C4C8D2;
+      }
+    }
+  }
 }
 
 #{$socialLink} {

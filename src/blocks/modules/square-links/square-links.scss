@@ -5,6 +5,7 @@ $squareLinks: ".square-links";
     display: grid;
     grid-template-columns: minmax(300px, 370px) minmax(650px, 770px);
     column-gap: 30px;
+    margin-bottom: 160px;
   }
 
   &__title-link {
@@ -86,7 +87,7 @@ $squareLinks: ".square-links";
         border-top: 1px solid $grey3;
       }
       &__links {
-        gap: 30px;
+        gap: 90px 30px;
       }
     }
   }
