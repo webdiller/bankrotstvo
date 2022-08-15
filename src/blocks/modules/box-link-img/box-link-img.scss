@@ -30,6 +30,7 @@ $boxLinkImg: ".box-link-img";
   &__img {
     max-width: 140px;
     flex: 1 0 140px;
+    align-self: flex-start;
   }
   &__content {
     padding: 20px;
