@@ -34,6 +34,24 @@ $verticalSteps: ".vertical-steps";
         }
       }
     }
+    &:first-child {
+      #{$verticalSteps} {
+        &__item-number {
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+    &:last-child {
+      #{$verticalSteps} {
+        &__item-number {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
   }
 
   &__item-number {
@@ -48,9 +66,33 @@ $verticalSteps: ".vertical-steps";
 
     height: 170px;
     border: 1px solid $blue1;
-    z-index: 10;
+    z-index: 20;
+
+    background-color: #fff;
 
     transition: all 0.3s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -11px;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background-color: #fff;
+      z-index: 10;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(100% + 11px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 200px;
+      background-color: #C4C8D2;
+      z-index: 5;
+    }
   }
 
   &__item-content {
