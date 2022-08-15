@@ -22,6 +22,8 @@ $header: ".header";
     position: relative;
     align-self: stretch;
     flex: 0 1 400px;
+    margin-right: 40px;
+
     transition: all 0.3s ease;
     &-input {
       border: 0;
@@ -56,6 +58,82 @@ $header: ".header";
       }
     }
   }
+
+  &__dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    height: 38px;
+
+    padding-left: 40px;
+    padding-right: 40px;
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+
+    transition: all 0.3s ease;
+    &:hover,
+    &:focus {
+      color: $blue1;
+      #{$header} {
+        &__dropdown-main {
+          color: $blue1;
+        }
+        &__dropdown-icon {
+          transform: rotate(180deg);
+          fill: $blue1;
+        }
+        &__dropdown-items {
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+      
+    }
+    &-main {
+      position: relative;
+      line-height: 18px;
+      font-weight: 700;
+      color: $black1;
+      transition: inherit;
+      text-transform: uppercase;
+      z-index: 5;
+    }
+
+    &-icon {
+      position: relative;
+      margin-left: 15px;
+      transition: inherit;
+      fill: $black1;
+      transition: inherit;
+      z-index: 5;
+    }
+
+    &-items {
+      position: absolute;
+      top: 0px;
+      left: -1px;
+      width: calc(100% + 10px);
+
+      display: flex;
+      flex-direction: column;
+      padding: 40px 40px 20px 40px;
+
+      opacity: 0;
+      transition: inherit;
+
+      pointer-events: none;
+      background-color: #f8f8fb;
+    }
+
+    &-item {
+      transition: inherit;
+      &:hover {
+        color: $blue1;
+      }
+    }
+  }
+
   &__contacts {
     margin-left: auto;
     &-description {
