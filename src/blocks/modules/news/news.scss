@@ -25,12 +25,13 @@
 
   &__top-left-link {
     display: flex;
+    margin-bottom: 10px;
     .box-link__wrapper {
       padding-top: 19px;
       padding-bottom: 20px;
     }
-    &:not(:last-child) {
-      margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -51,9 +52,9 @@
   }
 
   &__bottom-left-tags {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     gap: 20px 15px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 
   &__bottom-left-tag {
@@ -71,8 +72,9 @@
   }
 
   &__bottom-right-link {
-    &:not(:last-child) {
-      margin-bottom: 20px;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 

@@ -14,9 +14,11 @@ $spravka: ".spravka";
     display: grid;
     grid-template-columns: minmax(300px, 370px) minmax(650px, 770px);
     column-gap: 30px;
-    &:not(:last-child) {
-      padding-bottom: 40px;
-      border-bottom: 1px solid #dbe0e4;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #dbe0e4;
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
     }
     &:not(:first-child) {
       padding-top: 30px;

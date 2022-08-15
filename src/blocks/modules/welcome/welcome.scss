@@ -16,22 +16,25 @@
   }
 
   &__right {
+    display: flex;
+    flex-direction: column;
     text-align: right;
   }
 
   &__links {
-    
+    margin-bottom: auto;
   }
 
   &__link {
     display: block;
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
+    margin-bottom: 10px;
     &:last-child {
-      margin-bottom: 15px;
+      margin-bottom: 0;
     }
   }
 
-  &__read-more {}
+  &__read-more {
+    margin-top: 15px;
+    align-self: flex-end;
+  }
 }

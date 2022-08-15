@@ -116,8 +116,9 @@ $uiHorizontalCard: ".ui-horizontal-card";
   }
 
   &__tag {
-    &:not(:last-child) {
-      margin-right: 5px;
+    margin-right: 5px;
+    &:last-child {
+      margin-right: 0;
     }
   }
 

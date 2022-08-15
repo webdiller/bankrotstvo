@@ -18,8 +18,9 @@ $verticalSteps: ".vertical-steps";
     display: grid;
     grid-template-columns: 170px minmax((450px, 1fr));
     column-gap: 50px;
-    &:not(:last-child) {
-      margin-bottom: 120px;
+    margin-bottom: 120px;
+    &:last-child {
+      margin-bottom: 0;
     }
     &:hover,
     &:focus {

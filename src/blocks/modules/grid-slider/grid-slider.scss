@@ -40,12 +40,16 @@ $gridSlider: ".grid-slider";
     justify-content: flex-end;
 
     padding: 60px 60px 55px 60px;
-    aspect-ratio: 1;
+    min-height: 385px;
     color: $black1;
     transition: all 0.3s ease;
     overflow: auto;
-    border: 1px solid #C4C8D2;
+    border: 1px solid #c4c8d2;
     margin: 0 -1px -1px 0;
+    @supports (aspect-ratio: 1) {
+      min-height: unset;
+      aspect-ratio: 1;
+    }
     &:hover,
     &:focus {
       background-color: $grey5;

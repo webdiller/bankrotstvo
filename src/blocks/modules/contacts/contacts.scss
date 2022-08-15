@@ -1,6 +1,6 @@
 .contacts {
-
-  &__container {}
+  &__container {
+  }
 
   &__title {
     margin-bottom: 50px;
@@ -26,16 +26,19 @@
     margin-right: 23px;
   }
 
-  &__item-content {}
+  &__item-content {
+  }
 
   &__item-title {
     display: block;
     margin-bottom: 6px;
     font-weight: 700;
-    &_tel {}
+    &_tel {
+    }
   }
 
-  &__item-description {}
+  &__item-description {
+  }
 
   &__item-list {
   }
@@ -45,15 +48,19 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
     justify-content: space-between;
+
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid $grey3;
     span {
       &:last-child {
         text-align: right;
       }
     }
-    &:not(:last-child) {
-      margin-bottom: 6px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid $grey3;
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
     }
   }
 
@@ -71,11 +78,13 @@
     }
     &-group {
       width: 100%;
+      margin-bottom: 30px;
       &_button {
         margin-bottom: 35px;
       }
-      &:not(:last-child) {
-        margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }

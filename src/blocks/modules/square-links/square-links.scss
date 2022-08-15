@@ -25,15 +25,32 @@ $squareLinks: ".square-links";
     grid-template-columns: 1fr 1fr;
   }
 
-  &__links-item {
+  &__links-item-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     padding: 40px;
-    aspect-ratio: 1;
-    color: $black1;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  &__links-item {
+    position: relative;
+
     transition: all 0.3s ease;
+    
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+
     &:nth-child(1),
     &:nth-child(4) {
       border: 1px solid #c4c8d2;

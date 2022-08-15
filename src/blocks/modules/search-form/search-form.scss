@@ -10,13 +10,14 @@ $searchForm: '.search-form';
 
   &__group {
     width: 100%;
+    margin-bottom: 30px;
 
     &_button {
       margin-bottom: 35px;
     }
     
-    &:not(:last-child) {
-      margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
   &_kolonki {
@@ -25,8 +26,9 @@ $searchForm: '.search-form';
         margin-bottom: 20px;
       }
       &__group {
-        &:not(:last-child) {
-          margin-bottom: 10px;
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }
@@ -41,8 +43,9 @@ $searchForm: '.search-form';
         }
       }
       &__group {
-        &:not(:last-child) {
-          margin-bottom: 10px;
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }
