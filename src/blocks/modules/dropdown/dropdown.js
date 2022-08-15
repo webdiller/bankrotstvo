@@ -3,9 +3,12 @@ const dropdownComponents = document.querySelectorAll("[data-component='dropdown'
 document.addEventListener('DOMContentLoaded', function () {
   dropdownComponents.forEach(component => {
 
-    const defaultDropdownTitle = 'Город';
+    let defaultDropdownTitle = 'Город';
     const dropdownTitle = component.querySelector('.dropdown__main-item');
     const attributeValue = component.getAttribute('data-value');
+    if (component.getAttribute('data-title')) {
+      defaultDropdownTitle = component.getAttribute('data-title')
+    }
     let currentCityName = null;
     let currentCityValue = null;
 

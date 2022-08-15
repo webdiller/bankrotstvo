@@ -1,42 +1,109 @@
 <div class="subscribe">
   <div class="container subscribe__container">
-    
-    <img width="400" height="520" src="./img/images/subscribe-book.png" alt="ПОДПИСЫВАЙТЕСЬ НА ИНТЕРЕСУЮЩИЕ ВАС ТЕМЫ" class="subscribe__bg-image">
+    <img
+      width="400"
+      height="520"
+      src="./img/images/subscribe-book.png"
+      alt="ПОДПИСЫВАЙТЕСЬ НА ИНТЕРЕСУЮЩИЕ ВАС ТЕМЫ"
+      class="subscribe__bg-image"
+    />
 
     <p class="title title_2 subscribe__title">
       ПОДПИСЫВАЙТЕСЬ НА <br />
       ИНТЕРЕСУЮЩИЕ ВАС ТЕМЫ
     </p>
 
-    <p class="text text_sm subscribe__description">Не нужно следить за публикациями – мы сообщим, как только новость появится</p>
+    <p class="text text_sm subscribe__description">
+      Не нужно следить за публикациями – мы сообщим, как только новость появится
+    </p>
 
     <form class="subscribe__form">
-
       <div class="subscribe__dropdown-search">
+        <div
+          data-title="Выберите материал"
+          data-value='{"name": "Все материалы", "value": "all"}'
+          data-component="dropdown"
+          class="dropdown dropdown_white dropdown_overlay subscribe__dropdown"
+        >
+          <p class="dropdown__main-item">Город</p>
+          <svg
+            class="dropdown__icon"
+            width="7"
+            height="4"
+            viewBox="0 0 7 4"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M3.5 4L0.468911 0.25L6.53109 0.25L3.5 4Z" />
+          </svg>
+          <nav class="dropdown__navigation">
+            <button
+              type="button"
+              value='{"name": "Все материалы", "value": "all"}'
+              class="dropdown__navigation-item"
+            >
+              Все материалы
+            </button>
+            <button
+              type="button"
+              value='{"name": "Категоря 1", "value": "category1"}'
+              class="dropdown__navigation-item"
+            >
+              Категоря 1
+            </button>
+            <button
+              type="button"
+              value='{"name": "Категоря 2", "value": "category2"}'
+              class="dropdown__navigation-item"
+            >
+              Категоря 2
+            </button>
+          </nav>
+        </div>
 
         <div class="search-with-button subscribe__search-with-button">
-          <div data-component="search" class="ui-search ui-search_white d-block search-with-button__search">
-            <input type="text" class="ui-search__input">
+          <div
+            data-component="search"
+            class="ui-search ui-search_white d-block search-with-button__search"
+          >
+            <input type="text" class="ui-search__input" />
             <label class="ui-search__label">E-mail</label>
           </div>
-          <button type="submit" class="border-link border-link_white border-link_lg search-with-button__button">Подписаться</button>
+          <button
+            type="submit"
+            class="border-link border-link_white border-link_lg search-with-button__button"
+          >
+            Подписаться
+          </button>
         </div>
-        
       </div>
 
       <div class="subscribe__checkbox">
         <div class="ui-checkbox ui-checkbox_white">
-          <input id="subscribe" class="ui-checkbox__input" type="checkbox">
-          <button class="ui-checkbox__button"><svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5l3 2 5-6"/></svg></button>
+          <input id="subscribe" class="ui-checkbox__input" type="checkbox" />
+          <button class="ui-checkbox__button">
+            <svg
+              class="ui-checkbox__icon"
+              width="10"
+              height="8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M1 5l3 2 5-6" />
+            </svg>
+          </button>
           <label for="subscribe" class="ui-checkbox__label">
-            Я принимаю условия <a href="/">Пользовательского <br>
-            соглашения</a> и даю свое согласие на обработку<br>
-            моих персональных данных в соответствии с<br>
+            Я принимаю условия
+            <a href="/"
+              >Пользовательского <br />
+              соглашения</a
+            >
+            и даю свое согласие на обработку<br />
+            моих персональных данных в соответствии с<br />
             <a href="/">Политикой конфиденциальности</a>
           </label>
         </div>
       </div>
-      
     </form>
   </div>
 </div>

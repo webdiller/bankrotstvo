@@ -11,10 +11,13 @@ $dropdown: ".dropdown";
   cursor: pointer;
   transition: all 0.3s ease;
 
+  z-index: 20;
+
   &__main-item {
     position: relative;
     line-height: 26px;
     transform: translateY(10px);
+    z-index: 5;
     transition: all 0.3s ease;
     &::selection {
       background-color: transparent;
@@ -32,11 +35,13 @@ $dropdown: ".dropdown";
 
   &__navigation {
     display: none;
+    transition: all 0.3s ease;
   }
 
   &__navigation-item {
     display: block;
     line-height: 26px;
+    transition: all 0.3s ease;
     &:hover {
       color: $blue1;
       transition: all 0.3s ease;
@@ -64,6 +69,66 @@ $dropdown: ".dropdown";
       }
       &__navigation {
         display: block;
+      }
+    }
+  }
+
+  &_overlay {
+    overflow: visible;
+    #{$dropdown} {
+      &__navigation {
+        position: absolute;
+        left: 0;
+        right: 0;
+        
+        display: block;
+
+        width: 100%;
+        opacity: 0;
+        pointer-events: none;
+        background: #f0f2f5;
+        border-bottom: 1px solid transparent;
+
+        transition: all .3s ease;
+      }
+    }
+    &.active {
+      height: 46px;
+      #{$dropdown} {
+        &__navigation {
+          opacity: 1;
+          pointer-events: all;
+          border-bottom-color: $blue1;
+        }
+      }
+    }
+  }
+
+  &_white {
+    border-bottom: 1px solid #fff;
+    #{$dropdown} {
+      &__icon {
+        fill: #fff;
+      }
+      &__main-item {
+        color: #fff;
+      }
+      &__navigation {
+        background: $blue1;
+      }
+    }
+    &.active {
+      height: 46px;
+      #{$dropdown} {
+        &__main-item {
+          color: #fff;
+        }
+        &__navigation {
+          border-bottom-color: #fff;
+        }
+        &__navigation-item {
+          color: #fff;
+        }
       }
     }
   }

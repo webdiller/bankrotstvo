@@ -4,6 +4,7 @@ $horizontalSlider: ".horizontal-slider";
   &__container {
     position: relative;
     margin-bottom: 160px;
+    overflow-x: hidden;
     &::before {
       content: "";
       position: absolute;

@@ -25,7 +25,11 @@
     display: flex;
     margin-bottom: 30px;
   }
-  &__dropdown {}
+  &__dropdown {
+    min-width: 200px;
+    margin-top: auto;
+    margin-right: 30px;
+  }
   &__search-with-button {
     flex: 0 1 470px;
   }
