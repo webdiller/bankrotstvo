@@ -36,6 +36,10 @@ $uiSearch: ".ui-search";
     top: 10px;
     font-size: 18px;
     pointer-events: none;
+    @include media("<=tablet") {
+      font-size: 14px;
+      line-height: 21px;
+    }
   }
 
   &.active {

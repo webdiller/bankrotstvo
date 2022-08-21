@@ -15,6 +15,10 @@ $container: ".container";
   font-weight: 700;
   font-size: 34px;
   line-height: 48px;
+  @include media("<=tablet") {
+    font-size: 20px;
+    line-height: 30px;
+  }
   &_2 {
     font-weight: 600;
     font-size: 30px;
@@ -29,10 +33,18 @@ $container: ".container";
     font-weight: 600;
     font-size: 22px;
     line-height: 33px;
+    @include media("<=tablet") {
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
   &_5 {
     font-size: 20px;
     line-height: 30px;
+    @include media("<=tablet") {
+      font-size: 17px;
+      line-height: 25px;
+    }
   }
   &_6 {
     font-size: 18px;
@@ -49,6 +61,10 @@ $container: ".container";
     font-size: 16px;
     line-height: 26px;
     color: $grey1;
+    @include media("<=tablet") {
+      font-size: 13px;
+      line-height: 21px;
+    }
   }
   &_sm {
     font-size: 14px;
@@ -209,6 +225,11 @@ $container: ".container";
   color: $blue1;
   line-height: normal;
   transition: all 0.3s ease;
+
+  @include media("<=tablet") {
+    min-height: 49px;
+    padding: 14px 28px;
+  }
 
   &:hover,
   &:focus {
@@ -442,6 +463,10 @@ $container: ".container";
     font-size: 12px;
     line-height: 18px;
     transition: inherit;
+    @include media("<=tablet") {
+      font-size: 10px;
+      line-height: 15px;
+    }
     a {
       color: $grey4;
       text-decoration: underline;
@@ -597,6 +622,10 @@ $container: ".container";
   max-width: calc(1170px + 40px);
   padding: 0 20px;
   margin: 0 auto;
+  @include media("<=LGdesktop") {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .search-with-button {

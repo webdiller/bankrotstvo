@@ -37,6 +37,10 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   color: $black1;
+  @include media("<=tablet") {
+    font-size: 14px;
+    line-height: 23.1px;
+  }
 }
 
 /**

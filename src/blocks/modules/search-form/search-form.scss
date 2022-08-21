@@ -6,6 +6,9 @@ $searchForm: '.search-form';
 
   &__title {
     margin-bottom: 40px;
+    @include media("<=tablet") {
+      margin-bottom: 25px;
+    }
   }
 
   &__group {

@@ -5,6 +5,9 @@
   &__title {
     margin-bottom: 50px;
     font-weight: 700;
+    @include media("<=LGdesktop") {
+      margin-bottom: 25px;
+    }
   }
 
   &__items {
@@ -13,10 +16,22 @@
     column-gap: 20px;
     justify-content: space-between;
     margin-bottom: 60px;
+    @include media("<=LGdesktop") {
+      display: block;
+      margin-bottom: 30px;
+    }
   }
 
   &__item {
     display: flex;
+    @include media("<=LGdesktop") {
+      margin-bottom: 20px;
+    }
+    &:last-child {
+      @include media("<=LGdesktop") {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__item-icon {
@@ -24,6 +39,9 @@
     max-width: 18px;
     align-self: flex-start;
     margin-right: 23px;
+    @include media("<=LGdesktop") {
+      margin-right: 18px;
+    }
   }
 
   &__item-content {
@@ -33,6 +51,10 @@
     display: block;
     margin-bottom: 6px;
     font-weight: 700;
+    @include media("<=tablet") {
+      font-size: 15px;
+      line-height: 22px;
+    }
     &_tel {
     }
   }
@@ -46,12 +68,13 @@
   &__item-list-element {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 30px;
+    column-gap: 5px;
     justify-content: space-between;
 
     margin-bottom: 6px;
     padding-bottom: 6px;
     border-bottom: 1px solid $grey3;
+
     span {
       &:last-child {
         text-align: right;
@@ -68,11 +91,18 @@
     display: grid;
     grid-template-columns: 370px 1fr;
     column-gap: 30px;
+    @include media("<=desktop") {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
 
   &__form {
     padding: 50px;
     background-color: $grey5;
+    @include media("<=LGdesktop") {
+      padding: 30px 20px 20px 20px;
+    }
     &-title {
       margin-bottom: 40px;
     }
@@ -92,5 +122,10 @@
   &__map {
     background-color: $grey5;
     height: 100%;
+    @include media("<=LGdesktop") {
+      margin-bottom: 15px;
+      aspect-ratio: 16 / 9;
+      min-height: 350px;
+    }
   }
 }
