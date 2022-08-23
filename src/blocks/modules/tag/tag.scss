@@ -1,0 +1,50 @@
+$tag: ".tag";
+
+#{$tag} {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 30px;
+  min-height: 46px;
+
+  border: 1px solid $grey3;
+  border-radius: 30px;
+  line-height: normal;
+  color: $blue1;
+
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    border-color: $blue1;
+  }
+
+  &:active {
+    border-color: $blue1;
+    background-color: $blue1;
+    color: #fff;
+  }
+
+  &_sm {
+    min-height: 26px;
+    padding: 3px 10px;
+    font-size: 12px;
+  }
+
+  &_white {
+    color: #fff;
+    border-color: #fff;
+    &:hover,
+    &:focus {
+      border-color: #fff;
+      background-color: #fff;
+      color: $blue1;
+    }
+    &:active {
+      background-color: transparent;
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+}
