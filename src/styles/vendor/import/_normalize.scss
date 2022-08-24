@@ -17,11 +17,8 @@
 html {
   font-family: "Mulish", "sans-serif";
   line-height: 26.4px;
-  /* 1 */
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  min-width: 320px;
-  /* 2 */
 }
 
 /* Sections
@@ -37,6 +34,8 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   color: $black1;
+  overflow-x: hidden;
+  min-width: 320px;
   @include media("<=tablet") {
     font-size: 14px;
     line-height: 23.1px;

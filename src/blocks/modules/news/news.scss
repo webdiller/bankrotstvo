@@ -1,17 +1,45 @@
 .news {
   &__container {
     margin-bottom: 120px;
+    @include media("<=tablet") {
+      margin-bottom: 60px;
+    }
   }
 
   &__title {
     margin-bottom: 50px;
+    @include media("<=LGdesktop") {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__mobile-tags {
+    display: none;
+    align-items: center;
+    overflow-x: scroll;
+    margin-bottom: 30px;
+    @include media("<=desktop") {
+      display: flex;
+    }
+  }
+  &__mobile-tag {
+    margin-right: 10px;
+    min-height: 43px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__top {
     display: grid;
-    grid-template-columns: minmax(300px, 370px) minmax(650px, 770px);
+    grid-template-columns: minmax(300px, 370px) minmax(550px, 770px);
     column-gap: 30px;
     margin-bottom: 40px;
+    @include media("<=desktop") {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 30px;
+    }
   }
 
   &__left {
@@ -19,6 +47,9 @@
 
   &__top-left-title {
     margin-bottom: 20px;
+    @include media("<=desktop") {
+      margin-bottom: 10px;
+    }
   }
 
   &__top-left-links {
@@ -37,19 +68,32 @@
   }
 
   &__top-right {
+    @include media("<=desktop") {
+      margin-bottom: 30px;
+    }
   }
 
   &__big-img-link {
     height: 100%;
+    min-height: 490px;
+    @include media("<=phone") {
+      min-height: 290px;
+    }
   }
 
   &__bottom {
     display: grid;
-    grid-template-columns: minmax(300px, 370px) minmax(650px, 770px);
+    grid-template-columns: minmax(300px, 370px) minmax(550px, 770px);
     column-gap: 30px;
+    @include media("<=desktop") {
+      display: block;
+    }
   }
 
   &__bottom-left {
+    @include media("<=desktop") {
+      display: none;
+    }
   }
 
   &__bottom-left-tags {
@@ -66,14 +110,29 @@
 
   &__bottom-right-title {
     margin-bottom: 20px;
+    @include media("<=desktop") {
+      margin-bottom: 10px;
+    }
   }
 
   &__bottom-right-links {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 50px;
+    @include media("<=desktop") {
+      margin-bottom: 30px;
+    }
   }
 
   &__bottom-right-link {
     margin-bottom: 20px;
+    @include media("<=desktop") {
+      height: 360px;
+      margin-bottom: 15px;
+    }
+    @include media("<=phone") {
+      height: 290px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -85,5 +144,9 @@
     padding-bottom: 32px;
     border-top: 1px solid #dbe0e4;
     border-bottom: 1px solid #dbe0e4;
+    @include media("<=desktop") {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
   }
 }

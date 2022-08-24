@@ -1,44 +1,100 @@
 .subscribe {
-  &__container {
+  overflow: hidden;
+  &__first-container {
+
+  }
+  &__second-container {
     position: relative;
     max-width: 1170px;
     padding: 70px 65px 40px 70px;
     background-color: $blue1;
+    @include media("<=desktop") {
+      padding: 20px;
+    }
   }
   &__bg-image {
     position: absolute;
     bottom: 0;
     right: 0;
+    object-fit: contain;
+    @include media("<=LGdesktop") {
+      width: 250px;
+    }
+    @include media("<=desktop") {
+      display: none;
+    }
   }
   &__title {
     margin-bottom: 10px;
     color: #fff;
+    @include media("<=tablet") {
+      font-size: 18px;
+      line-height: 27px;
+    }
+    @include media("<=phone") {
+      margin-bottom: 30px;
+    }
   }
   &__description {
     margin-bottom: 60px;
     color: #fff;
+    @include media("<=phone") {
+      display: none;
+    }
   }
   &__form {
     max-width: 700px;
+    @include media("<=desktop") {
+      max-width: unset;
+    }
+    @include media("<=tablet") {
+      display: flex;
+      flex-direction: column;
+    }
   }
   &__dropdown-search {
     display: flex;
     margin-bottom: 30px;
+    @include media("<=tablet") {
+      display: block;
+    }
   }
   &__dropdown {
     min-width: 200px;
     margin-top: auto;
     margin-right: 30px;
+    @include media("<=tablet") {
+      max-width: 300px;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
   &__search-with-button {
     flex: 0 1 470px;
+    @include media("<=desktop") {
+      flex-grow: 1;
+    }
+    @include media("<=tablet") {
+      max-width: 300px;
+      display: block;
+    }
   }
-  &__button {
-    padding-left: 40px;
-    padding-right: 40px;
+  &__search-with-button-search {
+    @include media("<=tablet") {
+      flex: 1 1 auto;
+    }
+  }
+  &__submit-btn {
+    @include media("<=tablet") {
+      margin-top: 30px;
+      width: 100%;
+    }
   }
   &__checkbox {
     margin-left: 230px;
+    @include media("<=tablet") {
+      margin-left: 0;
+    }
   }
 
 }

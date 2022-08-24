@@ -242,35 +242,6 @@ $container: ".container";
     color: $blue1;
   }
 
-  &_pagination {
-    min-height: 42px;
-    padding: 8px;
-    min-width: 42px;
-    max-width: 42px;
-
-    color: $black1;
-    border-color: transparent;
-
-    &:hover,
-    &:focus {
-      color: $blue1;
-      background-color: transparent;
-      border-color: transparent;
-    }
-
-    &:active {
-      color: $black1;
-      background-color: transparent;
-      border-color: transparent;
-    }
-
-    &.active {
-      color: #fff;
-      background-color: $blue1;
-      border-color: $blue1;
-    }
-  }
-
   &_white {
     border-color: #fff;
     color: #fff;
@@ -363,9 +334,15 @@ $container: ".container";
   &__step {
     &_prev {
       margin-right: 24px;
+      @include media("<=tablet") {
+        margin-right: 5px;
+      }
     }
     &_next {
       margin-left: 24px;
+      @include media("<=tablet") {
+        margin-left: 5px;
+      }
     }
   }
 
@@ -374,6 +351,54 @@ $container: ".container";
     justify-content: space-between;
     align-items: center;
     gap: 0 18px;
+    @include media("<=tablet") {
+      gap: 13px;
+    }
+  }
+  &__item {
+    min-height: 42px;
+    padding: 8px;
+    min-width: 42px;
+    max-width: 42px;
+
+    color: $black1;
+    border-color: transparent;
+
+    @include media("<=tablet") {
+      padding: 0;
+      min-width: 40px;
+      width: 40px;
+      flex: 0 0 40px;
+      height: 37px;
+      min-height: 37px;
+    }
+    &:nth-child(3n) {
+      ~ #{$pagination} {
+        &__item {
+          display: none;
+          &_dots {
+            display: inline-flex;
+          }
+        }
+      }
+    }
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: $blue1;
+    }
+    &_active {
+      color: #fff;
+      background-color: $blue1;
+      border-color: $blue1;
+    }
+    &_dots {
+      @include media("<=tablet") {
+        min-width: 30px;
+        width: 30px;
+        flex: 0 0 30px;
+      }
+    }
   }
 }
 
