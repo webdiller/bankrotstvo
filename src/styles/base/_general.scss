@@ -15,6 +15,11 @@ $container: '.container';
   font-weight: 700;
   font-size: 34px;
   line-height: 48px;
+  br {
+    @include media('<=tablet') {
+      display: none;
+    }
+  }
   @include media('<=tablet') {
     font-size: 20px;
     line-height: 30px;
