@@ -147,6 +147,9 @@ $spravka: '.spravka';
         }
         &__docs-item-content {
           #{$spravka} {
+            &__docs-name {
+              color: $blue1;
+            }
             &__docs-border-icon-link {
               opacity: 1;
               pointer-events: all;

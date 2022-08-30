@@ -1,6 +1,6 @@
 $rating: '.rating';
 
-.rating {
+#{$rating} {
   &__container {
     position: relative;
     margin-bottom: 160px;
@@ -88,6 +88,17 @@ $rating: '.rating';
         display: none;
       }
     }
+    &_company {
+      &:hover,
+      &:focus {
+        .rating__table-text {
+          color: $blue1;
+        }
+        .rating__table-icon {
+          transform: scale(1.125);
+        }
+      }
+    }
     &_rating {
       @include media('<=desktop') {
         display: none;
@@ -104,10 +115,13 @@ $rating: '.rating';
   &__table-icon-text {
     display: flex;
     align-items: center;
+    transition: all 0.3s ease;
   }
 
   &__table-icon {
     margin-right: 26px;
+    will-change: transform;
+    transition: all 0.3s ease;
     @include media('<=desktop') {
       margin-right: 15px;
     }

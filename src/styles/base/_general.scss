@@ -91,6 +91,9 @@ $container: '.container';
       &__text {
         color: $blue1;
       }
+      &__img {
+        transform: translateZ(1.1);
+      }
     }
   }
   &:active {

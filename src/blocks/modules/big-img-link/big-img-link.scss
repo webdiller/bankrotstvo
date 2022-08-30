@@ -59,7 +59,8 @@ $bitImgLink: '.big-img-link';
     right: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(0, 18, 50, 0) 33.16%, rgba(0, 18, 50, 0.1) 51.61%, rgba(0, 18, 50, 0.2) 72.89%, rgba(0, 18, 50, 0.3) 100%);
+    // background: linear-gradient(180deg, rgba(0, 18, 50, 0) 33.16%, rgba(0, 18, 50, 0.1) 51.61%, rgba(0, 18, 50, 0.2) 72.89%, rgba(0, 18, 50, 0.3) 100%);
+    background: linear-gradient(180deg, rgba(0, 18, 50, 0) 15%, rgba(0, 18, 50, 0.1) 33.16%, rgba(0, 18, 50, 0.2) 51.61%, rgba(0, 18, 50, 0.3) 72.89%, rgba(0, 18, 50, 0.4) 100%);
   }
 
   &__content {

@@ -18,6 +18,13 @@ $bigBoxLinkImg: '.big-box-link-img';
     &:hover,
     &:focus {
       ~ #{$bigBoxLinkImg} {
+        &__img-wrapper {
+          #{$bigBoxLinkImg} {
+            &__img {
+              transform: scale(1.05);
+            }
+          }
+        }
         &__content {
           #{$bigBoxLinkImg} {
             &__title {
@@ -63,6 +70,7 @@ $bigBoxLinkImg: '.big-box-link-img';
   &__img-wrapper {
     width: 270px;
     flex: 0 0 270px;
+    overflow: hidden;
     @include media('<=desktop') {
       width: 100%;
       flex: 0 0 100%;
@@ -72,6 +80,8 @@ $bigBoxLinkImg: '.big-box-link-img';
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all .3s ease;
+    will-change: transform;
   }
   &__content {
     display: flex;

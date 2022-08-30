@@ -3,7 +3,6 @@ $uiVerticalCard: '.ui-vertical-card';
 #{$uiVerticalCard} {
   position: relative;
   &__overlay-link {
-    display: none;
     position: absolute;
     top: 0;
     right: 0;
