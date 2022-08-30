@@ -44,6 +44,11 @@ $overlayDescription: '.overlay-description';
   &__title {
     margin-bottom: 5px;
     color: #fff;
+    br {
+      @include media('<=tablet') {
+        display: none;
+      }
+    }
   }
 
   &__rating {

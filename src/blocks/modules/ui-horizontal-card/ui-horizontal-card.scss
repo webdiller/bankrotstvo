@@ -65,12 +65,14 @@ $uiHorizontalCard: '.ui-horizontal-card';
     position: relative;
     max-width: 270px;
     flex: 0 1 270px;
+    min-width: 270px;
     overflow: hidden;
     @include media('<=desktop') {
       max-width: unset;
       flex: 1 1 auto;
     }
     @include media('<=tablet') {
+      min-width: unset;
       &::before {
         content: '';
         position: absolute;
