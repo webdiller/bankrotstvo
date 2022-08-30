@@ -10,6 +10,9 @@
     position: relative;
     margin-bottom: 40px;
     overflow: hidden;
+    @include media('<=tablet') {
+      margin-bottom: 30px;
+    }
     &::after {
       content: '';
       position: absolute;
