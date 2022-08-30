@@ -92,7 +92,7 @@ $container: '.container';
         color: $blue1;
       }
       &__img {
-        transform: translateZ(1.1);
+        transform: scale(1.1);
       }
     }
   }
@@ -118,6 +118,7 @@ $container: '.container';
   }
   &__img {
     transition: inherit;
+    will-change: transform;
     @include media('<=tablet') {
       width: 12px;
       height: 12px;

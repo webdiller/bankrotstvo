@@ -1,6 +1,48 @@
 $uiHorizontalCard: '.ui-horizontal-card';
 
 #{$uiHorizontalCard} {
+  position: relative;
+  &__overlay-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    @include media('<=tablet') {
+      z-index: 15;
+    }
+    &:hover,
+    &:focus {
+      ~ #{$uiHorizontalCard} {
+        &__wrapper {
+          #{$uiHorizontalCard} {
+            &__title {
+              color: $blue1;
+              text-decoration-color: $blue1;
+            }
+            &__img-wrapper {
+              #{$uiHorizontalCard} {
+                &__img-text-icon {
+                  opacity: 1;
+                  @include media('<=tablet') {
+                    display: none;
+                  }
+                }
+              }
+            }
+            &__img-wrapper {
+              #{$uiHorizontalCard} {
+                &__img {
+                  transform: scale(1.025);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   &__wrapper {
     display: flex;
   }
@@ -11,6 +53,7 @@ $uiHorizontalCard: '.ui-horizontal-card';
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 4;
 
     display: none;
     @include media('<=tablet') {
@@ -22,6 +65,7 @@ $uiHorizontalCard: '.ui-horizontal-card';
     position: relative;
     max-width: 270px;
     flex: 0 1 270px;
+    overflow: hidden;
     @include media('<=desktop') {
       max-width: unset;
       flex: 1 1 auto;
@@ -34,6 +78,7 @@ $uiHorizontalCard: '.ui-horizontal-card';
         right: 0;
         width: 100%;
         height: 100%;
+        z-index: 4;
         background: linear-gradient(180deg, rgba(37, 39, 46, 0) 35.71%, rgba(37, 39, 46, 0.05) 44.92%, rgba(37, 39, 46, 0.5) 58.79%, rgba(37, 39, 46, 0.8) 76.45%, #25272e 100%);
       }
     }
@@ -44,6 +89,7 @@ $uiHorizontalCard: '.ui-horizontal-card';
     object-fit: cover;
     width: 100%;
     height: 100%;
+    transition: all .3s ease;
   }
 
   &__content {
@@ -60,6 +106,7 @@ $uiHorizontalCard: '.ui-horizontal-card';
     font-size: 24px;
     line-height: 40px;
     font-weight: 600;
+    transition: all .3s ease;
   }
 
   &__subtitle {
@@ -150,6 +197,8 @@ $uiHorizontalCard: '.ui-horizontal-card';
   }
 
   &__tag {
+    position: relative;
+    z-index: 10;
   }
 
   &__date {
@@ -162,6 +211,7 @@ $uiHorizontalCard: '.ui-horizontal-card';
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 4;
 
     display: flex;
     flex-direction: column;
@@ -190,6 +240,7 @@ $uiHorizontalCard: '.ui-horizontal-card';
           right: 0;
           width: 100%;
           height: 100%;
+          z-index: 4;
           background: linear-gradient(180deg, rgba(37, 39, 46, 0) 35.71%, rgba(37, 39, 46, 0.05) 44.92%, rgba(37, 39, 46, 0.5) 58.79%, rgba(37, 39, 46, 0.8) 76.45%, #25272e 100%);
         }
       }

@@ -120,6 +120,9 @@ $squareLinks: '.square-links';
           opacity: 0;
           pointer-events: none;
         }
+        &__links-icon {
+          transform: scale(1.1);
+        }
         &__links-answer {
           opacity: 1;
           pointer-events: all;
@@ -178,6 +181,8 @@ $squareLinks: '.square-links';
     margin-left: auto;
     width: 24px;
     height: 24px;
+    will-change: transform;
+    transition: all 0.3s ease;
     @include media('<=tablet') {
       width: 13px;
       height: 13px;
