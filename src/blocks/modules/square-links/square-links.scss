@@ -1,28 +1,64 @@
-$squareLinks: ".square-links";
+$squareLinks: '.square-links';
 
-.square-links {
+#{$squareLinks} {
   &__container {
     display: grid;
     grid-template-columns: minmax(300px, 370px) minmax(650px, 770px);
     column-gap: 30px;
     margin-bottom: 160px;
+    @include media('<=desktop') {
+      display: block;
+      margin-bottom: 60px;
+    }
   }
 
   &__title-link {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include media('<=desktop') {
+      margin-bottom: 30px;
+    }
   }
 
   &__title {
   }
 
   &__link {
+    @include media('<=desktop') {
+      display: none;
+    }
+    &_bottom {
+      display: none;
+      text-align: right;
+      margin-top: 30px;
+      @include media('<=desktop') {
+        display: block;
+      }
+    }
   }
 
   &__links {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 770px;
+    @include media('<=desktop') {
+      max-width: unset;
+    }
+    &.swiper {
+    }
+    .swiper-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 770px;
+      height: auto;
+      gap: 80px 30px;
+      @include media('<=desktop') {
+        display: flex;
+        height: 100%;
+        max-width: unset;
+      }
+    }
   }
 
   &__links-item-content {
@@ -38,15 +74,18 @@ $squareLinks: ".square-links";
 
     width: 100%;
     height: 100%;
+    @include media('<=tablet') {
+      padding: 15px;
+    }
   }
 
   &__links-item {
     position: relative;
 
     transition: all 0.3s ease;
-    
+
     &::before {
-      content: "";
+      content: '';
       display: block;
       padding-bottom: 100%;
     }
@@ -88,6 +127,10 @@ $squareLinks: ".square-links";
     text-decoration-color: transparent;
     transition: all 0.3s ease;
     text-underline-offset: 2px;
+    @include media('<=tablet') {
+      font-size: 13px;
+      line-height: 20px;
+    }
   }
 
   &__links-icon {
@@ -95,16 +138,46 @@ $squareLinks: ".square-links";
     margin-left: auto;
     width: 24px;
     height: 24px;
+    @include media('<=tablet') {
+      width: 13px;
+      height: 13px;
+    }
   }
 
+  // TODO: Закончил на адаптивности слайдера
   &_ui-vertical-card {
     #{$squareLinks} {
+      &__container {
+        @include media('<=desktop') {
+          padding-right: 0;
+        }
+      }
       &__title {
         padding-top: 20px;
         border-top: 1px solid $grey3;
+        @include media('<=desktop') {
+          padding-top: 0;
+          border-top: 0;
+        }
+      }
+      &__link {
+        &_bottom {
+          margin-top: 20px;
+          margin-right: 15px;
+        }
       }
       &__links {
-        gap: 90px 30px;
+        display: block;
+        &.swiper {
+          @include media('<=desktop') {
+            padding-right: 10px;
+          }
+        }
+        .swiper-wrapper {
+          @include media('<=desktop') {
+            gap: 0;
+          }
+        }
       }
     }
   }

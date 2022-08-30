@@ -1,12 +1,11 @@
-$horizontalSlider: ".horizontal-slider";
+$horizontalSlider: '.horizontal-slider';
 
 #{$horizontalSlider} {
   &__container {
     position: relative;
-    margin-bottom: 160px;
     overflow-x: hidden;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 10px;
       width: 100%;
@@ -21,14 +20,21 @@ $horizontalSlider: ".horizontal-slider";
     display: inline-block;
     background-color: #fff;
     padding-right: 46px;
+    @include media('<=desktop') {
+      margin-bottom: 10px;
+    }
   }
 
   &__swiper {
     &.swiper {
     }
     .swiper-wrapper {
+      @include media('<=phone') {
+        margin-right: 15px;
+      }
     }
     .swiper-slide {
+      overflow: hidden;
     }
     .swiper-button-prev {
     }
@@ -41,6 +47,9 @@ $horizontalSlider: ".horizontal-slider";
         display: flex;
         align-items: center;
         margin-top: 50px;
+        @include media('<=tablet') {
+          display: none;
+        }
       }
 
       &__scrollbar {
@@ -55,7 +64,7 @@ $horizontalSlider: ".horizontal-slider";
           position: relative;
           background-color: $blue1;
           &::before {
-            content: "";
+            content: '';
             position: absolute;
             top: -10px;
             left: 0;
@@ -121,6 +130,50 @@ $horizontalSlider: ".horizontal-slider";
         margin-bottom: 40px;
         padding-bottom: 120px;
         border-bottom: 1px solid #dbe0e4;
+        @include media('<=desktop') {
+          margin-bottom: 30px;
+          padding-bottom: 0;
+          border-bottom: 0;
+        }
+        @include media('<=phone') {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  &_bg-item-gradients {
+    .swiper {
+      @include media('<=desktop') {
+        padding-right: 10px;
+      }
+    }
+    #{$horizontalSlider} {
+      &__container {
+        &::before {
+          display: none;
+        }
+        margin-bottom: 160px;
+        @include media('<=desktop') {
+          margin-bottom: 60px;
+          padding-right: 0;
+        }
+      }
+      &__title {
+        @include media('<=desktop') {
+          margin-bottom: 30px;
+        }
+      }
+      &__links {
+        &_bottom {
+          display: none;
+          margin-top: 30px;
+          margin-right: 15px;
+          text-align: right;
+          @include media('<=desktop') {
+            display: block;
+          }
+        }
       }
     }
   }

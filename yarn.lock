@@ -7667,6 +7667,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     lint-staged: ^12.3.5
     postcss: ^8.4.8
     postcss-scss: ^4.0.3
+    prettier: 2.7.1
     require-dir: ^1.2.0
     sass: ^1.49.9
     stylelint: ^14.5.3
@@ -12018,6 +12019,15 @@ bem-tools-create@bem-tools/bem-tools-create:
   version: 0.2.0
   resolution: "preserve@npm:0.2.0"
   checksum: dd31d4fd0e6b218cac7178712ae0683c96e6eaa3e5490a37aba6d47095f87c47ffe980a3061ebe72ca07cb2a9a4f1a41bbeecee8944ec77be311c294e05b2e43
+  languageName: node
+  linkType: hard
+
+"prettier@npm:2.7.1":
+  version: 2.7.1
+  resolution: "prettier@npm:2.7.1"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 55a4409182260866ab31284d929b3cb961e5fdb91fe0d2e099dac92eaecec890f36e524b4c19e6ceae839c99c6d7195817579cdffc8e2c80da0cb794463a748b
   languageName: node
   linkType: hard
 

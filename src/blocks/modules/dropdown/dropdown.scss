@@ -1,4 +1,4 @@
-$dropdown: ".dropdown";
+$dropdown: '.dropdown';
 
 #{$dropdown} {
   position: relative;
@@ -80,7 +80,7 @@ $dropdown: ".dropdown";
         position: absolute;
         left: 0;
         right: 0;
-        
+
         display: block;
 
         width: 100%;
@@ -89,7 +89,7 @@ $dropdown: ".dropdown";
         background: #f0f2f5;
         border-bottom: 1px solid transparent;
 
-        transition: all .3s ease;
+        transition: all 0.3s ease;
       }
     }
     &.active {
@@ -129,6 +129,19 @@ $dropdown: ".dropdown";
         &__navigation-item {
           color: #fff;
         }
+      }
+    }
+  }
+  &_sort {
+    padding: 0 20px;
+    border: 1px solid $blue1;
+    #{$dropdown} {
+      &__navigation-item {
+
+      }
+      &__icon {
+        fill: transparent;
+        right: 20px;
       }
     }
   }

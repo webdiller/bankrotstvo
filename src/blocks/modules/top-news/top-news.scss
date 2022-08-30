@@ -1,6 +1,9 @@
 .top-news {
   &__container {
     margin-bottom: 200px;
+    @include media('<=desktop') {
+      margin-bottom: 60px;
+    }
   }
 
   &__title {
@@ -8,7 +11,7 @@
     margin-bottom: 40px;
     overflow: hidden;
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 10px;
       margin-left: 38px;
@@ -20,12 +23,11 @@
 
   &__items {
     display: flex;
+    display: grid;
+    gap: 10px 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
   &__item {
-    margin-right: 30px;
-    &:last-child {
-      margin-right: 0;
-    }
   }
 }

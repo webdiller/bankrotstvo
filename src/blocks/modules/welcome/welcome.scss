@@ -4,21 +4,21 @@
     grid-template-columns: minmax(500px, 770px) minmax(350px, 1fr);
     column-gap: 30px;
     margin-bottom: 70px;
-    @include media("<=desktop") {
+    @include media('<=desktop') {
       display: block;
     }
   }
 
   &__left {
     height: 100%;
-    @include media("<=desktop") {
+    @include media('<=desktop') {
       margin-bottom: 15px;
     }
   }
 
   &__big-img-link {
     min-height: 490px;
-    @include media("<=phone") {
+    @include media('<=phone') {
       min-height: 290px;
     }
   }

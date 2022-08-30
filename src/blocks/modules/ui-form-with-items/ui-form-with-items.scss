@@ -1,21 +1,30 @@
 $uiFormWithItems: '.ui-form-with-items';
 
 #{$uiFormWithItems} {
-
-  &__container {}
+  &__container {
+  }
 
   &__title {
     margin-bottom: 20px;
+    @include media('<=desktop') {
+      margin-bottom: 10px;
+    }
   }
 
   &__description {
     margin-bottom: 50px;
+    @include media('<=desktop') {
+      margin-bottom: 30px;
+    }
   }
 
   &__action-btn-wrapper {
     margin-bottom: 30px;
     padding: 50px;
-    background-color: #F0F2F5;
+    background-color: #f0f2f5;
+    @include media('<=desktop') {
+      display: none;
+    }
   }
 
   &__action-btn {
@@ -24,11 +33,18 @@ $uiFormWithItems: '.ui-form-with-items';
 
   &__form-content {
     display: grid;
-    grid-template-columns: 370px minmax(600px, 1fr);
+    grid-template-columns: minmax(300px, 370px) minmax(600px, 1fr);
     column-gap: 30px;
+    @include media('<=desktop') {
+      display: block;
+    }
   }
 
-  &__form-wrapper {}
+  &__form-wrapper {
+    @include media('<=desktop') {
+      margin-bottom: 15px;
+    }
+  }
   &__form {
     position: sticky;
     top: 10px;
@@ -46,22 +62,38 @@ $uiFormWithItems: '.ui-form-with-items';
     justify-content: flex-end;
     padding-bottom: 20px;
     margin-bottom: 30px;
-    border-bottom: 1px solid #C4C8D2;
+    border-bottom: 1px solid #c4c8d2;
 
     background-color: #fff;
     z-index: 10;
+    @include media('<=desktop') {
+      display: none;
+    }
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: -10px;
       left: 0;
       width: 100%;
       height: 10px;
       background-color: #fff;
+      @include media('<=desktop') {
+        display: none;
+      }
     }
   }
+
+  &__dropdown-sort {
+    max-width: unset;
+    display: none;
+    margin-bottom: 20px;
+    @include media('<=desktop') {
+      display: block;
+    }
+  }
+
   &__content-sort-item {
-    color: #ADB4C6;
+    color: #adb4c6;
     margin-right: 50px;
     &:last-child {
       margin-right: 0;
@@ -73,12 +105,20 @@ $uiFormWithItems: '.ui-form-with-items';
 
   &__content-items {
     margin-bottom: 60px;
+    @include media('<=desktop') {
+      margin-bottom: 30px;
+    }
   }
 
   &__content-item {
-    border-bottom: 1px solid #C4C8D2;
+    border-bottom: 1px solid #c4c8d2;
     margin-bottom: 30px;
     padding-bottom: 30px;
+    @include media('<=desktop') {
+      margin-bottom: 15px;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
     &:last-child {
       border-bottom: 0;
       margin-bottom: 0;
@@ -88,20 +128,30 @@ $uiFormWithItems: '.ui-form-with-items';
 
   &__content-results {
     margin-bottom: 20px;
+    @include media('<=desktop') {
+      margin-bottom: 10px;
+    }
   }
 
   &__content-pagination {
     display: flex;
     padding-top: 30px;
     padding-bottom: 30px;
-    border-top: 1px solid #DBE0E4;
-    border-bottom: 1px solid #DBE0E4;
+    border-top: 1px solid #dbe0e4;
+    border-bottom: 1px solid #dbe0e4;
+    @include media('<=desktop') {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
   }
 
   &_kolonki {
     #{$uiFormWithItems} {
       &__title {
         margin-bottom: 40px;
+        @include media('<=desktop') {
+          margin-bottom: 10px;
+        }
       }
       &__content-items {
         margin-bottom: 0;
@@ -110,6 +160,11 @@ $uiFormWithItems: '.ui-form-with-items';
         border-bottom: 0;
         margin-bottom: 30px;
         padding-bottom: 0;
+        @include media('<=desktop') {
+          margin-bottom: 15px;
+          padding-bottom: 0;
+          border-bottom: 0;
+        }
         &:last-child {
           border-bottom: 0;
           margin-bottom: 0;

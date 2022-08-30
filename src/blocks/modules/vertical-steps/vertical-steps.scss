@@ -1,38 +1,65 @@
-$verticalSteps: ".vertical-steps";
+$verticalSteps: '.vertical-steps';
 
-.vertical-steps {
+#{$verticalSteps} {
   &__container {
     display: grid;
     grid-template-columns: minmax(300px, 370px) minmax(650px, 770px);
     column-gap: 30px;
     margin-bottom: 160px;
+    @include media('<=desktop') {
+      display: block;
+      margin-bottom: 61px;
+      padding-right: 0;
+    }
   }
 
   &__title {
+    @include media('<=desktop') {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__swiper {
+    @include media('<=desktop') {
+      padding-right: 10px;
+    }
+    &.swiper {
+    }
+    .swiper-wrapper {
+      display: block;
+      height: auto;
+      @include media('<=desktop') {
+        display: flex;
+        height: 100%;
+      }
+    }
+    .swiper-slide {
+    }
+    .swiper-button-prev {
+    }
+    .swiper-button-next {
+    }
+    .swiper-scrollbar {
+    }
   }
 
   &__content {
   }
 
   &__item {
+    position: relative;
     display: grid;
     grid-template-columns: 170px minmax((450px, 1fr));
     column-gap: 50px;
     margin-bottom: 120px;
+    @include media('<=desktop') {
+      display: block;
+      margin-bottom: 0;
+      overflow: hidden;
+      height: auto;
+    }
     &:last-child {
       margin-bottom: 0;
-    }
-    &:hover,
-    &:focus {
-      #{$verticalSteps} {
-        &__item-number {
-          background-color: $blue1;
-          color: #fff;
-        }
-        &__item-title {
-          text-decoration-color: $blue1;
-        }
-      }
     }
     &:first-child {
       #{$verticalSteps} {
@@ -48,6 +75,31 @@ $verticalSteps: ".vertical-steps";
         &__item-number {
           &::after {
             display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__item-overflow-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 25;
+    &:hover,
+    &:focus {
+      ~ #{$verticalSteps} {
+         &__item-number {
+          background-color: $blue1;
+          color: #fff;
+        }
+        &__item-content {
+          #{$verticalSteps} {
+            &__item-title {
+              text-decoration-color: $blue1;
+            }
           }
         }
       }
@@ -72,8 +124,16 @@ $verticalSteps: ".vertical-steps";
 
     transition: all 0.3s ease;
 
+    @include media('<=desktop') {
+      font-size: 13px;
+      line-height: 18px;
+      height: 50px;
+      width: 50px;
+      margin-bottom: 20px;
+    }
+
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: -11px;
       left: 0;
@@ -81,17 +141,28 @@ $verticalSteps: ".vertical-steps";
       height: 10px;
       background-color: #fff;
       z-index: 10;
+      @include media('<=desktop') {
+        display: none;
+      }
     }
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: calc(100% + 11px);
       left: 50%;
       transform: translateX(-50%);
       width: 1px;
       height: 200px;
-      background-color: #C4C8D2;
+      background-color: #c4c8d2;
       z-index: 5;
+      @include media('<=desktop') {
+        transform: unset;
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(100% + 10px);
+        width: 100vw;
+        height: 1px;
+      }
     }
   }
 
@@ -107,16 +178,44 @@ $verticalSteps: ".vertical-steps";
     text-decoration-color: transparent;
     text-underline-offset: 2px;
     transition: all 0.3s ease;
+    @include media('<=desktop') {
+      margin-bottom: 15px;
+    }
+    @include media('<=tablet') {
+      font-size: 13px;
+      line-height: 20px;
+    }
   }
 
   &__item-list {
+    position: relative;
     padding-left: 25px;
     color: $black2;
     font-size: 16px;
     line-height: 33px;
     list-style-type: decimal;
+    z-index: 35;
+    @include media('<=tablet') {
+      font-size: 13px;
+      line-height: 20px;
+    }
   }
 
   &__item-list-element {
+    @include media('<=tablet') {
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      @include media('<=tablet') {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      position: relative;
+      z-index: 30;
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
   }
 }

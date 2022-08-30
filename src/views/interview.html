@@ -1,508 +1,608 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>gulp-scss-starter</title>
-        <meta name="theme-color" content="#fff">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
-        <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
-        <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
-        <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
-        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
-        <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-        <link rel="stylesheet" href="styles/main.css">
-    </head>
-    <body>
-        @@include("../blocks/modules/header/header.html")
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>gulp-scss-starter</title>
+    <meta name="theme-color" content="#fff" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon" />
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png" />
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png" />
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <!-- @@include("../blocks/modules/header/header.html") -->
+    <div class="horizontal-slider horizontal-slider_kolonki horizontal-slider_clear-title">
+      <div class="container horizontal-slider__container">
+        <p class="title horizontal-slider__title">ОБСУЖДАЕМЫЕ ИНТЕРВЬЮ</p>
+        <div id="horiontalSwiper1" class="swiper horizontal-slider__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="ui-vertical-card">
+                <a href="/" class="ui-vertical-card__overlay-link"></a>
+                <div class="ui-vertical-card__wrapper">
+                  <div class="ui-vertical-card__img-wrapper">
+                    <div class="ui-vertical-card__img-text-icon">
+                      <span class="title title_6 ui-vertical-card__img-text">Читать интервью</span>
+                      <img src="./img/icons/icon-arrow45-white.svg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img-icon" />
+                    </div>
+                    <img src="./img/images/ui-horizontal-card-img.jpg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img" />
+                    <div class="overlay-description overlay-description_vertical-card ui-vertical-card__overlay-description">
+                      <div class="overlay-description__wrapper">
+                        <div class="overlay-description__top">
+                          <time datetime="2022-06-12" class="overlay-description__top-date">12 июня 2022</time>
+                          <a href="#tag" class="overlay-description__top-tag tag tag_sm tag_blue">#Кредиты</a>
+                        </div>
+                        <div class="overlay-description__main-content">
+                          <p class="overlay-description__description">Соловьева Виктория</p>
+                          <p class="title title_5 overlay-description__title">
+                            Иванов Иван <br />
+                            Иваныч
+                          </p>
+                        </div>
+                        <div class="overlay-description__bottom">
+                          <p class="overlay-description__bottom-description">Кредит под залог автомобиля: как это работает и нужна ли регистрация на машину</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-        <div class="horizontal-slider horizontal-slider_kolonki horizontal-slider_clear-title">
-          <div class="container horizontal-slider__container">
-            <p class="title horizontal-slider__title">ОБСУЖДАЕМЫЕ ИНТЕРВЬЮ</p>
-            <div id="horiontalSwiper1" class="swiper horizontal-slider__swiper">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-        
-                <div class="swiper-slide">
-                  <div class="ui-vertical-card">
-                    <a href="/" class="ui-vertical-card__overlay-link"></a>
-                    <div class="ui-vertical-card__wrapper">
-                      <div class="ui-vertical-card__img-wrapper">
-                        <div class="ui-vertical-card__img-text-icon">
-                          <span class="title title_6 ui-vertical-card__img-text">Читать интервью</span>
-                          <img
-                            src="./img/icons/icon-arrow45-white.svg"
-                            alt="Иванов Иван Иваныч"
-                            class="ui-vertical-card__img-icon"
-                          />
-                        </div>
-                        <img
-                          src="./img/images/ui-horizontal-card-img.jpg"
-                          alt="Иванов Иван Иваныч"
-                          class="ui-vertical-card__img"
-                        />
-                      </div>
-                  
-                      <div class="ui-vertical-card__content">
-                        <div class="ui-vertical-card__date-tag">
-                          <p class="text text_sm ui-vertical-card__date">12 июля 2022</p>
-                          <a href="/rubrik" class="tag tag_sm ui-vertical-card__tag"
-                            >Рубрика</a
-                          >
-                        </div>
-                        <p class="title title_4 ui-vertical-card__title">Иванов Иван Иваныч</p>
-                        <p class="text text_md ui-vertical-card__description">
-                          Кредит под залог автомобиля: как это работает и нужна ли регистрация на
-                          машину
-                        </p>
-                      </div>
+                  <div class="ui-vertical-card__content">
+                    <div class="ui-vertical-card__date-tag">
+                      <p class="text text_sm ui-vertical-card__date">12 июля 2022</p>
+                      <a href="/rubrik" class="tag tag_sm ui-vertical-card__tag">Рубрика</a>
                     </div>
+                    <p class="title title_4 ui-vertical-card__title">Иванов Иван Иваныч</p>
+                    <p class="text text_md ui-vertical-card__description">Кредит под залог автомобиля: как это работает и нужна ли регистрация на машину</p>
                   </div>
-                </div>
-        
-                <div class="swiper-slide">
-                  <div class="ui-vertical-card">
-                    <a href="/" class="ui-vertical-card__overlay-link"></a>
-                    <div class="ui-vertical-card__wrapper">
-                      <div class="ui-vertical-card__img-wrapper">
-                        <div class="ui-vertical-card__img-text-icon">
-                          <span class="title title_6 ui-vertical-card__img-text">Читать интервью</span>
-                          <img
-                            src="./img/icons/icon-arrow45-white.svg"
-                            alt="Иванов Иван Иваныч"
-                            class="ui-vertical-card__img-icon"
-                          />
-                        </div>
-                        <img
-                          src="./img/images/ui-horizontal-card-img.jpg"
-                          alt="Иванов Иван Иваныч"
-                          class="ui-vertical-card__img"
-                        />
-                      </div>
-                  
-                      <div class="ui-vertical-card__content">
-                        <div class="ui-vertical-card__date-tag">
-                          <p class="text text_sm ui-vertical-card__date">12 июля 2022</p>
-                          <a href="/rubrik" class="tag tag_sm ui-vertical-card__tag"
-                            >Рубрика</a
-                          >
-                        </div>
-                        <p class="title title_4 ui-vertical-card__title">Иванов Иван Иваныч</p>
-                        <p class="text text_md ui-vertical-card__description">
-                          Кредит под залог автомобиля: как это работает и нужна ли регистрация на
-                          машину
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-        
-                <div class="swiper-slide">
-                  <div class="ui-vertical-card">
-                    <a href="/" class="ui-vertical-card__overlay-link"></a>
-                    <div class="ui-vertical-card__wrapper">
-                      <div class="ui-vertical-card__img-wrapper">
-                        <div class="ui-vertical-card__img-text-icon">
-                          <span class="title title_6 ui-vertical-card__img-text">Читать интервью</span>
-                          <img
-                            src="./img/icons/icon-arrow45-white.svg"
-                            alt="Иванов Иван Иваныч"
-                            class="ui-vertical-card__img-icon"
-                          />
-                        </div>
-                        <img
-                          src="./img/images/ui-horizontal-card-img.jpg"
-                          alt="Иванов Иван Иваныч"
-                          class="ui-vertical-card__img"
-                        />
-                      </div>
-                  
-                      <div class="ui-vertical-card__content">
-                        <div class="ui-vertical-card__date-tag">
-                          <p class="text text_sm ui-vertical-card__date">12 июля 2022</p>
-                          <a href="/rubrik" class="tag tag_sm ui-vertical-card__tag"
-                            >Рубрика</a
-                          >
-                        </div>
-                        <p class="title title_4 ui-vertical-card__title">Иванов Иван Иваныч</p>
-                        <p class="text text_md ui-vertical-card__description">
-                          Кредит под залог автомобиля: как это работает и нужна ли регистрация на
-                          машину
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-        
-                <div class="swiper-slide">
-                  <div class="ui-vertical-card">
-                    <a href="/" class="ui-vertical-card__overlay-link"></a>
-                    <div class="ui-vertical-card__wrapper">
-                      <div class="ui-vertical-card__img-wrapper">
-                        <div class="ui-vertical-card__img-text-icon">
-                          <span class="title title_6 ui-vertical-card__img-text">Читать интервью</span>
-                          <img
-                            src="./img/icons/icon-arrow45-white.svg"
-                            alt="Иванов Иван Иваныч"
-                            class="ui-vertical-card__img-icon"
-                          />
-                        </div>
-                        <img
-                          src="./img/images/ui-horizontal-card-img.jpg"
-                          alt="Иванов Иван Иваныч"
-                          class="ui-vertical-card__img"
-                        />
-                      </div>
-                  
-                      <div class="ui-vertical-card__content">
-                        <div class="ui-vertical-card__date-tag">
-                          <p class="text text_sm ui-vertical-card__date">12 июля 2022</p>
-                          <a href="/rubrik" class="tag tag_sm ui-vertical-card__tag"
-                            >Рубрика</a
-                          >
-                        </div>
-                        <p class="title title_4 ui-vertical-card__title">Иванов Иван Иваныч</p>
-                        <p class="text text_md ui-vertical-card__description">
-                          Кредит под залог автомобиля: как это работает и нужна ли регистрация на
-                          машину
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-        
-              </div>
-        
-              <div class="horizontal-slider__bottom">
-                <div class="horizontal-slider__links"></div>
-                <div class="swiper-scrollbar horizontal-slider__scrollbar"></div>
-                <div class="horizontal-slider__navigation">
-                  <button class="link-with-icon horizontal-slider__navigation-item horizontal-slider__navigation-item_prev">
-                    <svg
-                      class="link-with-icon__icon"
-                      width="15" 
-                      height="11" 
-                      viewBox="0 0 15 11"
-                      fill="none" 
-                      xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15 5.5H1M1 5.5L5.5 10M1 5.5L5.5 1"/>
-                    </svg>
-                  </button>
-                  <button class="link-with-icon horizontal-slider__navigation-item horizontal-slider__navigation-item_next">
-                    <svg class="link-with-icon__icon" width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 5.5H14M14 5.5L9.5 10M14 5.5L9.5 1"/>
-                    </svg>
-                  </button>
-                  
                 </div>
               </div>
-              
             </div>
-          </div>
-        </div>
-
-        <div class="ui-form-with-items ui-form-with-items_kolonki">
-          <div class="container ui-form-with-items__container">
-            <p class="title title_2 ui-form-with-items__title">ВСЕ ИНТЕРВЬЮ</p>
-            <div class="ui-form-with-items__form-content">
-              <div class="ui-form-with-items__form-wrapper">
-                <form class="search-form search-form_kolonki ui-form-with-items__form">
-                  <p class="search-form__title title title_4">Фильтр</p>
-                  
-                  <div class="ui-checkbox ui-checkbox_lg search-form__group">
-                    <input id="credit" class="ui-checkbox__input" type="checkbox" />
-                    <button class="ui-checkbox__button">
-                      <svg
-                        class="ui-checkbox__icon"
-                        width="10"
-                        height="8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M1 5l3 2 5-6" />
-                      </svg>
-                    </button>
-                    <label for="credit" class="ui-checkbox__label">Кредит</label>
+            <div class="swiper-slide">
+              <div class="ui-vertical-card">
+                <a href="/" class="ui-vertical-card__overlay-link"></a>
+                <div class="ui-vertical-card__wrapper">
+                  <div class="ui-vertical-card__img-wrapper">
+                    <div class="ui-vertical-card__img-text-icon">
+                      <span class="title title_6 ui-vertical-card__img-text">Читать интервью</span>
+                      <img src="./img/icons/icon-arrow45-white.svg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img-icon" />
+                    </div>
+                    <img src="./img/images/ui-horizontal-card-img.jpg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img" />
+                    <div class="overlay-description overlay-description_vertical-card ui-vertical-card__overlay-description">
+                      <div class="overlay-description__wrapper">
+                        <div class="overlay-description__top">
+                          <time datetime="2022-06-12" class="overlay-description__top-date">12 июня 2022</time>
+                          <a href="#tag" class="overlay-description__top-tag tag tag_sm tag_blue">#Кредиты</a>
+                        </div>
+                        <div class="overlay-description__main-content">
+                          <p class="overlay-description__description">Соловьева Виктория</p>
+                          <p class="title title_5 overlay-description__title">
+                            Иванов Иван <br />
+                            Иваныч
+                          </p>
+                        </div>
+                        <div class="overlay-description__bottom">
+                          <p class="overlay-description__bottom-description">Кредит под залог автомобиля: как это работает и нужна ли регистрация на машину</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
-                  <div class="ui-checkbox ui-checkbox_lg search-form__group">
-                    <input id="bankrotstvo" class="ui-checkbox__input" type="checkbox" />
-                    <button class="ui-checkbox__button">
-                      <svg
-                        class="ui-checkbox__icon"
-                        width="10"
-                        height="8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M1 5l3 2 5-6" />
-                      </svg>
-                    </button>
-                    <label for="bankrotstvo" class="ui-checkbox__label">Банкротство</label>
+                  <div class="ui-vertical-card__content">
+                    <div class="ui-vertical-card__date-tag">
+                      <p class="text text_sm ui-vertical-card__date">12 июля 2022</p>
+                      <a href="/rubrik" class="tag tag_sm ui-vertical-card__tag">Рубрика</a>
+                    </div>
+                    <p class="title title_4 ui-vertical-card__title">Иванов Иван Иваныч</p>
+                    <p class="text text_md ui-vertical-card__description">Кредит под залог автомобиля: как это работает и нужна ли регистрация на машину</p>
                   </div>
-
-                  <div class="ui-checkbox ui-checkbox_lg search-form__group">
-                    <input id="ipoteka" class="ui-checkbox__input" type="checkbox" />
-                    <button class="ui-checkbox__button">
-                      <svg
-                        class="ui-checkbox__icon"
-                        width="10"
-                        height="8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M1 5l3 2 5-6" />
-                      </svg>
-                    </button>
-                    <label for="ipoteka" class="ui-checkbox__label">Ипотека</label>
-                  </div>
-
-                  <div class="ui-checkbox ui-checkbox_lg search-form__group">
-                    <input id="kollektors" class="ui-checkbox__input" type="checkbox" />
-                    <button class="ui-checkbox__button">
-                      <svg
-                        class="ui-checkbox__icon"
-                        width="10"
-                        height="8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M1 5l3 2 5-6" />
-                      </svg>
-                    </button>
-                    <label for="kollektors" class="ui-checkbox__label">Коллекторы</label>
-                  </div>
-
-                  <div class="ui-checkbox ui-checkbox_lg search-form__group">
-                    <input id="banki" class="ui-checkbox__input" type="checkbox" />
-                    <button class="ui-checkbox__button">
-                      <svg
-                        class="ui-checkbox__icon"
-                        width="10"
-                        height="8"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M1 5l3 2 5-6" />
-                      </svg>
-                    </button>
-                    <label for="banki" class="ui-checkbox__label">Банки</label>
-                  </div>
-                </form>
+                </div>
               </div>
-              <div class="ui-form-with-items__content">
-                <div class="ui-form-with-items__content-items">
-
-                  <div class="ui-horizontal-card ui-horizontal-card_overlay ui-form-with-items__content-item">
-                    <div class="ui-horizontal-card__wrapper">
-                      <div class="ui-horizontal-card__img-wrapper">
-                        <img
-                          src="./img/images/ui-horizontal-card-img.jpg"
-                          alt="Соловьева Виктория Викторовна"
-                          class="ui-horizontal-card__img"
-                        />
-                        <div class="ui-horizontal-card__overlay">
-                          <p class="ui-horizontal-card__overlay-title">Соловьева Виктория</p>
-                          <p class="ui-horizontal-card__overlay-subtitle">
-                            Генеральный директор <br />
-                            «МЦФБ» Банкрот Консалт
+            </div>
+            <div class="swiper-slide">
+              <div class="ui-vertical-card">
+                <a href="/" class="ui-vertical-card__overlay-link"></a>
+                <div class="ui-vertical-card__wrapper">
+                  <div class="ui-vertical-card__img-wrapper">
+                    <div class="ui-vertical-card__img-text-icon">
+                      <span class="title title_6 ui-vertical-card__img-text">Читать интервью</span>
+                      <img src="./img/icons/icon-arrow45-white.svg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img-icon" />
+                    </div>
+                    <img src="./img/images/ui-horizontal-card-img.jpg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img" />
+                    <div class="overlay-description overlay-description_vertical-card ui-vertical-card__overlay-description">
+                      <div class="overlay-description__wrapper">
+                        <div class="overlay-description__top">
+                          <time datetime="2022-06-12" class="overlay-description__top-date">12 июня 2022</time>
+                          <a href="#tag" class="overlay-description__top-tag tag tag_sm tag_blue">#Кредиты</a>
+                        </div>
+                        <div class="overlay-description__main-content">
+                          <p class="overlay-description__description">Соловьева Виктория</p>
+                          <p class="title title_5 overlay-description__title">
+                            Иванов Иван <br />
+                            Иваныч
                           </p>
                         </div>
-                      </div>
-                      <div class="ui-horizontal-card__content">
-                        <p class="ui-horizontal-card__title">Кредит под залог автомобиля?</p>
-                        <p class="text text_sm ui-horizontal-card__subtitle">
-                          Cбер предлагает своим клиентам возместить рубли за бонусы <br />
-                          от СберСпасибо после совершения платежей в СберБанк <br />
-                          Онлайн. С момента запуска сервиса в конце 2020 года этой <br />
-                          возможностью уже воспользовались более 2 миллионов <br />
-                          участников программы лояльности Сбера. Они списали более <br />
-                          3 миллиардов бонусов за возмещение платежей.
-                        </p>
-                        <div class="ui-horizontal-card__tags-date">
-                          <div class="ui-horizontal-card__tags">
-                            <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Кредиты</a>
-                            <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банкротство</a>
-                            <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банки</a>
-                          </div>
-                          <p class="text text_sm ui-horizontal-card__date">12 июня 2022</p>
+                        <div class="overlay-description__bottom">
+                          <p class="overlay-description__bottom-description">Кредит под залог автомобиля: как это работает и нужна ли регистрация на машину</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="ui-horizontal-card ui-horizontal-card_overlay ui-form-with-items__content-item">
-                    <div class="ui-horizontal-card__wrapper">
-                      <div class="ui-horizontal-card__img-wrapper">
-                        <img
-                          src="./img/images/ui-horizontal-card-img.jpg"
-                          alt="Соловьева Виктория Викторовна"
-                          class="ui-horizontal-card__img"
-                        />
-                        <div class="ui-horizontal-card__overlay">
-                          <p class="ui-horizontal-card__overlay-title">Соловьева Виктория</p>
-                          <p class="ui-horizontal-card__overlay-subtitle">
-                            Генеральный директор <br />
-                            «МЦФБ» Банкрот Консалт
+                  <div class="ui-vertical-card__content">
+                    <div class="ui-vertical-card__date-tag">
+                      <p class="text text_sm ui-vertical-card__date">12 июля 2022</p>
+                      <a href="/rubrik" class="tag tag_sm ui-vertical-card__tag">Рубрика</a>
+                    </div>
+                    <p class="title title_4 ui-vertical-card__title">Иванов Иван Иваныч</p>
+                    <p class="text text_md ui-vertical-card__description">Кредит под залог автомобиля: как это работает и нужна ли регистрация на машину</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="ui-vertical-card">
+                <a href="/" class="ui-vertical-card__overlay-link"></a>
+                <div class="ui-vertical-card__wrapper">
+                  <div class="ui-vertical-card__img-wrapper">
+                    <div class="ui-vertical-card__img-text-icon">
+                      <span class="title title_6 ui-vertical-card__img-text">Читать интервью</span>
+                      <img src="./img/icons/icon-arrow45-white.svg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img-icon" />
+                    </div>
+                    <img src="./img/images/ui-horizontal-card-img.jpg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img" />
+                    <div class="overlay-description overlay-description_vertical-card ui-vertical-card__overlay-description">
+                      <div class="overlay-description__wrapper">
+                        <div class="overlay-description__top">
+                          <time datetime="2022-06-12" class="overlay-description__top-date">12 июня 2022</time>
+                          <a href="#tag" class="overlay-description__top-tag tag tag_sm tag_blue">#Кредиты</a>
+                        </div>
+                        <div class="overlay-description__main-content">
+                          <p class="overlay-description__description">Соловьева Виктория</p>
+                          <p class="title title_5 overlay-description__title">
+                            Иванов Иван <br />
+                            Иваныч
                           </p>
                         </div>
-                      </div>
-                      <div class="ui-horizontal-card__content">
-                        <p class="ui-horizontal-card__title">Кредит под залог автомобиля?</p>
-                        <p class="text text_sm ui-horizontal-card__subtitle">
-                          Cбер предлагает своим клиентам возместить рубли за бонусы <br />
-                          от СберСпасибо после совершения платежей в СберБанк <br />
-                          Онлайн. С момента запуска сервиса в конце 2020 года этой <br />
-                          возможностью уже воспользовались более 2 миллионов <br />
-                          участников программы лояльности Сбера. Они списали более <br />
-                          3 миллиардов бонусов за возмещение платежей.
-                        </p>
-                        <div class="ui-horizontal-card__tags-date">
-                          <div class="ui-horizontal-card__tags">
-                            <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Кредиты</a>
-                            <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банкротство</a>
-                            <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банки</a>
-                          </div>
-                          <p class="text text_sm ui-horizontal-card__date">12 июня 2022</p>
+                        <div class="overlay-description__bottom">
+                          <p class="overlay-description__bottom-description">Кредит под залог автомобиля: как это работает и нужна ли регистрация на машину</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="ui-horizontal-card ui-horizontal-card_overlay ui-form-with-items__content-item">
-                    <div class="ui-horizontal-card__wrapper">
-                      <div class="ui-horizontal-card__img-wrapper">
-                        <img
-                          src="./img/images/ui-horizontal-card-img.jpg"
-                          alt="Соловьева Виктория Викторовна"
-                          class="ui-horizontal-card__img"
-                        />
-                        <div class="ui-horizontal-card__overlay">
-                          <p class="ui-horizontal-card__overlay-title">Соловьева Виктория</p>
-                          <p class="ui-horizontal-card__overlay-subtitle">
-                            Генеральный директор <br />
-                            «МЦФБ» Банкрот Консалт
+                  <div class="ui-vertical-card__content">
+                    <div class="ui-vertical-card__date-tag">
+                      <p class="text text_sm ui-vertical-card__date">12 июля 2022</p>
+                      <a href="/rubrik" class="tag tag_sm ui-vertical-card__tag">Рубрика</a>
+                    </div>
+                    <p class="title title_4 ui-vertical-card__title">Иванов Иван Иваныч</p>
+                    <p class="text text_md ui-vertical-card__description">Кредит под залог автомобиля: как это работает и нужна ли регистрация на машину</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="ui-vertical-card">
+                <a href="/" class="ui-vertical-card__overlay-link"></a>
+                <div class="ui-vertical-card__wrapper">
+                  <div class="ui-vertical-card__img-wrapper">
+                    <div class="ui-vertical-card__img-text-icon">
+                      <span class="title title_6 ui-vertical-card__img-text">Читать интервью</span>
+                      <img src="./img/icons/icon-arrow45-white.svg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img-icon" />
+                    </div>
+                    <img src="./img/images/ui-horizontal-card-img.jpg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img" />
+                    <div class="overlay-description overlay-description_vertical-card ui-vertical-card__overlay-description">
+                      <div class="overlay-description__wrapper">
+                        <div class="overlay-description__top">
+                          <time datetime="2022-06-12" class="overlay-description__top-date">12 июня 2022</time>
+                          <a href="#tag" class="overlay-description__top-tag tag tag_sm tag_blue">#Кредиты</a>
+                        </div>
+                        <div class="overlay-description__main-content">
+                          <p class="overlay-description__description">Соловьева Виктория</p>
+                          <p class="title title_5 overlay-description__title">
+                            Иванов Иван <br />
+                            Иваныч
                           </p>
                         </div>
-                      </div>
-                      <div class="ui-horizontal-card__content">
-                        <p class="ui-horizontal-card__title">Кредит под залог автомобиля?</p>
-                        <p class="text text_sm ui-horizontal-card__subtitle">
-                          Cбер предлагает своим клиентам возместить рубли за бонусы <br />
-                          от СберСпасибо после совершения платежей в СберБанк <br />
-                          Онлайн. С момента запуска сервиса в конце 2020 года этой <br />
-                          возможностью уже воспользовались более 2 миллионов <br />
-                          участников программы лояльности Сбера. Они списали более <br />
-                          3 миллиардов бонусов за возмещение платежей.
-                        </p>
-                        <div class="ui-horizontal-card__tags-date">
-                          <div class="ui-horizontal-card__tags">
-                            <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Кредиты</a>
-                            <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банкротство</a>
-                            <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банки</a>
-                          </div>
-                          <p class="text text_sm ui-horizontal-card__date">12 июня 2022</p>
+                        <div class="overlay-description__bottom">
+                          <p class="overlay-description__bottom-description">Кредит под залог автомобиля: как это работает и нужна ли регистрация на машину</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="ui-horizontal-card ui-horizontal-card_overlay ui-form-with-items__content-item">
-                    <div class="ui-horizontal-card__wrapper">
-                      <div class="ui-horizontal-card__img-wrapper">
-                        <img
-                          src="./img/images/ui-horizontal-card-img.jpg"
-                          alt="Соловьева Виктория Викторовна"
-                          class="ui-horizontal-card__img"
-                        />
-                        <div class="ui-horizontal-card__overlay">
-                          <p class="ui-horizontal-card__overlay-title">Соловьева Виктория</p>
-                          <p class="ui-horizontal-card__overlay-subtitle">
-                            Генеральный директор <br />
-                            «МЦФБ» Банкрот Консалт
-                          </p>
-                        </div>
-                      </div>
-                      <div class="ui-horizontal-card__content">
-                        <p class="ui-horizontal-card__title">Кредит под залог автомобиля?</p>
-                        <p class="text text_sm ui-horizontal-card__subtitle">
-                          Cбер предлагает своим клиентам возместить рубли за бонусы <br />
-                          от СберСпасибо после совершения платежей в СберБанк <br />
-                          Онлайн. С момента запуска сервиса в конце 2020 года этой <br />
-                          возможностью уже воспользовались более 2 миллионов <br />
-                          участников программы лояльности Сбера. Они списали более <br />
-                          3 миллиардов бонусов за возмещение платежей.
-                        </p>
-                        <div class="ui-horizontal-card__tags-date">
-                          <div class="ui-horizontal-card__tags">
-                            <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Кредиты</a>
-                            <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банкротство</a>
-                            <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банки</a>
-                          </div>
-                          <p class="text text_sm ui-horizontal-card__date">12 июня 2022</p>
-                        </div>
-                      </div>
+                  <div class="ui-vertical-card__content">
+                    <div class="ui-vertical-card__date-tag">
+                      <p class="text text_sm ui-vertical-card__date">12 июля 2022</p>
+                      <a href="/rubrik" class="tag tag_sm ui-vertical-card__tag">Рубрика</a>
                     </div>
-                  </div>
-
-                  <div class="ui-horizontal-card ui-horizontal-card_overlay ui-form-with-items__content-item">
-                    <div class="ui-horizontal-card__wrapper">
-                      <div class="ui-horizontal-card__img-wrapper">
-                        <img
-                          src="./img/images/ui-horizontal-card-img.jpg"
-                          alt="Соловьева Виктория Викторовна"
-                          class="ui-horizontal-card__img"
-                        />
-                        <div class="ui-horizontal-card__overlay">
-                          <p class="ui-horizontal-card__overlay-title">Соловьева Виктория</p>
-                          <p class="ui-horizontal-card__overlay-subtitle">
-                            Генеральный директор <br />
-                            «МЦФБ» Банкрот Консалт
-                          </p>
-                        </div>
-                      </div>
-                      <div class="ui-horizontal-card__content">
-                        <p class="ui-horizontal-card__title">Кредит под залог автомобиля?</p>
-                        <p class="text text_sm ui-horizontal-card__subtitle">
-                          Cбер предлагает своим клиентам возместить рубли за бонусы <br />
-                          от СберСпасибо после совершения платежей в СберБанк <br />
-                          Онлайн. С момента запуска сервиса в конце 2020 года этой <br />
-                          возможностью уже воспользовались более 2 миллионов <br />
-                          участников программы лояльности Сбера. Они списали более <br />
-                          3 миллиардов бонусов за возмещение платежей.
-                        </p>
-                        <div class="ui-horizontal-card__tags-date">
-                          <div class="ui-horizontal-card__tags">
-                            <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Кредиты</a>
-                            <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банкротство</a>
-                            <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банки</a>
-                          </div>
-                          <p class="text text_sm ui-horizontal-card__date">12 июня 2022</p>
-                        </div>
-                      </div>
-                    </div>
+                    <p class="title title_4 ui-vertical-card__title">Иванов Иван Иваныч</p>
+                    <p class="text text_md ui-vertical-card__description">Кредит под залог автомобиля: как это работает и нужна ли регистрация на машину</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="horizontal-slider__bottom">
+            <div class="horizontal-slider__links"></div>
+            <div class="swiper-scrollbar horizontal-slider__scrollbar"></div>
+            <div class="horizontal-slider__navigation">
+              <button class="link-with-icon horizontal-slider__navigation-item horizontal-slider__navigation-item_prev">
+                <svg class="link-with-icon__icon" width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 5.5H1M1 5.5L5.5 10M1 5.5L5.5 1" />
+                </svg>
+              </button>
+              <button class="link-with-icon horizontal-slider__navigation-item horizontal-slider__navigation-item_next">
+                <svg class="link-with-icon__icon" width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 5.5H14M14 5.5L9.5 10M14 5.5L9.5 1" />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
-        
-        
-        @@include("../blocks/modules/footer/footer.html")
-        <script src="js/vendor.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+      </div>
+    </div>
+
+    <div class="ui-form-with-items ui-form-with-items_kolonki">
+      <div class="container ui-form-with-items__container">
+        <p class="title title_2 ui-form-with-items__title">ВСЕ ИНТЕРВЬЮ</p>
+        <div class="ui-form-with-items__form-content">
+          <div class="ui-form-with-items__form-wrapper">
+            <form data-component="searchForm" class="search-form search-form_kolonki ui-form-with-items__form">
+              <div data-component="searchFormHeader" class="search-form__header">
+                <p class="search-form__header-title">Фильтр</p>
+                <img width="13" height="13" src="./img/icons/icon-dropdown-back-blue_alt.svg" alt="Фильтр" class="search-form__header-icon" />
+              </div>
+              <div class="search-form__wrapper">
+                <p class="search-form__title title title_4">Фильтр</p>
+
+                <div class="ui-checkbox ui-checkbox_lg search-form__group">
+                  <input id="credit" class="ui-checkbox__input" type="checkbox" />
+                  <button class="ui-checkbox__button">
+                    <svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5l3 2 5-6" />
+                    </svg>
+                  </button>
+                  <label for="credit" class="ui-checkbox__label">Кредит</label>
+                </div>
+
+                <div class="ui-checkbox ui-checkbox_lg search-form__group">
+                  <input id="bankrotstvo" class="ui-checkbox__input" type="checkbox" />
+                  <button class="ui-checkbox__button">
+                    <svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5l3 2 5-6" />
+                    </svg>
+                  </button>
+                  <label for="bankrotstvo" class="ui-checkbox__label">Банкротство</label>
+                </div>
+
+                <div class="ui-checkbox ui-checkbox_lg search-form__group">
+                  <input id="ipoteka" class="ui-checkbox__input" type="checkbox" />
+                  <button class="ui-checkbox__button">
+                    <svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5l3 2 5-6" />
+                    </svg>
+                  </button>
+                  <label for="ipoteka" class="ui-checkbox__label">Ипотека</label>
+                </div>
+
+                <div class="ui-checkbox ui-checkbox_lg search-form__group">
+                  <input id="kollektors" class="ui-checkbox__input" type="checkbox" />
+                  <button class="ui-checkbox__button">
+                    <svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5l3 2 5-6" />
+                    </svg>
+                  </button>
+                  <label for="kollektors" class="ui-checkbox__label">Коллекторы</label>
+                </div>
+
+                <div class="ui-checkbox ui-checkbox_lg search-form__group">
+                  <input id="banki" class="ui-checkbox__input" type="checkbox" />
+                  <button class="ui-checkbox__button">
+                    <svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5l3 2 5-6" />
+                    </svg>
+                  </button>
+                  <label for="banki" class="ui-checkbox__label">Банки</label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="ui-form-with-items__content">
+            <div class="ui-form-with-items__content-items">
+              <div class="ui-horizontal-card ui-horizontal-card_overlay ui-form-with-items__content-item">
+                <div class="ui-horizontal-card__wrapper">
+                  <div class="ui-horizontal-card__img-wrapper">
+                    <img src="./img/images/ui-horizontal-card-img.jpg" alt="Соловьева Виктория Викторовна" class="ui-horizontal-card__img" />
+
+                    <div class="overlay-description ui-horizontal-card__overlay-description">
+                      <div class="overlay-description__wrapper">
+                        <div class="overlay-description__top">
+                          <time datetime="2022-06-12" class="overlay-description__top-date">12 июня 2022</time>
+                          <a href="#tag" class="overlay-description__top-tag tag tag_sm tag_blue">#Кредиты</a>
+                        </div>
+                        <div class="overlay-description__main-content">
+                          <p class="overlay-description__description">Соловьева Виктория</p>
+                          <p class="title title_5 overlay-description__title">
+                            Иванов Иван <br />
+                            Иваныч
+                          </p>
+                        </div>
+                        <div class="overlay-description__bottom">
+                          <p class="overlay-description__bottom-description">Cбер предлагает своим клиентам возместить рубли за бонусы...</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ui-horizontal-card__overlay">
+                      <p class="ui-horizontal-card__overlay-title">Соловьева Виктория</p>
+                      <p class="ui-horizontal-card__overlay-subtitle">
+                        Генеральный директор <br />
+                        «МЦФБ» Банкрот Консалт
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ui-horizontal-card__content">
+                    <p class="ui-horizontal-card__title">Кредит под залог автомобиля?</p>
+                    <p class="text text_sm ui-horizontal-card__subtitle">
+                      Cбер предлагает своим клиентам возместить рубли за бонусы <br />
+                      от СберСпасибо после совершения платежей в СберБанк <br />
+                      Онлайн. С момента запуска сервиса в конце 2020 года этой <br />
+                      возможностью уже воспользовались более 2 миллионов <br />
+                      участников программы лояльности Сбера. Они списали более <br />
+                      3 миллиардов бонусов за возмещение платежей.
+                    </p>
+                    <div class="ui-horizontal-card__tags-date">
+                      <div class="ui-horizontal-card__tags">
+                        <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Кредиты</a>
+                        <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банкротство</a>
+                        <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банки</a>
+                      </div>
+                      <p class="text text_sm ui-horizontal-card__date">12 июня 2022</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ui-horizontal-card ui-horizontal-card_overlay ui-form-with-items__content-item">
+                <div class="ui-horizontal-card__wrapper">
+                  <div class="ui-horizontal-card__img-wrapper">
+                    <img src="./img/images/ui-horizontal-card-img.jpg" alt="Соловьева Виктория Викторовна" class="ui-horizontal-card__img" />
+
+                    <div class="overlay-description ui-horizontal-card__overlay-description">
+                      <div class="overlay-description__wrapper">
+                        <div class="overlay-description__top">
+                          <time datetime="2022-06-12" class="overlay-description__top-date">12 июня 2022</time>
+                          <a href="#tag" class="overlay-description__top-tag tag tag_sm tag_blue">#Кредиты</a>
+                        </div>
+                        <div class="overlay-description__main-content">
+                          <p class="overlay-description__description">Соловьева Виктория</p>
+                          <p class="title title_5 overlay-description__title">
+                            Иванов Иван <br />
+                            Иваныч
+                          </p>
+                        </div>
+                        <div class="overlay-description__bottom">
+                          <p class="overlay-description__bottom-description">Cбер предлагает своим клиентам возместить рубли за бонусы...</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ui-horizontal-card__overlay">
+                      <p class="ui-horizontal-card__overlay-title">Соловьева Виктория</p>
+                      <p class="ui-horizontal-card__overlay-subtitle">
+                        Генеральный директор <br />
+                        «МЦФБ» Банкрот Консалт
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ui-horizontal-card__content">
+                    <p class="ui-horizontal-card__title">Кредит под залог автомобиля?</p>
+                    <p class="text text_sm ui-horizontal-card__subtitle">
+                      Cбер предлагает своим клиентам возместить рубли за бонусы <br />
+                      от СберСпасибо после совершения платежей в СберБанк <br />
+                      Онлайн. С момента запуска сервиса в конце 2020 года этой <br />
+                      возможностью уже воспользовались более 2 миллионов <br />
+                      участников программы лояльности Сбера. Они списали более <br />
+                      3 миллиардов бонусов за возмещение платежей.
+                    </p>
+                    <div class="ui-horizontal-card__tags-date">
+                      <div class="ui-horizontal-card__tags">
+                        <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Кредиты</a>
+                        <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банкротство</a>
+                        <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банки</a>
+                      </div>
+                      <p class="text text_sm ui-horizontal-card__date">12 июня 2022</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ui-horizontal-card ui-horizontal-card_overlay ui-form-with-items__content-item">
+                <div class="ui-horizontal-card__wrapper">
+                  <div class="ui-horizontal-card__img-wrapper">
+                    <img src="./img/images/ui-horizontal-card-img.jpg" alt="Соловьева Виктория Викторовна" class="ui-horizontal-card__img" />
+
+                    <div class="overlay-description ui-horizontal-card__overlay-description">
+                      <div class="overlay-description__wrapper">
+                        <div class="overlay-description__top">
+                          <time datetime="2022-06-12" class="overlay-description__top-date">12 июня 2022</time>
+                          <a href="#tag" class="overlay-description__top-tag tag tag_sm tag_blue">#Кредиты</a>
+                        </div>
+                        <div class="overlay-description__main-content">
+                          <p class="overlay-description__description">Соловьева Виктория</p>
+                          <p class="title title_5 overlay-description__title">
+                            Иванов Иван <br />
+                            Иваныч
+                          </p>
+                        </div>
+                        <div class="overlay-description__bottom">
+                          <p class="overlay-description__bottom-description">Cбер предлагает своим клиентам возместить рубли за бонусы...</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ui-horizontal-card__overlay">
+                      <p class="ui-horizontal-card__overlay-title">Соловьева Виктория</p>
+                      <p class="ui-horizontal-card__overlay-subtitle">
+                        Генеральный директор <br />
+                        «МЦФБ» Банкрот Консалт
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ui-horizontal-card__content">
+                    <p class="ui-horizontal-card__title">Кредит под залог автомобиля?</p>
+                    <p class="text text_sm ui-horizontal-card__subtitle">
+                      Cбер предлагает своим клиентам возместить рубли за бонусы <br />
+                      от СберСпасибо после совершения платежей в СберБанк <br />
+                      Онлайн. С момента запуска сервиса в конце 2020 года этой <br />
+                      возможностью уже воспользовались более 2 миллионов <br />
+                      участников программы лояльности Сбера. Они списали более <br />
+                      3 миллиардов бонусов за возмещение платежей.
+                    </p>
+                    <div class="ui-horizontal-card__tags-date">
+                      <div class="ui-horizontal-card__tags">
+                        <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Кредиты</a>
+                        <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банкротство</a>
+                        <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банки</a>
+                      </div>
+                      <p class="text text_sm ui-horizontal-card__date">12 июня 2022</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ui-horizontal-card ui-horizontal-card_overlay ui-form-with-items__content-item">
+                <div class="ui-horizontal-card__wrapper">
+                  <div class="ui-horizontal-card__img-wrapper">
+                    <img src="./img/images/ui-horizontal-card-img.jpg" alt="Соловьева Виктория Викторовна" class="ui-horizontal-card__img" />
+
+                    <div class="overlay-description ui-horizontal-card__overlay-description">
+                      <div class="overlay-description__wrapper">
+                        <div class="overlay-description__top">
+                          <time datetime="2022-06-12" class="overlay-description__top-date">12 июня 2022</time>
+                          <a href="#tag" class="overlay-description__top-tag tag tag_sm tag_blue">#Кредиты</a>
+                        </div>
+                        <div class="overlay-description__main-content">
+                          <p class="overlay-description__description">Соловьева Виктория</p>
+                          <p class="title title_5 overlay-description__title">
+                            Иванов Иван <br />
+                            Иваныч
+                          </p>
+                        </div>
+                        <div class="overlay-description__bottom">
+                          <p class="overlay-description__bottom-description">Cбер предлагает своим клиентам возместить рубли за бонусы...</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ui-horizontal-card__overlay">
+                      <p class="ui-horizontal-card__overlay-title">Соловьева Виктория</p>
+                      <p class="ui-horizontal-card__overlay-subtitle">
+                        Генеральный директор <br />
+                        «МЦФБ» Банкрот Консалт
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ui-horizontal-card__content">
+                    <p class="ui-horizontal-card__title">Кредит под залог автомобиля?</p>
+                    <p class="text text_sm ui-horizontal-card__subtitle">
+                      Cбер предлагает своим клиентам возместить рубли за бонусы <br />
+                      от СберСпасибо после совершения платежей в СберБанк <br />
+                      Онлайн. С момента запуска сервиса в конце 2020 года этой <br />
+                      возможностью уже воспользовались более 2 миллионов <br />
+                      участников программы лояльности Сбера. Они списали более <br />
+                      3 миллиардов бонусов за возмещение платежей.
+                    </p>
+                    <div class="ui-horizontal-card__tags-date">
+                      <div class="ui-horizontal-card__tags">
+                        <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Кредиты</a>
+                        <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банкротство</a>
+                        <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банки</a>
+                      </div>
+                      <p class="text text_sm ui-horizontal-card__date">12 июня 2022</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ui-horizontal-card ui-horizontal-card_overlay ui-form-with-items__content-item">
+                <div class="ui-horizontal-card__wrapper">
+                  <div class="ui-horizontal-card__img-wrapper">
+                    <img src="./img/images/ui-horizontal-card-img.jpg" alt="Соловьева Виктория Викторовна" class="ui-horizontal-card__img" />
+
+                    <div class="overlay-description ui-horizontal-card__overlay-description">
+                      <div class="overlay-description__wrapper">
+                        <div class="overlay-description__top">
+                          <time datetime="2022-06-12" class="overlay-description__top-date">12 июня 2022</time>
+                          <a href="#tag" class="overlay-description__top-tag tag tag_sm tag_blue">#Кредиты</a>
+                        </div>
+                        <div class="overlay-description__main-content">
+                          <p class="overlay-description__description">Соловьева Виктория</p>
+                          <p class="title title_5 overlay-description__title">
+                            Иванов Иван <br />
+                            Иваныч
+                          </p>
+                        </div>
+                        <div class="overlay-description__bottom">
+                          <p class="overlay-description__bottom-description">Cбер предлагает своим клиентам возместить рубли за бонусы...</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ui-horizontal-card__overlay">
+                      <p class="ui-horizontal-card__overlay-title">Соловьева Виктория</p>
+                      <p class="ui-horizontal-card__overlay-subtitle">
+                        Генеральный директор <br />
+                        «МЦФБ» Банкрот Консалт
+                      </p>
+                    </div>
+                  </div>
+                  <div class="ui-horizontal-card__content">
+                    <p class="ui-horizontal-card__title">Кредит под залог автомобиля?</p>
+                    <p class="text text_sm ui-horizontal-card__subtitle">
+                      Cбер предлагает своим клиентам возместить рубли за бонусы <br />
+                      от СберСпасибо после совершения платежей в СберБанк <br />
+                      Онлайн. С момента запуска сервиса в конце 2020 года этой <br />
+                      возможностью уже воспользовались более 2 миллионов <br />
+                      участников программы лояльности Сбера. Они списали более <br />
+                      3 миллиардов бонусов за возмещение платежей.
+                    </p>
+                    <div class="ui-horizontal-card__tags-date">
+                      <div class="ui-horizontal-card__tags">
+                        <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Кредиты</a>
+                        <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банкротство</a>
+                        <a href="#tag" class="tag tag_sm ui-horizontal-card__tag">#Банки</a>
+                      </div>
+                      <p class="text text_sm ui-horizontal-card__date">12 июня 2022</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @@include("../blocks/modules/footer/footer.html")
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

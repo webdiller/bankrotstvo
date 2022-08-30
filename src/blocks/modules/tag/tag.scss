@@ -1,4 +1,4 @@
-$tag: ".tag";
+$tag: '.tag';
 
 #{$tag} {
   display: inline-flex;
@@ -15,7 +15,7 @@ $tag: ".tag";
 
   transition: all 0.3s ease;
 
-  @include media("<=tablet") {
+  @include media('<=tablet') {
     padding: 2px 9px;
     min-height: 22px;
   }
@@ -35,6 +35,10 @@ $tag: ".tag";
     min-height: 26px;
     padding: 3px 10px;
     font-size: 12px;
+    @include media('<=tablet') {
+      padding: 2px 9px;
+      min-height: 22px;
+    }
   }
 
   &_white {
@@ -50,6 +54,23 @@ $tag: ".tag";
       background-color: transparent;
       color: #fff;
       border-color: #fff;
+    }
+  }
+
+  &_blue {
+    color: #fff;
+    border-color: $blue1;
+    background-color: $blue1;
+    &:hover,
+    &:focus {
+      border-color: #fff;
+      background-color: #fff;
+      color: $blue1;
+    }
+    &:active {
+      background-color: $blue1;
+      color: #fff;
+      border-color: $blue1;
     }
   }
 }

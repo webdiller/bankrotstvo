@@ -1,4 +1,4 @@
-$uiSearch: ".ui-search";
+$uiSearch: '.ui-search';
 
 #{$uiSearch} {
   position: relative;
@@ -36,7 +36,7 @@ $uiSearch: ".ui-search";
     top: 10px;
     font-size: 18px;
     pointer-events: none;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       font-size: 14px;
       line-height: 21px;
     }
@@ -78,7 +78,7 @@ $uiSearch: ".ui-search";
     #{$uiSearch} {
       &__label {
         font-size: 16px;
-        @include media("<=tablet") {
+        @include media('<=tablet') {
           font-size: 14px;
           line-height: 21px;
         }

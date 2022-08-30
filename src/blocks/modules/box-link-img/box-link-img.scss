@@ -1,4 +1,4 @@
-$boxLinkImg: ".box-link-img";
+$boxLinkImg: '.box-link-img';
 
 #{$boxLinkImg} {
   position: relative;
@@ -30,10 +30,18 @@ $boxLinkImg: ".box-link-img";
   &__img {
     max-width: 140px;
     flex: 1 0 140px;
-    align-self: flex-start;
+    align-self: cover;
+    object-fit: cover;
+    @include media('<=desktop') {
+      max-width: 90px;
+      flex: 1 0 90px;
+    }
   }
   &__content {
     padding: 20px;
+    @include media('<=desktop') {
+      padding: 10px 10px 10px 15px;
+    }
   }
   &__title {
     margin-bottom: 11px;
@@ -44,7 +52,21 @@ $boxLinkImg: ".box-link-img";
     text-decoration: underline;
     text-decoration-color: transparent;
     transition: all 0.3s ease;
+
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    @include media('<=desktop') {
+      font-size: 13px;
+      line-height: 18px;
+    }
   }
   &__date {
+    @include media('<=desktop') {
+      font-size: 10px;
+      line-height: 16.5px;
+    }
   }
 }

@@ -2,17 +2,17 @@
   background-color: $grey5;
   &_margin {
     margin-top: 180px;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       margin-top: 100px;
     }
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       margin-top: 60px;
     }
   }
   &__container {
     padding-top: 73px;
     padding-bottom: 25px;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       padding-top: 40px;
       padding-bottom: 40px;
     }
@@ -24,7 +24,7 @@
     padding-bottom: 81px;
     margin-bottom: 25px;
     border-bottom: 1px solid $grey2;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       display: block;
       padding-bottom: 40px;
     }
@@ -33,7 +33,7 @@
   &__logo-address-description {
     margin-right: 30px;
     flex: 0 1 475px;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       margin-right: 0;
       margin-bottom: 30px;
     }
@@ -42,10 +42,10 @@
   &__logo {
     display: inline-block;
     margin-bottom: 30px;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       margin-bottom: 25px;
     }
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       width: 180px;
       height: 22px;
     }
@@ -59,7 +59,7 @@
     margin-bottom: 40px;
     font-size: 12px;
     line-height: 20px;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       margin-bottom: 15px;
     }
   }
@@ -68,7 +68,7 @@
     color: $grey1;
     font-size: 12px;
     line-height: 20px;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       font-size: 10px;
       line-height: 16px;
     }
@@ -80,7 +80,7 @@
     max-width: 500px;
     flex: 1 1 500px;
     margin-top: -10px;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       display: block;
       margin-top: 0;
     }
@@ -88,7 +88,7 @@
 
   &__navigation {
     margin-right: 30px;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       margin-right: 0;
       margin-bottom: 30px;
     }
@@ -99,11 +99,11 @@
     margin-bottom: 25px;
     line-height: 20px;
     font-weight: 500;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       margin-bottom: 20px;
       color: $blue1;
     }
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       line-height: 18px;
     }
 
@@ -138,7 +138,7 @@
     display: flex;
     align-items: center;
     margin-right: 30px;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       margin-right: 0;
       margin-bottom: 30px;
     }

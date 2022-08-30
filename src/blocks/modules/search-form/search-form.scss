@@ -1,32 +1,121 @@
 $searchForm: '.search-form';
 
-.search-form {
-  padding: 50px;
+#{$searchForm} {
   background-color: $grey5;
+
+  &.active {
+    #{$searchForm} {
+      &__wrapper {
+        display: block;
+        @include media('<=desktop') {
+          display: block;
+        }
+      }
+      &__header-icon {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &__header {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 20px;
+    background-color: $grey5;
+    cursor: pointer;
+    @include media('<=desktop') {
+      display: flex;
+    }
+    &-title {
+      &::selection {
+        background-color: transparent;
+      }
+    }
+    &-icon {
+      transition: all 0.3s ease;
+      &::selection {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: 50px;
+    transition: all 0.3s ease-in-out;
+    @include media('<=desktop') {
+      display: none;
+      padding: 0 20px 30px 20px;
+    }
+  }
 
   &__title {
     margin-bottom: 40px;
-    @include media("<=tablet") {
+    @include media('<=desktop') {
       margin-bottom: 25px;
     }
+    display: none;
   }
 
   &__group {
     width: 100%;
     margin-bottom: 30px;
+    @include media('<=tablet') {
+      margin-bottom: 25px;
+    }
 
     &_button {
       margin-bottom: 35px;
     }
-    
+
     &:last-child {
       margin-bottom: 0;
     }
   }
+
+  &_contacts {
+    .ui-search__label {
+      font-size: 16px;
+      @include media('<=tablet') {
+        font-size: 14px;
+      }
+    }
+    #{$searchForm} {
+      &__title {
+        display: block;
+      }
+      &__header {
+        @include media('<=desktop') {
+          display: none;
+        }
+      }
+      &__wrapper {
+        @include media('<=desktop') {
+          display: block;
+          padding: 30px 20px 20px 20px;
+        }
+      }
+    }
+  }
+
+  &_arbitrazhnye {
+    .ui-search__label {
+      font-size: 16px;
+      @include media('<=tablet') {
+        font-size: 14px;
+      }
+    }
+  }
+
   &_kolonki {
     #{$searchForm} {
       &__title {
+        display: block;
         margin-bottom: 20px;
+        @include media('<=desktop') {
+          display: none;
+        }
       }
       &__group {
         margin-bottom: 10px;
@@ -38,15 +127,30 @@ $searchForm: '.search-form';
   }
 
   &_urists {
+    .ui-search__label {
+      font-size: 16px;
+    }
     #{$searchForm} {
       &__title {
         margin-bottom: 20px;
+        display: block;
+        margin-bottom: 20px;
+        @include media('<=desktop') {
+          display: none;
+        }
         &-second {
           margin-top: 35px;
+          @include media('<=desktop') {
+            display: block;
+            margin-top: 15px;
+          }
         }
       }
       &__group {
-        margin-bottom: 30px;
+        margin-bottom: 12px;
+        @include media('<=desktop') {
+          margin-bottom: 17px;
+        }
         &:last-child {
           margin-bottom: 0;
         }

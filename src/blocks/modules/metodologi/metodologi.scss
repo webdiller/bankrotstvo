@@ -6,7 +6,7 @@
     padding-bottom: 50px;
     margin-bottom: 40px;
     border-bottom: 1px solid $grey3;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       margin-bottom: 30px;
       padding-bottom: 0;
       border-bottom: 0;
@@ -18,14 +18,14 @@
     grid-template-columns: 291px 1fr;
     column-gap: 110px;
     color: $black2;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       display: block;
     }
-   }
+  }
 
   &__content-left {
     flex: 0 0 400px;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       margin-bottom: 30px;
     }
   }
@@ -34,24 +34,24 @@
     display: flex;
     flex-wrap: wrap;
     flex: 1 1 570px;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       display: block;
     }
     p {
-      @include media("<=LGdesktop") {
+      @include media('<=LGdesktop') {
         margin-bottom: 30px;
       }
       &:nth-child(1) {
         flex: 1 1 100%;
         margin-bottom: 50px;
-        @include media("<=LGdesktop") {
+        @include media('<=LGdesktop') {
           margin-bottom: 30px;
         }
       }
       &:nth-child(2) {
         flex: 0 1 370px;
         margin-right: 30px;
-        @include media("<=LGdesktop") {
+        @include media('<=LGdesktop') {
           margin-right: 30px;
           margin-right: 0;
         }
@@ -60,7 +60,7 @@
         flex: 1 0 calc(100% - 400px);
       }
       &:last-child {
-        @include media("<=LGdesktop") {
+        @include media('<=LGdesktop') {
           margin-bottom: 0;
         }
       }

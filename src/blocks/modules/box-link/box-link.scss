@@ -1,4 +1,4 @@
-$boxLink: ".box-link";
+$boxLink: '.box-link';
 
 #{$boxLink} {
   position: relative;
@@ -8,7 +8,7 @@ $boxLink: ".box-link";
     display: flex;
     padding: 30px 20px;
     text-align: left;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       padding: 27px 20px;
     }
   }
@@ -47,7 +47,7 @@ $boxLink: ".box-link";
     line-height: 38px;
     text-transform: uppercase;
     color: #cfd8e0;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       align-self: center;
       font-size: 26px;
       line-height: 14px;
@@ -62,7 +62,7 @@ $boxLink: ".box-link";
     text-decoration: underline;
     text-decoration-color: transparent;
     transition: all 0.3s ease;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       font-size: 13px;
       line-height: 18px;
     }

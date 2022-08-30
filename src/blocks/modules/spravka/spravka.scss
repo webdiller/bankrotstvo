@@ -1,17 +1,17 @@
-$spravka: ".spravka";
+$spravka: '.spravka';
 
 #{$spravka} {
   &__container {
     margin-top: 90px;
     margin-bottom: 160px;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       margin-bottom: 60px;
     }
   }
 
   &__categories {
     margin-bottom: 100px;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       margin-bottom: 45px;
     }
   }
@@ -22,7 +22,7 @@ $spravka: ".spravka";
     column-gap: 30px;
     padding-bottom: 40px;
     border-bottom: 1px solid #dbe0e4;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       display: block;
       padding-bottom: 0;
       border-bottom: 0;
@@ -33,7 +33,7 @@ $spravka: ".spravka";
     }
     &:not(:first-child) {
       padding-top: 30px;
-      @include media("<=LGdesktop") {
+      @include media('<=LGdesktop') {
         padding-top: 15px;
       }
     }
@@ -42,20 +42,20 @@ $spravka: ".spravka";
   &__categories-title-icon {
     display: flex;
     align-self: flex-start;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       margin-bottom: 20px;
     }
   }
 
   &__categories-icon {
     margin-right: 20px;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       margin-right: 17px;
     }
   }
 
   &__categories-title {
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       font-size: 18px;
       line-height: 27px;
     }
@@ -69,10 +69,10 @@ $spravka: ".spravka";
   &__categories-item {
     margin-right: 20px;
     margin-bottom: 20px;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       margin-bottom: 15px;
     }
-    @include media("<=phone") {
+    @include media('<=phone') {
       padding-left: 20px;
       padding-right: 20px;
     }
@@ -88,17 +88,17 @@ $spravka: ".spravka";
     display: grid;
     grid-template-columns: minmax(300px, 370px) 770px;
     column-gap: 30px;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       display: block;
     }
   }
 
   &__title {
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       margin-bottom: 20px;
     }
     &_docs {
-      @include media("<=tablet") {
+      @include media('<=tablet') {
         margin-bottom: 10px;
       }
     }
@@ -114,7 +114,7 @@ $spravka: ".spravka";
     justify-content: space-between;
 
     padding-bottom: 20px;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       margin-bottom: 10px;
     }
   }
@@ -198,7 +198,7 @@ $spravka: ".spravka";
     z-index: 6;
 
     transition: all 0.3s ease;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       padding: 20px 0;
     }
   }
@@ -206,10 +206,10 @@ $spravka: ".spravka";
   &__docs-icon-name {
     margin-right: 40px;
     flex: 0 0 450px;
-    @include media("<=desktop") {
+    @include media('<=desktop') {
       flex: 0 0 400px;
     }
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       flex: 1 1 155px;
     }
   }
@@ -219,7 +219,7 @@ $spravka: ".spravka";
     min-width: 50px;
     flex: 0 0 50px;
     margin-right: 30px;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       vertical-align: middle;
       margin-right: 0;
       margin-left: 10px;
@@ -235,7 +235,7 @@ $spravka: ".spravka";
     flex-direction: row-reverse;
     align-items: center;
     font-weight: 600;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       display: block;
       flex-direction: row;
       justify-content: flex-start;
@@ -251,7 +251,7 @@ $spravka: ".spravka";
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       display: none;
     }
   }
@@ -259,7 +259,7 @@ $spravka: ".spravka";
   &__docs-date {
     margin-left: auto;
     white-space: nowrap;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       font-size: 10px;
       line-height: 16px;
     }

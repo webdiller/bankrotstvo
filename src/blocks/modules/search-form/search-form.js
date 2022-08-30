@@ -1,13 +1,11 @@
-modules.define('search-form', ['i-bem-dom'], function(provide, bemDom) {
+const searchForms = document.querySelectorAll("[data-component='searchForm']");
 
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
-
+document.addEventListener('DOMContentLoaded', function () {
+  searchForms.forEach((component) => {
+    const searchRoot = component;
+    const searchHeader = searchRoot.querySelector("[data-component='searchFormHeader']");
+    searchHeader.addEventListener('click', function () {
+      searchRoot.classList.toggle('active');
+    });
+  });
 });

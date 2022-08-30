@@ -1,14 +1,18 @@
-$uiVerticalCard: ".ui-vertical-card";
+$uiVerticalCard: '.ui-vertical-card';
 
 #{$uiVerticalCard} {
   position: relative;
   &__overlay-link {
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
     width: 100%;
     height: 100%;
     z-index: 10;
+    @include media('<=tablet') {
+      z-index: 15;
+    }
     &:hover,
     &:focus {
       ~ #{$uiVerticalCard} {
@@ -22,6 +26,9 @@ $uiVerticalCard: ".ui-vertical-card";
               #{$uiVerticalCard} {
                 &__img-text-icon {
                   opacity: 1;
+                  @include media('<=tablet') {
+                    display: none;
+                  }
                 }
               }
             }
@@ -40,22 +47,43 @@ $uiVerticalCard: ".ui-vertical-card";
   &__wrapper {
   }
 
+  &__overlay-description {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    @include media('<=tablet') {
+      display: block;
+      z-index: 10;
+    }
+  }
+
   &__img-wrapper {
     position: relative;
     aspect-ratio: 1 / 1;
     margin-bottom: 20px;
     overflow: hidden;
+    @include media('<=tablet') {
+      margin-bottom: 0;
+    }
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       right: 0;
-      
+
       width: 100%;
       height: 100%;
 
       background: #0c5eed;
       opacity: 0;
+      @include media('<=tablet') {
+        opacity: 1;
+        z-index: 5;
+        background: linear-gradient(180deg, rgba(37, 39, 46, 0) 35.71%, rgba(37, 39, 46, 0.05) 44.92%, rgba(37, 39, 46, 0.5) 58.79%, rgba(37, 39, 46, 0.8) 76.45%, #25272e 100%);
+      }
     }
   }
 
@@ -92,10 +120,14 @@ $uiVerticalCard: ".ui-vertical-card";
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: all .3s ease;
+    object-position: top;
+    transition: all 0.3s ease;
   }
 
   &__content {
+    @include media('<=tablet') {
+      display: none;
+    }
   }
 
   &__rating {
@@ -158,6 +190,11 @@ $uiVerticalCard: ".ui-vertical-card";
   }
   &_bg-gradient {
     height: 490px;
+    @include media('<=tablet') {
+      height: auto;
+      min-height: 240px;
+      aspect-ratio: 1 / 1;
+    }
     #{$uiVerticalCard} {
       &__wrapper {
         height: 100%;
@@ -166,20 +203,13 @@ $uiVerticalCard: ".ui-vertical-card";
         aspect-ratio: unset;
         height: 100%;
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           top: 0;
           right: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(
-            180deg,
-            rgba(37, 39, 46, 0) 35.71%,
-            rgba(37, 39, 46, 0.05) 44.92%,
-            rgba(37, 39, 46, 0.5) 58.79%,
-            rgba(37, 39, 46, 0.8) 76.45%,
-            #25272e 100%
-          );
+          background: linear-gradient(180deg, rgba(37, 39, 46, 0) 35.71%, rgba(37, 39, 46, 0.05) 44.92%, rgba(37, 39, 46, 0.5) 58.79%, rgba(37, 39, 46, 0.8) 76.45%, #25272e 100%);
         }
       }
       &__content {
@@ -193,11 +223,49 @@ $uiVerticalCard: ".ui-vertical-card";
         color: #fff;
 
         z-index: 20;
+        @include media('<=tablet') {
+          display: block;
+          padding: 0 20px 20px 20px;
+        }
       }
       &__title {
         line-height: 28px;
+        @include media('<=tablet') {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+      &__description {
+        @include media('<=tablet') {
+          color: #c4c8d2;
+          font-size: 12px;
+          line-height: 19px;
+        }
+      }
+      &__rating {
+        @include media('<=tablet') {
+          margin-bottom: 5px;
+        }
+      }
+      &__rating-number {
+        @include media('<=tablet') {
+          margin-right: 10px;
+          padding-right: 10px;
+          font-size: 13px;
+          line-height: 21px;
+        }
+      }
+      &__rating-count {
+        @include media('<=tablet') {
+          font-size: 13px;
+          line-height: 21px;
+        }
       }
       &__overlay-link {
+        @include media('<=tablet') {
+          z-index: 50;
+        }
         &:hover,
         &:focus {
           ~ #{$uiVerticalCard} {

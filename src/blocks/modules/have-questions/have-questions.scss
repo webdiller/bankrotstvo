@@ -7,7 +7,7 @@
     max-width: 1170px;
     padding: 70px 65px 90px 70px;
     background-color: $blue1;
-    @include media("<=desktop") {
+    @include media('<=desktop') {
       padding: 20px;
     }
   }
@@ -15,17 +15,17 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       width: 250px;
     }
-    @include media("<=desktop") {
+    @include media('<=desktop') {
       display: none;
     }
   }
   &__title {
     margin-bottom: 95px;
     color: #fff;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       margin-bottom: 30px;
       font-size: 18px;
       line-height: 27px;
@@ -35,7 +35,7 @@
     display: grid;
     grid-template-columns: 270px 310px;
     gap: 68px 60px;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       display: flex;
       flex-direction: column;
       gap: 30px 0;
@@ -45,12 +45,18 @@
     &_input,
     &_button {
       max-width: 270px;
-      @include media("<=tablet") {
+      @include media('<=tablet') {
         max-width: unset;
       }
     }
   }
   &__border-link {
     width: 100%;
+  }
+  &_home {
+    margin-bottom: 160px;
+    @include media('<=desktop') {
+      margin-bottom: 60px;
+    }
   }
 }

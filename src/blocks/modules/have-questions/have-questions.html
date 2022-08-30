@@ -1,8 +1,7 @@
-<div class="have-questions">
+<div class="have-questions @@classNames">
   <div class="container have-questions__first-container">
     <div class="container have-questions__second-container">
-      
-      <img width="400" height="520" src="./img/images/have-questions-book.png" alt="ОСТАЛИСЬ ВОПРОСЫ? НАШИ СПЕЦИАЛИСТЫ ОТВЕТЯТ" class="have-questions__bg-image">
+      <img width="400" height="520" src="./img/images/have-questions-book.png" alt="ОСТАЛИСЬ ВОПРОСЫ? НАШИ СПЕЦИАЛИСТЫ ОТВЕТЯТ" class="have-questions__bg-image" />
 
       <p class="title title_2 have-questions__title">
         ОСТАЛИСЬ ВОПРОСЫ? <br />
@@ -10,27 +9,28 @@
       </p>
 
       <form class="have-questions__form">
+        <div class="have-questions__group have-questions__group_input">@@include("../search/search.html", {"label": "Имя", "classNames": "ui-search_white d-block"})</div>
 
-        <div class="have-questions__group have-questions__group_input">
-          @@include("../search/search.html", {"label": "Имя", "classNames": "ui-search_white d-block"})
-        </div>
-
-        <div class="have-questions__group have-questions__group_input">
-          @@include("../search/search.html", {"label": "Телефон", "classNames": "ui-search_white d-block"})
-        </div>
+        <div class="have-questions__group have-questions__group_input">@@include("../search/search.html", {"label": "Телефон", "classNames": "ui-search_white d-block"})</div>
 
         <div class="have-questions__group have-questions__group_button">
           <a href="/" class="border-link border-link_white border-link_lg have-questions__border-link">Проконсультироваться</a>
         </div>
-        
+
         <div class="have-questions__group">
           <div class="ui-checkbox ui-checkbox_white">
-            <input id="haveQuestions" class="ui-checkbox__input" type="checkbox">
-            <button class="ui-checkbox__button"><svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5l3 2 5-6"/></svg></button>
+            <input id="haveQuestions" class="ui-checkbox__input" type="checkbox" />
+            <button class="ui-checkbox__button">
+              <svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 5l3 2 5-6" /></svg>
+            </button>
             <label for="haveQuestions" class="ui-checkbox__label">
-              Я принимаю условия <a href="/">Пользовательского <br>
-              соглашения</a> и даю свое согласие на обработку<br>
-              моих персональных данных в соответствии с<br>
+              Я принимаю условия
+              <a href="/"
+                >Пользовательского <br />
+                соглашения</a
+              >
+              и даю свое согласие на обработку<br />
+              моих персональных данных в соответствии с<br />
               <a href="/">Политикой конфиденциальности</a>
             </label>
           </div>

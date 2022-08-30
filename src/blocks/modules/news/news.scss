@@ -1,14 +1,14 @@
 .news {
   &__container {
     margin-bottom: 120px;
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       margin-bottom: 60px;
     }
   }
 
   &__title {
     margin-bottom: 50px;
-    @include media("<=LGdesktop") {
+    @include media('<=LGdesktop') {
       margin-bottom: 20px;
     }
   }
@@ -18,7 +18,7 @@
     align-items: center;
     overflow-x: scroll;
     margin-bottom: 30px;
-    @include media("<=desktop") {
+    @include media('<=desktop') {
       display: flex;
     }
   }
@@ -35,7 +35,7 @@
     grid-template-columns: minmax(300px, 370px) minmax(550px, 770px);
     column-gap: 30px;
     margin-bottom: 40px;
-    @include media("<=desktop") {
+    @include media('<=desktop') {
       display: flex;
       flex-direction: column-reverse;
       margin-bottom: 30px;
@@ -47,7 +47,7 @@
 
   &__top-left-title {
     margin-bottom: 20px;
-    @include media("<=desktop") {
+    @include media('<=desktop') {
       margin-bottom: 10px;
     }
   }
@@ -68,7 +68,7 @@
   }
 
   &__top-right {
-    @include media("<=desktop") {
+    @include media('<=desktop') {
       margin-bottom: 30px;
     }
   }
@@ -76,7 +76,7 @@
   &__big-img-link {
     height: 100%;
     min-height: 490px;
-    @include media("<=phone") {
+    @include media('<=phone') {
       min-height: 290px;
     }
   }
@@ -85,18 +85,21 @@
     display: grid;
     grid-template-columns: minmax(300px, 370px) minmax(550px, 770px);
     column-gap: 30px;
-    @include media("<=desktop") {
+    @include media('<=desktop') {
       display: block;
     }
   }
 
   &__bottom-left {
-    @include media("<=desktop") {
+    @include media('<=desktop') {
       display: none;
     }
   }
 
   &__bottom-left-tags {
+    top: 10px;
+    position: sticky;
+
     display: grid;
     gap: 20px 15px;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -110,7 +113,7 @@
 
   &__bottom-right-title {
     margin-bottom: 20px;
-    @include media("<=desktop") {
+    @include media('<=desktop') {
       margin-bottom: 10px;
     }
   }
@@ -119,18 +122,18 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
-    @include media("<=desktop") {
+    @include media('<=desktop') {
       margin-bottom: 30px;
     }
   }
 
   &__bottom-right-link {
     margin-bottom: 20px;
-    @include media("<=desktop") {
+    @include media('<=desktop') {
       height: 360px;
       margin-bottom: 15px;
     }
-    @include media("<=phone") {
+    @include media('<=phone') {
       height: 290px;
     }
     &:last-child {
@@ -144,7 +147,7 @@
     padding-bottom: 32px;
     border-top: 1px solid #dbe0e4;
     border-bottom: 1px solid #dbe0e4;
-    @include media("<=desktop") {
+    @include media('<=desktop') {
       padding-top: 20px;
       padding-bottom: 20px;
     }

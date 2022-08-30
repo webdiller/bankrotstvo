@@ -1,16 +1,22 @@
-$rating: ".rating";
+$rating: '.rating';
 
 .rating {
   &__container {
     position: relative;
     margin-bottom: 160px;
+    @include media('<=desktop') {
+      margin-bottom: 60px;
+    }
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 10px;
       width: 100%;
       height: 1px;
       background-color: #dbe0e4;
+      @include media('<=desktop') {
+        display: none;
+      }
     }
   }
 
@@ -20,11 +26,17 @@ $rating: ".rating";
     display: inline-block;
     background-color: #fff;
     padding-right: 46px;
+    @include media('<=desktop') {
+      margin-bottom: 30px;
+    }
   }
 
   &__table {
     width: 100%;
     margin-bottom: 40px;
+    @include media('<=desktop') {
+      margin-bottom: 20px;
+    }
   }
 
   &__table-header {
@@ -33,7 +45,21 @@ $rating: ".rating";
     column-gap: 30px;
     padding: 0 35px 35px 35px;
     border-bottom: 1px solid #c4c8d2;
+    @include media('<=desktop') {
+      grid-template-columns: minmax(60%, 1fr) 75px;
+      padding: 0 0 23px 0;
+    }
     &-col {
+      &_position {
+        @include media('<=desktop') {
+          display: none;
+        }
+      }
+      &_grade {
+        @include media('<=desktop') {
+          display: none;
+        }
+      }
     }
   }
 
@@ -46,6 +72,11 @@ $rating: ".rating";
     column-gap: 30px;
     padding: 18px 35px 10px 35px;
     border-bottom: 1px solid #c4c8d2;
+    @include media('<=desktop') {
+      grid-template-columns: minmax(60%, 1fr) 75px;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__table-col {
@@ -53,6 +84,14 @@ $rating: ".rating";
     align-items: center;
     &_number {
       padding-left: 30px;
+      @include media('<=desktop') {
+        display: none;
+      }
+    }
+    &_rating {
+      @include media('<=desktop') {
+        display: none;
+      }
     }
     &_reputation {
       position: relative;
@@ -69,6 +108,9 @@ $rating: ".rating";
 
   &__table-icon {
     margin-right: 26px;
+    @include media('<=desktop') {
+      margin-right: 15px;
+    }
   }
 
   &__table-text {
