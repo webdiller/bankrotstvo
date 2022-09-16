@@ -27,7 +27,6 @@ function swiperMode() {
   }
   else if (!mobile) {
     // TODO: Проверить метод
-    swiper.destroy();
     init = false;
   }
 

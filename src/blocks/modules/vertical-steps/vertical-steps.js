@@ -26,16 +26,20 @@ function swiperMode() {
   }
   else if (!mobile) {
     // TODO: Проверить метод
-    swiper.destroy();
+    try {
+      swiper.destroy();
+    } catch (error) {
+      console.log('Обработанная ошибка: ', error);
+    }
     init = false;
   }
 
 }
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
   swiperMode();
 });
 
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
   swiperMode();
 });
