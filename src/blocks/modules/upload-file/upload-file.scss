@@ -1,0 +1,68 @@
+$uploadFile: '.upload-file';
+
+#{$uploadFile} {
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__photo-with-area {
+    display: flex;
+  }
+
+  &__photo {
+    display: none;
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+
+  &__area {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    flex: 1 1 auto;
+    padding: 15px;
+    border: 1px dashed $blue1;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover,
+    &:focus {
+      background-color: #f3f3f3;
+    }
+  }
+
+  &__icon {
+  }
+
+  &__text {
+    margin-bottom: 4px;
+    color: $blue1;
+  }
+
+  &__formats {
+    color: #adb4c6;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &.active {
+    #{$uploadFile} {
+      &__photo {
+        display: block;
+      }
+    }
+  }
+}

@@ -701,7 +701,6 @@ $container: '.container';
 #{$mobileMenu} {
   display: none;
   transition: all 0.3s ease;
-  will-change: opacity, height;
   position: absolute;
   top: 53px;
   left: 0;
@@ -710,13 +709,14 @@ $container: '.container';
   overflow-y: scroll;
   background-color: $grey5;
   transform: scale(1.025);
-  will-change: transform;
   z-index: -1;
+  visibility: hidden;
   &.active {
     transform: scale(1);
     opacity: 1;
     pointer-events: all;
     z-index: 100;
+    visibility: visible;
   }
   @include media('<=desktop') {
     display: block;

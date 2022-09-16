@@ -8,3 +8,5 @@ import "%modules%/search-form/search-form";
 import "%modules%/vertical-steps/vertical-steps";
 import "%modules%/square-links/square-links";
 import "%modules%/modals/modals";
+import "%modules%/rating-star/rating-star";
+import "%modules%/upload-file/upload-file";
