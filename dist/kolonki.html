@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" />
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png" />
-    <link rel="stylesheet" href="styles/main.min.css" />
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
     <header data-component="header" class="header header_margin">
@@ -771,7 +771,106 @@
   </div>
 </footer>
 
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <div data-component="modalSearch" class="modal-search">
+  <form class="modal-search__wrapper">
+    <input placeholder="Введите название" type="text" class="modal-search__input" />
+    <button type="button" class="border-link-with-icon border-link-with-icon_blue modal-search__button">
+      Поиск
+      <svg class="border-link-with-icon__icon" width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0.5 5.5H14.5M14.5 5.5L10 10M14.5 5.5L10 1" stroke="white" />
+      </svg>
+    </button>
+    <button type="button" class="modal-search__close-btn">
+      <img width="24" height="24" src="./img/icons/icon-close-white.svg" alt="Закрыть поиск" class="modal-search__close-icon" />
+    </button>
+  </form>
+</div>
+
+<div data-component="modalReview" class="modal-review">
+  <form class="modal-review__wrapper">
+    <p class="title title_4 modal-review__title">Написать отзыв</p>
+
+    <div data-component="search" class="ui-search ui-search_sm modal-review__group">
+      <input type="text" class="ui-search__input" />
+      <label class="ui-search__label">Ваше имя</label>
+    </div>
+
+    <div data-component="uploadFile" class="upload-file modal-review__group">
+      <div class="upload-file__container">
+        <p class="upload-file__title">Ваше фото</p>
+        <div class="upload-file__photo-with-area">
+          <img src="" alt="" class="upload-file__photo" />
+          <div class="upload-file__area">
+            <img src="./img/icons/icon-upload-file.svg" alt="Загрузите файл" class="upload-file__icon" />
+            <p class="upload-file__text">Загрузите файл</p>
+            <p class="upload-file__formats">PNG, JPG</p>
+            <input type="file" class="upload-file__input" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-component="rating" class="rating-star modal-review__rating-star">
+      <div class="rating-star__wrapper">
+        <p class="rating-star__title">Оцените компанию</p>
+        <div class="rating-star__stars-with-count">
+          <div class="rating-star__stars">
+            <input class="rating-star__input" type="radio" name="rating" id="rating-5" value="5" />
+            <label class="rating-star__label" for="rating-5"></label>
+            <input class="rating-star__input" type="radio" name="rating" id="rating-4" value="4" />
+            <label class="rating-star__label" for="rating-4"></label>
+            <input class="rating-star__input" type="radio" name="rating" id="rating-3" value="3" />
+            <label class="rating-star__label" for="rating-3"></label>
+            <input class="rating-star__input" type="radio" name="rating" id="rating-2" value="2" />
+            <label class="rating-star__label" for="rating-2"></label>
+            <input class="rating-star__input" type="radio" name="rating" id="rating-1" value="1" />
+            <label class="rating-star__label" for="rating-1"></label>
+          </div>
+          <p class="rating-star__count">
+            <span class="rating-star__count-current">0</span>
+            <span class="rating-star__count-separator">/</span>
+            <span class="rating-star__count-all">5</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div data-component="search" class="ui-search ui-search_sm modal-review__group">
+      <input type="text" class="ui-search__input" />
+      <label class="ui-search__label">Комментарий</label>
+    </div>
+
+    <button class="border-link">Опубликовать</button>
+
+    <button type="button" class="modal-review__close-btn">
+      <img width="24" height="24" src="./img/icons/icon-close-white.svg" alt="Закрыть поиск" class="modal-review__close-icon" />
+    </button>
+  </form>
+</div>
+
+<div data-component="modalComment" class="modal-review">
+  <form class="modal-review__wrapper">
+    <p class="title title_4 modal-review__title">Ответить на комментарий</p>
+
+    <div data-component="search" class="ui-search ui-search_sm modal-review__group">
+      <input type="text" class="ui-search__input" />
+      <label class="ui-search__label">Ваше имя</label>
+    </div>
+
+    <div data-component="search" class="ui-search ui-search_sm modal-review__group">
+      <input type="text" class="ui-search__input" />
+      <label class="ui-search__label">Ответ</label>
+    </div>
+
+    <button class="border-link">Опубликовать</button>
+
+    <button type="button" class="modal-review__close-btn">
+      <img width="24" height="24" src="./img/icons/icon-close-white.svg" alt="Закрыть поиск" class="modal-review__close-icon" />
+    </button>
+  </form>
+</div>
+
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

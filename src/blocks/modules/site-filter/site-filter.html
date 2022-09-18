@@ -1,0 +1,78 @@
+<div class="site-filter">
+  <div class="site-filter__container">
+    <div class="site-filter__links-and-dropdown">
+      <div class="site-filter__links">
+        <a href="?orderBy_rating" class="site-filter__link active">По рейтингу</a>
+        <a href="?orderBy_reviews" class="site-filter__link">По отзывам</a>
+      </div>
+
+      <p class="site-filter__dropdown-title">Город:</p>
+      <div data-title="Томск" data-value='{"name": "Томск", "value": "tomsk"}' data-component="dropdown" class="dropdown dropdown_overlay-alt site-filter__dropdown">
+        <p class="dropdown__main-item">Город</p>
+        <svg class="dropdown__icon" width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.5 4L0.468911 0.25L6.53109 0.25L3.5 4Z" />
+        </svg>
+        <nav class="dropdown__navigation">
+          <button value='{"name": "Томск", "value": "tomsk"}' class="dropdown__navigation-item">Томск</button>
+          <button value='{"name": "Москва", "value": "moscow"}' class="dropdown__navigation-item">Москва</button>
+          <button value='{"name": "Орел", "value": "orel"}' class="dropdown__navigation-item">Орел</button>
+          <button value='{"name": "Краснодар", "value": "krasnodar"}' class="dropdown__navigation-item">Краснодар</button>
+          <button value='{"name": "Магадан", "value": "magadan"}' class="dropdown__navigation-item">Магадан</button>
+          <button value='{"name": "Иркутск", "value": "irkutsk"}' class="dropdown__navigation-item">Иркутск</button>
+        </nav>
+      </div>
+    </div>
+
+    <button class="border-link border-link_with-icon site-filter__border-link">
+      Добавить компанию
+      <svg class="border-link__icon" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0.5 8L14.5 8" stroke-linecap="square" stroke-linejoin="round"></path>
+        <path d="M7.5 1L7.5 15" stroke-linecap="square" stroke-linejoin="round"></path>
+      </svg>
+    </button>
+
+    <form data-component="searchForm" class="search-form search-form_urists ui-form-with-items__form site-filter__filter">
+      <div data-component="searchFormHeader" class="search-form__header">
+        <p class="search-form__header-title">Фильтр</p>
+        <img width="13" height="13" src="./img/icons/icon-dropdown-back-blue_alt.svg" alt="Фильтр" class="search-form__header-icon" />
+      </div>
+      <div class="search-form__wrapper">
+        <p class="search-form__title title title_4">Фильтр</p>
+
+        <div class="ui-checkbox ui-checkbox_lg search-form__group">
+          <input id="byRating" class="ui-checkbox__input" name="sorting" type="radio" />
+          <button class="ui-checkbox__button">
+            <svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 5l3 2 5-6" />
+            </svg>
+          </button>
+          <label for="byRating" class="ui-checkbox__label">По рейтингу</label>
+        </div>
+
+        <div class="ui-checkbox ui-checkbox_lg search-form__group">
+          <input id="reReviews" class="ui-checkbox__input" name="sorting" type="radio" />
+          <button class="ui-checkbox__button">
+            <svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 5l3 2 5-6" />
+            </svg>
+          </button>
+          <label for="reReviews" class="ui-checkbox__label">По отзывам</label>
+        </div>
+
+        <p class="search-form__title search-form__title-second title title_4">Город</p>
+
+        <div data-title="Город" data-value='{"name": "Томск", "value": "tomsk"}' data-component="dropdown" class="dropdown search-form__group">
+          <p class="dropdown__main-item">Город</p>
+          <svg class="dropdown__icon" width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.5 4L0.468911 0.25L6.53109 0.25L3.5 4Z" />
+          </svg>
+          <nav class="dropdown__navigation">
+            <button type="button" value='{"name": "Томск", "value": "tomsk"}' class="dropdown__navigation-item">Томск</button>
+            <button type="button" value='{"name": "Иркутск", "value": "irkutsk"}' class="dropdown__navigation-item">Иркутск</button>
+            <button type="button" value='{"name": "Москва", "value": "moskva"}' class="dropdown__navigation-item">Москва</button>
+          </nav>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

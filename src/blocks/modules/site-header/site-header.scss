@@ -1,0 +1,18 @@
+.site-header {
+  &__container {
+    margin-bottom: 50px;
+    @include media('<=tablet') {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    @include media('<=tablet') {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__description {
+  }
+}

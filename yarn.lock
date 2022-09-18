@@ -7665,7 +7665,6 @@ bem-tools-create@bem-tools/bem-tools-create:
     imagemin-zopfli: ^7.0.0
     jquery: ^3.6.0
     lint-staged: ^12.3.5
-    photoswipe: ^5.3.2
     postcss: ^8.4.8
     postcss-scss: ^4.0.3
     prettier: 2.7.1
@@ -11705,13 +11704,6 @@ bem-tools-create@bem-tools/bem-tools-create:
   version: 2.9.3
   resolution: "phin@npm:2.9.3"
   checksum: 7e2abd7be74a54eb7be92dccb1d7a019725c8adaa79ac22a38f25220f9a859393e654ea753a559d326aed7bbc966fadac88270cc8c39d78896f7784219560c47
-  languageName: node
-  linkType: hard
-
-"photoswipe@npm:^5.3.2":
-  version: 5.3.2
-  resolution: "photoswipe@npm:5.3.2"
-  checksum: c9a369e088b40e7dfac6b3bc402183dee2b3b04971299544910b00bfc97f550080baaf8b0ba1b4229bad8427c80cfa7bff7b693db43d9e6f74808687efe28025
   languageName: node
   linkType: hard
 

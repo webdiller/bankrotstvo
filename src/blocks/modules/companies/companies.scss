@@ -1,0 +1,306 @@
+$companies: '.companies';
+$uiRating: '.ui-rating';
+
+#{$companies} {
+  &__container {
+  }
+
+  &__items {
+    @include media('<=desktop') {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 15px;
+    }
+    @include media('<=phone') {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    display: flex;
+
+    margin-bottom: 50px;
+    @include media('<=desktop') {
+      display: block;
+      padding: 30px 20px 17px 20px;
+      border: 1px solid $grey2;
+      margin-bottom: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-overlay-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    &:hover,
+    &:focus {
+      ~ #{$companies} {
+        &__item-media {
+          #{$companies} {
+            &__item-media-img {
+              transform: scale(1.025);
+            }
+          }
+        }
+        &__item-content {
+          #{$companies} {
+            &__item-title {
+              text-decoration-color: $blue1;
+              color: $blue1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__item-media {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 270px;
+    min-width: 250px;
+    flex: 1 1 270px;
+    min-height: 270px;
+    height: auto;
+
+    border: 1px solid $grey2;
+    overflow: hidden;
+    @include media('<=desktop') {
+      justify-content: flex-start;
+      max-width: unset;
+      min-width: unset;
+      min-height: unset;
+      border: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item-media-top {
+    @include media('<=desktop') {
+      display: none;
+    }
+    &-icon {
+      position: absolute;
+      top: 0;
+      left: 30px;
+    }
+    &-text {
+      position: absolute;
+      top: 10px;
+      left: 72px;
+      font-size: 12px;
+      color: $blue1;
+      white-space: nowrap;
+    }
+  }
+
+  &__item-media-img {
+    object-fit: cover;
+    transition: all 0.3s ease;
+    will-change: transform;
+    @include media('<=desktop') {
+      width: 125px;
+      height: auto;
+    }
+  }
+
+  &__item-content {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 20px 30px;
+    background-color: #f9f9fb;
+    @include media('<=desktop') {
+      padding: 0;
+      display: block;
+      background-color: transparent;
+    }
+  }
+
+  &__item-content-first {
+    min-width: 360px;
+    flex: 1 1 42%;
+    margin-right: auto;
+    @include media('<=desktop') {
+      margin-right: 0;
+      min-width: unset;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    transition: all 0.3s ease;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 2px;
+    @include media('<=desktop') {
+      margin-bottom: 11px;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 25px;
+    }
+  }
+
+  &__ui-rating {
+    margin-bottom: 15px;
+    .ui-rating__city {
+      display: none;
+      @include media('<=desktop') {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__item-address {
+    margin-bottom: 15px;
+    @include media('<=desktop') {
+      margin-bottom: 13px;
+      font-size: 12px;
+      line-height: 20px;
+      color: $grey1;
+    }
+  }
+
+  &__item-address-city {
+    @include media('<=desktop') {
+      display: none;
+    }
+  }
+
+  &__item-features {
+    display: flex;
+    @include media('<=desktop') {
+      display: block;
+    }
+  }
+
+  &__item-feature {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    padding: 6px 0 6px 20px;
+    border-left: 1px solid $grey3;
+    &::after {
+      @include media('<=desktop') {
+        background-image: radial-gradient(circle, $grey1 1px, transparent 1.5px);
+        background-position: bottom;
+        background-size: 4px 1px;
+        background-repeat: space no-repeat;
+        content: '';
+        flex-grow: 1;
+        height: 18px;
+        order: 2;
+      }
+    }
+    @include media('<=desktop') {
+      flex-direction: row;
+      border: 0;
+      padding: 0;
+      color: $grey1;
+      margin-right: 0;
+      font-size: 12px;
+    }
+    &:last-child {
+      margin-right: 0;
+      @include media('<=desktop') {
+        margin-bottom: 0;
+      }
+    }
+    &-key {
+      margin-bottom: 6px;
+      font-weight: 600;
+      @include media('<=desktop') {
+        margin-bottom: 0;
+        order: 1;
+        position: relative;
+        padding-right: 4px;
+      }
+    }
+    &-value {
+      @include media('<=desktop') {
+        margin-left: auto;
+        order: 3;
+        padding-left: 4px;
+      }
+    }
+  }
+
+  &__item-content-second {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 260px;
+    max-width: 350px;
+    flex: 1 1 58%;
+    margin-top: 45px;
+    margin-left: 30px;
+    @include media('<=desktop') {
+      display: none;
+    }
+  }
+
+  &__item-comments {
+    margin-bottom: auto;
+  }
+
+  &__item-comment {
+    padding-left: 20px;
+    border-left: 1px solid $blue1;
+    color: $grey1;
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  &__link-text-with-icon {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: $blue1;
+  }
+
+  &_collectorskie {
+    #{$companies} {
+      &__item-content {
+        padding: 55px 50px 30px 30px;
+        @include media('<=desktop') {
+          padding: 0;
+        }
+      }
+      &__item-content-first {
+        min-width: 300px;
+        @include media('<=desktop') {
+          min-width: unset;
+        }
+      }
+      &__item-content-second {
+        margin-top: 0;
+        min-width: 260px;
+        max-width: 370px;
+        @include media('<=desktop') {
+          display: block;
+          margin: 0;
+          min-width: unset;
+        }
+      }
+      &__link-text-with-icon {
+        margin-top: 40px;
+        justify-content: flex-end;
+        @include media('<=desktop') {
+          display: none;
+        }
+      }
+    }
+  }
+}

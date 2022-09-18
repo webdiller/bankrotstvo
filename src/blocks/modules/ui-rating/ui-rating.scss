@@ -1,0 +1,46 @@
+.ui-rating {
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__city {
+    margin-right: 33px;
+    font-weight: 600;
+    color: $grey1;
+    @include media('<=desktop') {
+      margin-right: auto;
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    @include media('<=desktop') {
+      font-size: 13px;
+      line-height: 21px;
+    }
+  }
+
+  &__rating-icon {
+    margin-right: 13px;
+    @include media('<=desktop') {
+      width: 18px;
+    }
+  }
+
+  &__rating-number {
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid #c4c8d2;
+    @include media('<=desktop') {
+      padding-right: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  &__rating-count {
+  }
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>gulp-scss-starter</title>
+    <meta name="theme-color" content="#fff" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon" />
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png" />
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png" />
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" />
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    @@include("../blocks/modules/header/header.html")
+    <div class="companies">
+      <div class="container companies__container">
+        <div class="site-header">
+          <div class="site-header__container">
+            <p class="title site-header__title">КОМПАНИ ПО БАНКРОТСТВУ ФИЗ. ЛИЦ</p>
+            <p class="site-header__description">Более 1 000 компаний с рейтингом</p>
+          </div>
+        </div>
+
+        <div class="site-filter">
+          <div class="site-filter__container">
+            <div class="site-filter__links-and-dropdown">
+              <div class="site-filter__links">
+                <a href="?orderBy_rating" class="site-filter__link active">По рейтингу</a>
+                <a href="?orderBy_reviews" class="site-filter__link">По отзывам</a>
+              </div>
+        
+              <p class="site-filter__dropdown-title">Город:</p>
+              <div data-title="Томск" data-value='{"name": "Томск", "value": "tomsk"}' data-component="dropdown" class="dropdown dropdown_overlay-alt site-filter__dropdown">
+                <p class="dropdown__main-item">Город</p>
+                <svg class="dropdown__icon" width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3.5 4L0.468911 0.25L6.53109 0.25L3.5 4Z" />
+                </svg>
+                <nav class="dropdown__navigation">
+                  <button value='{"name": "Томск", "value": "tomsk"}' class="dropdown__navigation-item">Томск</button>
+                  <button value='{"name": "Москва", "value": "moscow"}' class="dropdown__navigation-item">Москва</button>
+                  <button value='{"name": "Орел", "value": "orel"}' class="dropdown__navigation-item">Орел</button>
+                  <button value='{"name": "Краснодар", "value": "krasnodar"}' class="dropdown__navigation-item">Краснодар</button>
+                  <button value='{"name": "Магадан", "value": "magadan"}' class="dropdown__navigation-item">Магадан</button>
+                  <button value='{"name": "Иркутск", "value": "irkutsk"}' class="dropdown__navigation-item">Иркутск</button>
+                </nav>
+              </div>
+            </div>
+        
+            <button class="border-link border-link_with-icon site-filter__border-link">
+              Добавить компанию
+              <svg class="border-link__icon" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.5 8L14.5 8" stroke-linecap="square" stroke-linejoin="round"></path>
+                <path d="M7.5 1L7.5 15" stroke-linecap="square" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+        
+            <form data-component="searchForm" class="search-form search-form_urists ui-form-with-items__form site-filter__filter">
+              <div data-component="searchFormHeader" class="search-form__header">
+                <p class="search-form__header-title">Фильтр</p>
+                <img width="13" height="13" src="./img/icons/icon-dropdown-back-blue_alt.svg" alt="Фильтр" class="search-form__header-icon" />
+              </div>
+              <div class="search-form__wrapper">
+                <p class="search-form__title title title_4">Фильтр</p>
+        
+                <div class="ui-checkbox ui-checkbox_lg search-form__group">
+                  <input id="byRating" class="ui-checkbox__input" name="sorting" type="radio" />
+                  <button class="ui-checkbox__button">
+                    <svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5l3 2 5-6" />
+                    </svg>
+                  </button>
+                  <label for="byRating" class="ui-checkbox__label">По рейтингу</label>
+                </div>
+        
+                <div class="ui-checkbox ui-checkbox_lg search-form__group">
+                  <input id="reReviews" class="ui-checkbox__input" name="sorting" type="radio" />
+                  <button class="ui-checkbox__button">
+                    <svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 5l3 2 5-6" />
+                    </svg>
+                  </button>
+                  <label for="reReviews" class="ui-checkbox__label">По отзывам</label>
+                </div>
+        
+                <p class="search-form__title search-form__title-second title title_4">Город</p>
+        
+                <div data-title="Город" data-value='{"name": "Томск", "value": "tomsk"}' data-component="dropdown" class="dropdown search-form__group">
+                  <p class="dropdown__main-item">Город</p>
+                  <svg class="dropdown__icon" width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.5 4L0.468911 0.25L6.53109 0.25L3.5 4Z" />
+                  </svg>
+                  <nav class="dropdown__navigation">
+                    <button type="button" value='{"name": "Томск", "value": "tomsk"}' class="dropdown__navigation-item">Томск</button>
+                    <button type="button" value='{"name": "Иркутск", "value": "irkutsk"}' class="dropdown__navigation-item">Иркутск</button>
+                    <button type="button" value='{"name": "Москва", "value": "moskva"}' class="dropdown__navigation-item">Москва</button>
+                  </nav>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="companies__items">
+          <div class="companies__item">
+            <a href="/" class="companies__item-overlay-link"></a>
+            <div class="companies__item-media">
+              <!-- Топ компания или нет - НАЧАЛО -->
+              <div class="companies__item-media-top">
+                <img class="companies__item-media-top-icon" src="./img/icons/icon-bookmark-star-blue.svg" alt="" />
+                <p class="companies__item-media-top-text">ТОП-10 лучших компаний</p>
+              </div>
+              <!-- Топ компания или нет - КОНЕЦ -->
+
+              <img src="./img/images/company-dviteks-alt.png" alt="dviteks" class="companies__item-media-img" />
+            </div>
+            <div class="companies__item-content">
+              <div class="companies__item-content-first">
+                <p class="companies__item-title">
+                  Наименование организации
+                  <br />
+                  2-я строка
+                </p>
+                <div class="ui-rating companies__ui-rating">
+                  <div class="ui-rating__container">
+                    <p class="ui-rating__city">Москва</p>
+                    <div class="ui-rating__rating">
+                      <img src="./img/icons/icon-star-blue.svg" alt="Оценки специалиста" class="ui-rating__rating-icon" />
+                      <span class="ui-rating__rating-number">4.1</span>
+                      <span class="ui-rating__rating-count">12 оценок</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="companies__item-address"><span class="companies__item-address-city">Москва, </span>Комсомольский проспект, д. 16/2, с. 3</p>
+                <ul class="companies__item-features">
+                  <li class="companies__item-feature">
+                    <span class="companies__item-feature-key">Дата регистрации</span>
+                    <span class="companies__item-feature-value">10.05.22</span>
+                  </li>
+                  <li class="companies__item-feature">
+                    <span class="companies__item-feature-key">Уставной капитал</span>
+                    <span class="companies__item-feature-value">10 000 000</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="companies__item-content-second">
+                <div class="companies__item-comments">
+                  <p class="companies__item-comment">
+                    <b>Отзыв:</b> Спасибо арбитражному управляюему Маргарите Холостовой, который занимался моим делом, спасибо Ольге которая делала всю бумажную работу...
+                  </p>
+                </div>
+                <a href="/" class="link-text-with-icon companies__link-text-with-icon">
+                  <span class="link-text-with-icon__text">Больше информации</span>
+                  <img width="18" height="18" src="./img/icons/icon-arrow45-blue.svg" alt="Больше информации" class="link-text-with-icon__img" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="companies__item">
+            <a href="/" class="companies__item-overlay-link"></a>
+            <div class="companies__item-media">
+              <!-- Топ компания или нет - НАЧАЛО -->
+              <div class="companies__item-media-top">
+                <img class="companies__item-media-top-icon" src="./img/icons/icon-bookmark-star-blue.svg" alt="" />
+                <p class="companies__item-media-top-text">ТОП-10 лучших компаний</p>
+              </div>
+              <!-- Топ компания или нет - КОНЕЦ -->
+
+              <img src="./img/images/company-dviteks-alt.png" alt="dviteks" class="companies__item-media-img" />
+            </div>
+            <div class="companies__item-content">
+              <div class="companies__item-content-first">
+                <p class="companies__item-title">
+                  Наименование организации
+                  <br />
+                  2-я строка
+                </p>
+                <div class="ui-rating companies__ui-rating">
+                  <div class="ui-rating__container">
+                    <p class="ui-rating__city">Москва</p>
+                    <div class="ui-rating__rating">
+                      <img src="./img/icons/icon-star-blue.svg" alt="Оценки специалиста" class="ui-rating__rating-icon" />
+                      <span class="ui-rating__rating-number">4.1</span>
+                      <span class="ui-rating__rating-count">12 оценок</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="companies__item-address"><span class="companies__item-address-city">Москва, </span>Комсомольский проспект, д. 16/2, с. 3</p>
+                <ul class="companies__item-features">
+                  <li class="companies__item-feature">
+                    <span class="companies__item-feature-key">Дата регистрации</span>
+                    <span class="companies__item-feature-value">10.05.22</span>
+                  </li>
+                  <li class="companies__item-feature">
+                    <span class="companies__item-feature-key">Уставной капитал</span>
+                    <span class="companies__item-feature-value">10 000 000</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="companies__item-content-second">
+                <div class="companies__item-comments">
+                  <p class="companies__item-comment">
+                    <b>Отзыв:</b> Спасибо арбитражному управляюему Маргарите Холостовой, который занимался моим делом, спасибо Ольге которая делала всю бумажную работу...
+                  </p>
+                </div>
+                <a href="/" class="link-text-with-icon companies__link-text-with-icon">
+                  <span class="link-text-with-icon__text">Больше информации</span>
+                  <img width="18" height="18" src="./img/icons/icon-arrow45-blue.svg" alt="Больше информации" class="link-text-with-icon__img" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="companies__item">
+            <a href="/" class="companies__item-overlay-link"></a>
+            <div class="companies__item-media">
+              <!-- Топ компания или нет - НАЧАЛО -->
+              <div class="companies__item-media-top">
+                <img class="companies__item-media-top-icon" src="./img/icons/icon-bookmark-star-blue.svg" alt="" />
+                <p class="companies__item-media-top-text">ТОП-10 лучших компаний</p>
+              </div>
+              <!-- Топ компания или нет - КОНЕЦ -->
+
+              <img src="./img/images/company-dviteks-alt.png" alt="dviteks" class="companies__item-media-img" />
+            </div>
+            <div class="companies__item-content">
+              <div class="companies__item-content-first">
+                <p class="companies__item-title">
+                  Наименование организации
+                  <br />
+                  2-я строка
+                </p>
+                <div class="ui-rating companies__ui-rating">
+                  <div class="ui-rating__container">
+                    <p class="ui-rating__city">Москва</p>
+                    <div class="ui-rating__rating">
+                      <img src="./img/icons/icon-star-blue.svg" alt="Оценки специалиста" class="ui-rating__rating-icon" />
+                      <span class="ui-rating__rating-number">4.1</span>
+                      <span class="ui-rating__rating-count">12 оценок</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="companies__item-address"><span class="companies__item-address-city">Москва, </span>Комсомольский проспект, д. 16/2, с. 3</p>
+                <ul class="companies__item-features">
+                  <li class="companies__item-feature">
+                    <span class="companies__item-feature-key">Дата регистрации</span>
+                    <span class="companies__item-feature-value">10.05.22</span>
+                  </li>
+                  <li class="companies__item-feature">
+                    <span class="companies__item-feature-key">Уставной капитал</span>
+                    <span class="companies__item-feature-value">10 000 000</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="companies__item-content-second">
+                <div class="companies__item-comments">
+                  <p class="companies__item-comment">
+                    <b>Отзыв:</b> Спасибо арбитражному управляюему Маргарите Холостовой, который занимался моим делом, спасибо Ольге которая делала всю бумажную работу...
+                  </p>
+                </div>
+                <a href="/" class="link-text-with-icon companies__link-text-with-icon">
+                  <span class="link-text-with-icon__text">Больше информации</span>
+                  <img width="18" height="18" src="./img/icons/icon-arrow45-blue.svg" alt="Больше информации" class="link-text-with-icon__img" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include("../blocks/modules/footer/footer.html")
+    @@include("../blocks/modules/modals/modals.html")
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

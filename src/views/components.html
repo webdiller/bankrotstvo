@@ -26,10 +26,10 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-
     @@include("../blocks/modules/header/header.html")
     <div style="background-color: #fff; padding: 20px">
       <div class="container">
+        @@include("../blocks/modules/site-header/site-header.html")
         <!-- Заголовки -->
         <h1 class="title">
           Заголовок H1 <br />
@@ -184,8 +184,8 @@
             <path d="M6.50012 7.79995L6.50012 0.600342" stroke-linecap="square" />
           </svg>
         </button>
-        <br>
-        <br>
+        <br />
+        <br />
 
         <button data-component="modalCommentTrigger" class="border-link-with-icon">
           <span class="border-link-with-icon__text">Открыть ответ на комментарий</span>
@@ -195,9 +195,12 @@
             <path d="M6.50012 7.79995L6.50012 0.600342" stroke-linecap="square" />
           </svg>
         </button>
-        <br>
-        <br>
+        <br />
+        <br />
         @@include("../blocks/modules/tag/tag.html")
+        <br />
+        <br />
+        @@include("../blocks/modules/ui-rating/ui-rating.html")
         <br />
         <br />
         @@include("../blocks/modules/likes/likes.html")
@@ -234,10 +237,7 @@
 
     <div style="background-color: #f0f2f5; padding: 20px">
       <div class="container">
-        @@include("../blocks/modules/dropdown/dropdown.html")
-        
-
-        @@include("../blocks/modules/search/search.html", {"label": "Имя"})
+        @@include("../blocks/modules/dropdown/dropdown.html") @@include("../blocks/modules/search/search.html", {"label": "Имя"})
         <br />
         <br />
 
@@ -296,7 +296,6 @@
             <button value='{"name": "Категоря 2", "value": "category2"}' class="dropdown__navigation-item">Категоря 2</button>
           </nav>
         </div>
-
         <br />
         <br />
 
@@ -332,6 +331,24 @@
     </div>
 
     <div style="background-color: #fff; padding: 20px">
+
+      <div data-title="Томск" data-value='{"name": "Томск", "value": "tomsk"}' data-component="dropdown" class="dropdown dropdown_overlay-alt">
+        <p class="dropdown__main-item">Город</p>
+        <svg class="dropdown__icon" width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.5 4L0.468911 0.25L6.53109 0.25L3.5 4Z" />
+        </svg>
+        <nav class="dropdown__navigation">
+          <button value='{"name": "Томск", "value": "tomsk"}' class="dropdown__navigation-item">Томск</button>
+          <button value='{"name": "Москва", "value": "moscow"}' class="dropdown__navigation-item">Москва</button>
+          <button value='{"name": "Орел", "value": "orel"}' class="dropdown__navigation-item">Орел</button>
+          <button value='{"name": "Краснодар", "value": "krasnodar"}' class="dropdown__navigation-item">Краснодар</button>
+          <button value='{"name": "Магадан", "value": "magadan"}' class="dropdown__navigation-item">Магадан</button>
+          <button value='{"name": "Иркутск", "value": "irkutsk"}' class="dropdown__navigation-item">Иркутск</button>
+        </nav>
+      </div>
+      <br />
+      <br />
+      
       @@include("../blocks/modules/box-link/box-link.html")
       <br />
       <br />
@@ -371,7 +388,7 @@
       @@include("../blocks/modules/subscribe/subscribe.html")
     </div>
 
-    @@include("../blocks/modules/footer/footer.html")
+    @@include("../blocks/modules/footer/footer.html") 
     @@include("../blocks/modules/modals/modals.html")
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>

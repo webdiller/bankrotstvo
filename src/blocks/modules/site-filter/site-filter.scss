@@ -1,0 +1,81 @@
+$siteFilter: ".site-filter";
+
+#{$siteFilter} {
+  &_dropdown {
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    @include media('<=desktop') {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__links-and-dropdown {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    margin-right: 30px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid $grey2;
+    @include media('<=desktop') {
+      display: none;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    margin-right: 160px;
+    @include media('<=LGdesktop') {
+      margin-right: auto;
+    }
+  }
+
+  &__link {
+    margin-right: 50px;
+    color: #adb4c6;
+    &.active {
+      color: $black1;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__dropdown-title {
+    margin-right: 8px;
+  }
+
+  &__dropdown {
+    min-width: 285px;
+  }
+
+  &__border-link {
+    margin-left: auto;
+    @include media('<=desktop') {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__filter {
+    display: none;
+    @include media('<=desktop') {
+      display: block;
+    }
+  }
+  &_without-button {
+    #{$siteFilter} {
+      &__links {
+        margin-right: auto;
+      }
+      &__links-and-dropdown {
+        margin-right: 0;
+      }
+    }
+  }
+}

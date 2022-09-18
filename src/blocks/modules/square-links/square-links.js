@@ -26,7 +26,6 @@ function swiperMode() {
     }
   }
   else if (!mobile) {
-    // TODO: Проверить метод
     init = false;
   }
 
