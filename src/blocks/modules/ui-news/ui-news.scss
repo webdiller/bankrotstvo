@@ -1,0 +1,37 @@
+.ui-news {
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(300px, 370px) minmax(600px, 1fr);
+    justify-content: space-between;
+    column-gap: 30px;
+
+    margin-top: 150px;
+    margin-bottom: 120px;
+    @include media('<=desktop') {
+      display: block;
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__title {
+    @include media('<=desktop') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    row-gap: 30px;
+    @include media('<=desktop') {
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    @include media('<=phone') {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__big-box-link-img {
+  }
+}

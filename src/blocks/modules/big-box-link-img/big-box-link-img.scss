@@ -66,6 +66,8 @@ $bigBoxLinkImg: '.big-box-link-img';
     margin-bottom: 10px;
   }
   &__mobile-date {
+    font-size: 10px;
+    line-height: 16px;
   }
   &__img-wrapper {
     width: 270px;
@@ -125,5 +127,20 @@ $bigBoxLinkImg: '.big-box-link-img';
     }
   }
   &__date {
+    font-size: 12px;
+  }
+
+  &_alt {
+    #{$bigBoxLinkImg} {
+      &__title {
+        margin-bottom: 10px;
+      }
+      &__content {
+        padding: 20px 20px 20px 30px;
+      }
+      &__excerpt {
+        max-width: unset;
+      }
+    }
   }
 }

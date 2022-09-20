@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" />
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png" />
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/main.min.css" />
   </head>
   <body>
     <header data-component="header" class="header header_margin">
@@ -486,7 +486,8 @@
   </nav>
 </div>
 <br />
-<br /> <div data-component="search" class="ui-search @@classNames">
+<br /> 
+        <div data-component="search" class="ui-search @@classNames">
   <input type="text" class="ui-search__input" />
   <label class="ui-search__label">Имя</label>
 </div>
@@ -639,7 +640,7 @@
 
       <br />
       <br />
-      <div class="big-box-link-img">
+      <div style="width: 770px;"><div class="big-box-link-img">
   <div class="big-box-link-img__wrapper">
     <a href="/" class="big-box-link-img__link"></a>
     <div class="big-box-link-img__img-wrapper">
@@ -666,6 +667,32 @@
   </div>
 </div>
 
+<br />
+<br />
+
+<div class="big-box-link-img big-box-link-img_alt">
+  <div class="big-box-link-img__wrapper">
+    <a href="/" class="big-box-link-img__link"></a>
+    <div class="big-box-link-img__img-wrapper">
+      <img src="./img/images/box-link-img-2.jpg" alt="Банки отказывали в выдаче потребкредита 75% желающих в марте" class="big-box-link-img__img" />
+      <div class="big-box-link-img__mobile-content">
+        <p class="title title_5 big-box-link-img__mobile-title">СберБанк помогает клиентам получить QR-код сертификата вакцинированного или переболевшего Covid-19</p>
+        <p class="big-box-link-img__mobile-date">12 июня 2022</p>
+      </div>
+    </div>
+    <div class="big-box-link-img__content">
+      <p class="title title_5 big-box-link-img__title">СберБанк помогает клиентам получить QR-код сертификата вакцинированного или переболевшего Covid-19</p>
+      <p class="text text_sm big-box-link-img__excerpt">
+        В период локдауна, введённого в Москве и в регионах в связи с коронавирусом, клиенты СберБанка теперь могут скачать QR-код сертификата о вакцинации или о перенесённом заболевании с помощью
+        СберБанк Онлайн — не выходя из дома.
+      </p>
+      <div class="big-box-link-img__tag-date">
+        <p class="text text_sm big-box-link-img__date">12 июня 2022</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
       <br />
       <br />
       <div style="max-width: 770px;"><div class="ui-horizontal-card ui-horizontal-card_features">
@@ -2371,7 +2398,7 @@
   </form>
 </div>
 
-    <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

@@ -1,0 +1,116 @@
+$faq: '.faq';
+
+#{$faq} {
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(300px, 370px) minmax(600px, 1fr);
+    justify-content: space-between;
+    column-gap: 30px;
+    padding-top: 30px;
+    @include media('<=desktop') {
+      display: block;
+    }
+  }
+
+  &__title {
+    @include media('<=desktop') {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__items {
+  }
+
+  &__item {
+    padding: 40px 0;
+    border-bottom: 1px solid $grey3;
+    @include media('<=tablet') {
+      padding: 20px 0;
+    }
+    &:first-child {
+      padding-top: 15px;
+    }
+  }
+
+  &__item-question {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    @include media('<=tablet') {
+      font-size: 14px;
+      line-height: 21px;
+      text-align: left;
+    }
+    &.active {
+      #{$faq} {
+        &__item-question-icon {
+          transform: translateY(-50%) rotate(-180deg);
+        }
+      }
+      ~ #{$faq} {
+        &__item-answers {
+          padding-top: 40px;
+          max-height: 100%;
+          visibility: visible;
+          pointer-events: all;
+          @include media('<=tablet') {
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+    &-icon {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 25px;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      @include media('<=tablet') {
+        width: 18px;
+      }
+    }
+  }
+
+  &__item-answers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding-top: 0;
+    transition: all 0.3s ease;
+
+    will-change: max-height, visibility, padding-top;
+    max-height: 0;
+    visibility: hidden;
+    pointer-events: none;
+    @include media('<=tablet') {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  &__item-answer-description {
+    color: $grey1;
+  }
+
+  &__item-answer-downloads {
+    margin-top: 20px;
+  }
+  &__ui-download {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-answer-img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 20px;
+    @include media('<=tablet') {
+      margin-bottom: 15px;
+    }
+  }
+}
