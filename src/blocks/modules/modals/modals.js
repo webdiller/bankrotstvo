@@ -1,3 +1,5 @@
+import Viewer from 'viewerjs';
+
 const modalSearch = document.querySelector("[data-component='modalSearch']");
 const modalSearchTrigger = document.querySelectorAll("[data-component='modalSearchTrigger']");
 const modalSearchInput = modalSearch.querySelector("input");
@@ -10,6 +12,9 @@ const modalReviewClose = modalReview.querySelector(".modal-review__close-btn");
 const modalComment = document.querySelector("[data-component='modalComment']");
 const modalCommentTrigger = document.querySelectorAll("[data-component='modalCommentTrigger']");
 const modalCommentClose = modalComment.querySelector(".modal-review__close-btn");
+
+const modalViewer = document.querySelector("[data-component='modalViewer']");
+const modalImages = document.querySelectorAll("[data-component='modalImages']");
 
 document.addEventListener('DOMContentLoaded', function () {
   // modalSearch
@@ -59,4 +64,21 @@ document.addEventListener('DOMContentLoaded', function () {
   modalCommentClose.addEventListener('click', function () {
     modalComment.classList.remove('active');
   });
+
+  // modalViewer
+  (() => {
+    try {
+      modalImages.forEach(element => {
+        new Viewer(element, {
+          toolbar: false,
+          navbar: false,
+          title: false,
+          className: "viewer-modal"
+        });
+      });
+
+    } catch (error) {
+      console.log(error);
+    }
+  })();
 });

@@ -1,5 +1,6 @@
 $modalSearch: '.modal-search';
 $modalReview: '.modal-review';
+$viewerModal: '.viewer-modal';
 
 #{$modalSearch} {
   position: fixed;
@@ -198,5 +199,11 @@ $modalReview: '.modal-review';
       right: 20px;
       filter: invert(100%) grayscale(1);
     }
+  }
+}
+
+#{$viewerModal} {
+  .viewer-button {
+    // background-color: transparent !important;
   }
 }

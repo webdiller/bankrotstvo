@@ -237,8 +237,7 @@
 
     <div style="background-color: #f0f2f5; padding: 20px">
       <div class="container">
-        @@include("../blocks/modules/dropdown/dropdown.html") 
-        @@include("../blocks/modules/search/search.html", {"label": "Имя"})
+        @@include("../blocks/modules/dropdown/dropdown.html") @@include("../blocks/modules/search/search.html", {"label": "Имя"})
         <br />
         <br />
 
@@ -332,7 +331,6 @@
     </div>
 
     <div style="background-color: #fff; padding: 20px">
-
       <div data-title="Томск" data-value='{"name": "Томск", "value": "tomsk"}' data-component="dropdown" class="dropdown dropdown_overlay-alt">
         <p class="dropdown__main-item">Город</p>
         <svg class="dropdown__icon" width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -349,7 +347,7 @@
       </div>
       <br />
       <br />
-      
+
       @@include("../blocks/modules/box-link/box-link.html")
       <br />
       <br />
@@ -387,10 +385,14 @@
       <br />
       <br />
       @@include("../blocks/modules/subscribe/subscribe.html")
+      <br />
+      <br />
+      <ul data-component="modalImages">
+        <li><img style="max-width: 100%;" src="./img/images/document-pdf.jpg" alt="Picture 1" /></li>
+      </ul>
     </div>
 
-    @@include("../blocks/modules/footer/footer.html") 
-    @@include("../blocks/modules/modals/modals.html")
+    @@include("../blocks/modules/footer/footer.html") @@include("../blocks/modules/modals/modals.html")
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
   </body>

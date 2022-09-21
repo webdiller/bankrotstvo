@@ -7675,6 +7675,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     stylelint-order: ^5.0.0
     stylelint-selector-bem-pattern: ^2.1.1
     swiper: ^8.3.2
+    viewerjs: ^1.10.5
     webpack: ^5.70.0
     webpack-stream: ^7.0.0
     yargs: ^17.3.1
@@ -15233,6 +15234,13 @@ bem-tools-create@bem-tools/bem-tools-create:
     core-util-is: 1.0.2
     extsprintf: ^1.2.0
   checksum: c431df0bedf2088b227a4e051e0ff4ca54df2c114096b0c01e1cbaadb021c30a04d7dd5b41ab277bcd51246ca135bf931d4c4c796ecae7a4fef6d744ecef36ea
+  languageName: node
+  linkType: hard
+
+"viewerjs@npm:^1.10.5":
+  version: 1.10.5
+  resolution: "viewerjs@npm:1.10.5"
+  checksum: b6b3b3a3e256ce89ce2b424a26d2f64e27b6f2a8c330857abdb4d2c9d56d5c8f5674f5f4b5ccbfe27c9298edd39d3cd5b54f6b55dfa38607f8369f1b09fc15a2
   languageName: node
   linkType: hard
 

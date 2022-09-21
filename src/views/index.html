@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    @@include("../blocks/modules/header/header.html")
+    @@include("../blocks/modules/header/header.html") 
     @@include("../blocks/modules/welcome/welcome.html")
     @@include("../blocks/modules/top-news/top-news.html")
     @@include("../blocks/modules/vertical-steps/vertical-steps.html")
@@ -260,7 +260,7 @@
       </div>
     </div>
 
-    @@include("../blocks/modules/have-questions/have-questions.html", {"classNames": "have-questions_home"})
+    @@include("../blocks/modules/have-questions/have-questions.html", {"classNames": "have-questions_home"}) 
     @@include("../blocks/modules/grid-slider/grid-slider.html")
 
     <div class="horizontal-slider horizontal-slider_bg-item-gradients">
@@ -434,9 +434,19 @@
         </div>
       </div>
     </div>
+    
+    
 
-    @@include("../blocks/modules/we-will-help/we-will-help.html")
-    @@include("../blocks/modules/footer/footer.html")
+    <div>
+      <ul data-component="modalImages">
+        <li><img src="./img/images/ui-horizontal-card-img.jpg" alt="Picture 1"></li>
+        <li><img src="./img/images/ui-horizontal-card-img-2.jpg" alt="Picture 2"></li>
+        <li><img src="./img/images/faq-item-2.jpg" alt="Picture 3"></li>
+      </ul>
+    </div>
+
+    @@include("../blocks/modules/we-will-help/we-will-help.html") 
+    @@include("../blocks/modules/footer/footer.html") 
     @@include("../blocks/modules/modals/modals.html")
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
