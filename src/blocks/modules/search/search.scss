@@ -26,6 +26,27 @@ $uiSearch: '.ui-search';
         color: $grey2;
       }
     }
+    &:invalid {
+      border-bottom-color: $red1;
+      ~ #{$uiSearch} {
+        &__error {
+          overflow: visible;
+          line-height: 21px;
+          max-height: 100%;
+          opacity: 1;
+        }
+      }
+    }
+    &:invalid:not(:focus):not(:placeholder-shown) {
+      border-bottom-color: $blue1;
+      ~ #{$uiSearch} {
+        &__error {
+          overflow: hidden;
+          opacity: 0;
+          max-height: 0;
+        }
+      }
+    }
   }
 
   &__label {
@@ -40,6 +61,20 @@ $uiSearch: '.ui-search';
       font-size: 14px;
       line-height: 21px;
     }
+  }
+
+  &__error {
+    display: block;
+    color: $red1;
+    font-size: 12px;
+    line-height: 21px;
+    overflow: hidden;
+
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    will-change: max-height, opacity;
   }
 
   &.active {

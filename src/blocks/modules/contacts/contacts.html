@@ -51,24 +51,27 @@
           <p class="search-form__title title title_4">Написать нам</p>
 
           <div data-component="search" class="ui-search search-form__group">
-            <input type="text" class="ui-search__input" />
+            <input required minlength="2" maxlength="30" type="text" class="ui-search__input" />
             <label class="ui-search__label">Имя</label>
+            <small class="ui-search__error">От 2 до 30 символов</small>
           </div>
 
           <div data-component="search" class="ui-search search-form__group">
-            <input type="text" class="ui-search__input" />
+            <input required pattern="[+][7-9]{1}[0-9]{10}" type="tel" class="ui-search__input" />
             <label class="ui-search__label">Телефон</label>
+            <small class="ui-search__error">Введите корректный телефон. <br> Пример + 7 000 000 00 00</small>
           </div>
 
           <div data-component="search" class="ui-search search-form__group">
-            <input type="text" class="ui-search__input" />
+            <input required minlength="10" maxlength="400" type="text" class="ui-search__input" />
             <label class="ui-search__label">Сообщение</label>
+            <small class="ui-search__error">От 10 до 400 символов</small>
           </div>
 
           <button type="submit" class="border-link search-form__group search-form__group_button">Написать</button>
 
           <div class="ui-checkbox search-form__group">
-            <input id="contactsOferta" class="ui-checkbox__input" type="checkbox" />
+            <input required id="contactsOferta" class="ui-checkbox__input" type="checkbox" />
             <button class="ui-checkbox__button">
               <svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 5l3 2 5-6" />
