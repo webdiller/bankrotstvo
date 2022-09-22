@@ -584,6 +584,38 @@
   </form>
 </div>
 
+<div data-component="modalSorting" class="modal-sort">
+  <div class="modal-sort__wrapper">
+    <p class="title title_4 modal-sort__title">Показать</p>
+
+    <form class="modal-sort__groups">
+      <div class="ui-checkbox ui-checkbox_lg ui-checkbox_center modal-sort__group">
+        <input value="Новые комментарии" id="newCommentsModal" class="ui-checkbox__input" type="radio" name="reviewSortingModal" />
+        <button class="ui-checkbox__button">
+          <svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 5l3 2 5-6"></path>
+          </svg>
+        </button>
+        <label for="newCommentsModal" class="ui-checkbox__label">Новые комментарии</label>
+      </div>
+
+      <div class="ui-checkbox ui-checkbox_lg ui-checkbox_center modal-sort__group">
+        <input value="Популярные комментарии" id="popularCommentsModal" class="ui-checkbox__input" type="radio" name="reviewSortingModal" />
+        <button class="ui-checkbox__button">
+          <svg class="ui-checkbox__icon" width="10" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 5l3 2 5-6"></path>
+          </svg>
+        </button>
+        <label for="popularCommentsModal" class="ui-checkbox__label">Популярные комментарии</label>
+      </div>
+    </form>
+
+    <button type="button" class="modal-sort__close-btn">
+      <img width="24" height="24" src="./img/icons/icon-close-blue.svg" alt="Закрыть сортировку" class="modal-sort__close-icon" />
+    </button>
+  </div>
+</div>
+
 <div data-component="modalViewer" class="modal-viewer"></div>
 
     <script src="js/vendor.min.js"></script>

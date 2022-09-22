@@ -1,6 +1,7 @@
 $modalSearch: '.modal-search';
 $modalReview: '.modal-review';
 $viewerModal: '.viewer-modal';
+$modalSort: '.modal-sort';
 
 #{$modalSearch} {
   position: fixed;
@@ -167,8 +168,8 @@ $viewerModal: '.viewer-modal';
 
   &__group {
     margin-bottom: 35px;
-    @include media('<=tablet') {
-      margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -199,6 +200,99 @@ $viewerModal: '.viewer-modal';
       right: 20px;
       filter: invert(100%) grayscale(1);
     }
+  }
+}
+
+#{$modalSort} {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  background-color: transparent;
+
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  will-change: opacity, z-index;
+
+  transition: all 0.3s ease;
+
+  @include media('<=tablet') {
+    top: unset;
+    bottom: 0;
+    padding: 0;
+    overflow-y: auto;
+    opacity: 1;
+  }
+
+  &.active {
+    z-index: 1000;
+    opacity: 1;
+    pointer-events: all;
+    overflow-y: auto;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.7);
+    #{$modalSort} {
+      &__wrapper {
+        transform: scale(1);
+        top: 0;
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    top: 30%;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 20px 15px;
+    margin-top: auto;
+
+    background-color: $grey5;
+
+    transition: all 0.3s ease;
+    will-change: transform;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__group {
+    margin-bottom: 10px;
+    width: 100%;
+    &:first-child {
+      padding-bottom: 10px;
+      border-bottom: 1px solid $grey3;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s ease;
+    will-change: transform;
   }
 }
 

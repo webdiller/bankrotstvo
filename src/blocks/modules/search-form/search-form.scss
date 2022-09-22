@@ -157,4 +157,37 @@ $searchForm: '.search-form';
       }
     }
   }
+
+  &_reviews {
+    .ui-search__label {
+      font-size: 16px;
+    }
+    #{$searchForm} {
+      &__title {
+        margin-bottom: 20px;
+        display: block;
+        margin-bottom: 20px;
+        @include media('<=desktop') {
+          display: none;
+        }
+        &-second {
+          margin-top: 35px;
+          @include media('<=desktop') {
+            display: block;
+            margin-top: 15px;
+          }
+        }
+      }
+      &__group {
+        margin-bottom: 12px;
+        @include media('<=desktop') {
+          margin-bottom: 17px;
+        }
+        &_button {
+          margin-top: 25px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
