@@ -167,4 +167,28 @@ $rating: '.rating';
   &__bottom {
     text-align: right;
   }
+  &__social {
+    display: flex;
+    align-items: center;
+    &-item {
+      margin-right: 5px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &_page-rating {
+    #{$rating} {
+      &__container {
+        padding-left: 0;
+        padding-right: 0;
+        @include media('<=desktop') {
+          margin-bottom: 30px;
+        }
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
 }
