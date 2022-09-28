@@ -2,8 +2,8 @@ import Swiper, { Scrollbar, Navigation } from 'swiper';
 document.addEventListener('DOMContentLoaded', function () {
   new Swiper('#horiontalSwiper1', {
     modules: [Scrollbar, Navigation],
-    spaceBetween: 10,
-    slidesPerView: 1.3,
+    spaceBetween: 15,
+    slidesPerView: 1.2,
     centeredSlides: false,
     loop: false,
     scrollbar: {
@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   new Swiper('#horiontalSwiper2', {
     modules: [Scrollbar, Navigation],
-    spaceBetween: 10,
-    slidesPerView: 1.25,
+    spaceBetween: 15,
+    slidesPerView: 1.2,
     centeredSlides: false,
     loop: false,
     scrollbar: {

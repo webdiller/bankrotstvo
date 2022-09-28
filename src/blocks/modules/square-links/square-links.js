@@ -5,7 +5,7 @@ let init = false;
 
 const swiperOptions = {
   spaceBetween: 10,
-  slidesPerView: 1.22,
+  slidesPerView: 1.20,
   centeredSlides: false,
   loop: false,
   breakpoints: {

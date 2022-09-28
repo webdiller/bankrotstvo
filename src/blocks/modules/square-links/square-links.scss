@@ -214,7 +214,7 @@ $squareLinks: '.square-links';
         display: block;
         &.swiper {
           @include media('<=desktop') {
-            padding-right: 10px;
+            padding-right: 15px;
           }
         }
         .swiper-wrapper {

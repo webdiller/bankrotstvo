@@ -4,6 +4,9 @@ $horizontalSlider: '.horizontal-slider';
   &__container {
     position: relative;
     overflow-x: hidden;
+    @include media('<=desktop') {
+      padding-right: 0;
+    }
     &::before {
       content: '';
       position: absolute;
@@ -14,6 +17,13 @@ $horizontalSlider: '.horizontal-slider';
     }
   }
 
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
   &__title {
     margin-bottom: 50px;
     position: relative;
@@ -22,16 +32,18 @@ $horizontalSlider: '.horizontal-slider';
     padding-right: 46px;
     @include media('<=desktop') {
       margin-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 
   &__swiper {
     &.swiper {
+      @include media('<=desktop') {
+        padding-right: 15px;
+      }
     }
     .swiper-wrapper {
-      @include media('<=phone') {
-        margin-right: 15px;
-      }
     }
     .swiper-slide {
       overflow: hidden;
@@ -49,6 +61,14 @@ $horizontalSlider: '.horizontal-slider';
         margin-top: 50px;
         @include media('<=tablet') {
           display: none;
+        }
+      }
+
+      &__bottom-addition {
+        display: none;
+        margin-top: 20px;
+        &-link {
+          margin-left: auto;
         }
       }
 
@@ -126,6 +146,11 @@ $horizontalSlider: '.horizontal-slider';
 
   &_kolonki {
     #{$horizontalSlider} {
+      &__title {
+        @include media('<=desktop') {
+          margin-bottom: 20px;
+        }
+      }
       &__container {
         margin-bottom: 40px;
         padding-bottom: 120px;
@@ -144,9 +169,6 @@ $horizontalSlider: '.horizontal-slider';
 
   &_bg-item-gradients {
     .swiper {
-      @include media('<=desktop') {
-        padding-right: 10px;
-      }
     }
     #{$horizontalSlider} {
       &__container {
@@ -156,12 +178,15 @@ $horizontalSlider: '.horizontal-slider';
         margin-bottom: 160px;
         @include media('<=desktop') {
           margin-bottom: 60px;
+          padding-left: 15px;
           padding-right: 0;
         }
       }
       &__title {
         @include media('<=desktop') {
           margin-bottom: 30px;
+          padding-left: 0;
+          padding-right: 0;
         }
       }
       &__links {
@@ -173,6 +198,59 @@ $horizontalSlider: '.horizontal-slider';
           @include media('<=desktop') {
             display: block;
           }
+        }
+      }
+    }
+  }
+
+  &_articles-page {
+    #{$horizontalSlider} {
+      &__container {
+        padding-top: 30px;
+        &::before {
+          top: 0;
+          right: 0;
+          left: 20px;
+          width: calc(100% - 40px);
+          @include media('<=desktop') {
+            display: none;
+          }
+        }
+        @include media('<=desktop') {
+          padding-top: 0;
+          padding-right: 0;
+        }
+      }
+      &__title {
+        margin-bottom: 0;
+        @include media('<=desktop') {
+          padding-left: 0;
+        }
+        @include media('<=tablet') {
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+      &__header {
+        @include media('<=desktop') {
+          margin-bottom: 20px;
+          padding: 0 15px 0 0;
+        }
+      }
+      &__swiper {
+        @include media('<=desktop') {
+          padding-right: 15px;
+        }
+      }
+      &__link-text-with-icon {
+      }
+      
+      &__bottom-addition {
+        @include media('<=desktop') {
+          display: flex;
+        }
+        &-link {
+          
         }
       }
     }

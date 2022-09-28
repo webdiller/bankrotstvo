@@ -11,3 +11,4 @@ import "%modules%/modals/modals";
 import "%modules%/rating-star/rating-star";
 import "%modules%/upload-file/upload-file";
 import "%modules%/faq/faq";
+import "%modules%/articles-page/articles-page";
