@@ -231,6 +231,7 @@
     margin-bottom: 180px;
     @include media('<=desktop') {
       margin-top: 60px;
+      margin-bottom: 60px;
     }
   }
 }
