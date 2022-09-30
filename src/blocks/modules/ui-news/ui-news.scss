@@ -1,16 +1,13 @@
-.ui-news {
+$uiNews: '.ui-news';
+
+#{$uiNews} {
   &__container {
     display: grid;
     grid-template-columns: minmax(300px, 370px) minmax(600px, 1fr);
     justify-content: space-between;
     column-gap: 30px;
-
-    margin-top: 150px;
-    margin-bottom: 120px;
     @include media('<=desktop') {
       display: block;
-      margin-top: 60px;
-      margin-bottom: 60px;
     }
   }
 
@@ -33,5 +30,43 @@
   }
 
   &__big-box-link-img {
+  }
+
+  &_vopros-otvet {
+    #{$uiNews} {
+      &__container {
+        margin-top: 150px;
+        margin-bottom: 120px;
+        @include media('<=desktop') {
+          margin-top: 60px;
+          margin-bottom: 60px;
+        }
+      }
+    }
+  }
+  
+  &_card-page {
+    #{$uiNews} {
+      &__container {
+        margin-top: 150px;
+        margin-bottom: 120px;
+        @include media('<=desktop') {
+          margin-top: 60px;
+          margin-bottom: 60px;
+        }
+      }
+    }
+  }
+
+  &_card-interview {
+    #{$uiNews} {
+      &__container {
+        margin-top: 120px;
+        margin-bottom: 180px;
+        @include media('<=desktop') {
+          margin-top: 60px;
+        }
+      }
+    }
   }
 }

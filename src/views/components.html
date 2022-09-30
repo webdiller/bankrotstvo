@@ -27,7 +27,7 @@
   </head>
   <body>
     @@include("../blocks/modules/header/header.html")
-    <div style="background-color: #fff; padding: 15px">
+    <div style="background-color: #fff;">
       <div class="container">
         @@include("../blocks/modules/site-header/site-header.html")
         <!-- Заголовки -->
@@ -164,6 +164,27 @@
         </a>
         <br />
         <br />
+        
+        <a href="/" class="border-link border-link_with-icon-left"
+          >
+          <svg class="border-link__icon" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.5 8L14.5 8" stroke-linecap="square" stroke-linejoin="round" />
+            <path d="M7.5 1L7.5 15" stroke-linecap="square" stroke-linejoin="round" />
+          </svg>
+          Банкротство физических лиц 
+        </a>
+        <br>
+        <br>
+
+        <a href="/" class="border-link border-link_with-icon-left"
+          >
+          <svg class="border-link__icon" width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.85938 13.4286L1.57378 7.14302L7.85938 0.857421"/>
+          </svg>
+          Банкротство физических лиц 
+        </a>
+        <br>
+        <br>
 
         <a href="/" class="border-link-with-icon">
           <span class="border-link-with-icon__text">Скачать</span>
@@ -173,6 +194,25 @@
             <path d="M6.50012 7.79995L6.50012 0.600342" stroke-linecap="square" />
           </svg>
         </a>
+        <br />
+        <br />
+
+        <div style="background-color: blue; padding: 15px;">
+          <a href="/" class="border-link-with-icon border-link-with-icon_white">
+            <span class="border-link-with-icon__text">Скачать</span>
+            <svg class="border-link-with-icon__icon" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 6H15M15 6L10.1786 11M15 6L10.1786 1" />
+            </svg>
+          </a>
+          <br>
+          <br>
+          <a href="/" class="border-link-with-icon border-link-with-icon_white border-link-with-icon_lg">
+            <span class="border-link-with-icon__text">Скачать</span>
+            <svg class="border-link-with-icon__icon" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 6H15M15 6L10.1786 11M15 6L10.1786 1" />
+            </svg>
+          </a>
+        </div>
         <br />
         <br />
 
@@ -235,10 +275,9 @@
       </div>
     </div>
 
-    <div style="background-color: #f0f2f5; padding: 15px">
+    <div style="background-color: #f0f2f5;">
       <div class="container">
-        @@include("../blocks/modules/dropdown/dropdown.html") 
-        @@include("../blocks/modules/search/search.html", {"label": "Имя"})
+        @@include("../blocks/modules/dropdown/dropdown.html") @@include("../blocks/modules/search/search.html", {"label": "Имя"})
         <br />
         <br />
 
@@ -277,7 +316,7 @@
       </div>
     </div>
 
-    <div style="background-color: #0c5eed; padding: 15px">
+    <div style="background-color: #0c5eed;">
       <div class="container">
         @@include("../blocks/modules/search/search.html", {"label": "Имя","classNames": "ui-search_white"})
         <br />
@@ -331,7 +370,7 @@
       </div>
     </div>
 
-    <div style="background-color: #fff; padding: 15px">
+    <div style="background-color: #fff;">
       <div data-title="Томск" data-value='{"name": "Томск", "value": "tomsk"}' data-component="dropdown" class="dropdown dropdown_overlay-alt">
         <p class="dropdown__main-item">Город</p>
         <svg class="dropdown__icon" width="7" height="4" viewBox="0 0 7 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -399,11 +438,19 @@
       @@include("../blocks/modules/ui-author/ui-author.html")
       <br />
       <br />
+      @@include("../blocks/modules/ui-author-post/ui-author-post.html")
+      <br />
+      <br />
       @@include("../blocks/modules/ui-reviews/ui-reviews.html")
+      <br />
+      <br />
+      @@include("../blocks/modules/ui-share/ui-share.html")
+      <br />
+      <br />
+      @@include("../blocks/modules/ui-newslider/ui-newslider.html")
     </div>
 
-    @@include("../blocks/modules/footer/footer.html") 
-    @@include("../blocks/modules/modals/modals.html")
+    @@include("../blocks/modules/footer/footer.html") @@include("../blocks/modules/modals/modals.html")
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
   </body>

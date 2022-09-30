@@ -281,4 +281,13 @@ $uiVerticalCard: '.ui-vertical-card';
       }
     }
   }
+  &_team {
+    #{$uiVerticalCard} {
+      &__content {
+        @include media('<=tablet') {
+          display: block;
+        }
+      }
+    }
+  }
 }

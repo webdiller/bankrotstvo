@@ -81,7 +81,9 @@
 
   &__item-img-title-date {
     display: flex;
-    margin-bottom: 13px;
+    @include media('<=desktop') {
+      margin-bottom: 12px;
+    }
   }
   &__item-title-date {
   }
@@ -117,7 +119,6 @@
   &__item-date {
     font-size: 14px;
     color: #adb4c6;
-    margin-bottom: 10px;
   }
 
   &__item-message {

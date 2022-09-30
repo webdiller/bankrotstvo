@@ -1,0 +1,61 @@
+$uiAsk: '.ui-ask';
+
+#{$uiAsk} {
+  &__container {
+    position: relative;
+    padding: 40px 50px 50px 50px;
+    background: $blue1;
+    overflow: hidden;
+    @include media('<=tablet') {
+      padding: 20px;
+    }
+  }
+
+  &__bg-image {
+    position: absolute;
+    right: -15px;
+    top: 20px;
+    width: 255px;
+    @include media('<=tablet') {
+      display: none;
+    }
+  }
+
+  &__title {
+    max-width: 477px;
+    margin-bottom: 26px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 36px;
+    @include media('<=tablet') {
+      margin-bottom: 30px;
+      max-width: unset;
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  &__button {
+    @include media('<=tablet') {
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &_article-content {
+    #{$uiAsk} {
+      &__container {
+      }
+
+      &__bg-image {
+      }
+
+      &__title {
+      }
+
+      &__button {
+      }
+    }
+  }
+}

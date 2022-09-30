@@ -4,6 +4,7 @@ $rating: '.rating';
   &__container {
     position: relative;
     margin-bottom: 160px;
+    overflow: hidden;
     @include media('<=desktop') {
       margin-bottom: 60px;
     }

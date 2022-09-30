@@ -1,0 +1,236 @@
+.card-new {
+  @include media('<=desktop') {
+  }
+  @include media('<=tablet') {
+  }
+  &__container {
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__aside-content {
+    display: grid;
+    grid-template-columns: minmax(300px, 370px) minmax(600px, 770px);
+    justify-content: space-between;
+    column-gap: 30px;
+    @include media('<=desktop') {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__aside {
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__aside-wrapper {
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__aside-back {
+    margin-bottom: 122px;
+    @include media('<=desktop') {
+      display: none;
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__aside-materials {
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__aside-materials-title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    @include media('<=desktop') {
+      font-size: 15px;
+      line-height: 23px;
+      margin-bottom: 10px;
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__aside-materials-items {
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__aside-materials-item {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__aside-tags {
+    margin-top: 60px;
+    padding-top: 60px;
+    border-top: 1px solid #dbe0e4;
+    display: grid;
+    gap: 20px 15px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    @include media('<=desktop') {
+      display: none;
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__aside-tag {
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__content {
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__content-title {
+    margin-bottom: 40px;
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+    font-size: 14px;
+    line-height: 165%;
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+      margin-bottom: 20px;
+      font-size: 12px;
+    }
+  }
+
+  &__content-date {
+    margin-right: 50px;
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+      margin-right: auto;
+    }
+  }
+
+  &__content-rubric {
+    color: $blue1;
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__content-main-img {
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    @include media('<=desktop') {
+      margin-bottom: 20px;
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__content-mobile-tags {
+    display: none;
+    overflow: auto;
+    margin-bottom: 20px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &::-webkit-scrollbar-track {
+      display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      display: none;
+    }
+    @include media('<=desktop') {
+      display: flex;
+    }
+  }
+
+  &__content-mobile-tag {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+      padding: 10px 30px;
+    }
+  }
+
+  &__excerpt {
+    margin: 40px 0 50px 0;
+    @include media('<=desktop') {
+      margin: 30px 0 30px 0;
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__main {
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__ui-reviews {
+    margin-top: 120px;
+    @include media('<=desktop') {
+      margin-top: 60px;
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__ui-share {
+    margin-top: 45px;
+    @include media('<=desktop') {
+      margin-top: 35px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__subscribe {
+    margin-top: 120px;
+    margin-bottom: 180px;
+    @include media('<=desktop') {
+      margin-top: 60px;
+    }
+  }
+}

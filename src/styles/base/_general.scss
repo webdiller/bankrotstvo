@@ -256,6 +256,10 @@ $container: '.container';
     padding: 14px 28px;
   }
 
+  &__icon {
+    margin-left: 25px;
+  }
+
   &:hover,
   &:focus {
     background-color: $blue1;
@@ -268,6 +272,11 @@ $container: '.container';
   }
 
   &_white {
+    #{$borderLink} {
+      &__icon {
+        stroke: #fff;
+      }
+    }
     border-color: #fff;
     color: #fff;
 
@@ -319,6 +328,37 @@ $container: '.container';
       }
     }
   }
+
+  &_with-icon-left {
+    #{$borderLink} {
+      &__icon {
+        margin-left: 0;
+        margin-right: 25px;
+        stroke: $blue1;
+        transition: all 0.3s ease;
+      }
+    }
+    &:hover,
+    &:focus {
+      background-color: $blue1;
+      color: #fff;
+      #{$borderLink} {
+        &__icon {
+          stroke: #fff;
+        }
+      }
+    }
+
+    &:active {
+      background-color: transparent;
+      color: $blue1;
+      #{$borderLink} {
+        &__icon {
+          stroke: $blue1;
+        }
+      }
+    }
+  }
 }
 
 #{$borderLinkWithIcon} {
@@ -339,6 +379,7 @@ $container: '.container';
     color: $blue1;
     font-size: 14px;
     line-height: normal;
+    transition: all 0.3s ease;
   }
 
   &__icon {
@@ -362,7 +403,7 @@ $container: '.container';
       &__icon {
         margin-left: 25px;
         path {
-          transition: all .3s ease;
+          transition: all 0.3s ease;
         }
       }
     }
@@ -376,6 +417,80 @@ $container: '.container';
           path {
             stroke: #000;
           }
+        }
+      }
+    }
+  }
+
+  &_white {
+    background-color: #fff;
+    border-color: #fff;
+    color: $blue1;
+    #{$borderLinkWithIcon} {
+      &__icon {
+        margin-left: 25px;
+        path {
+          transition: all 0.3s ease;
+        }
+      }
+    }
+    &:hover,
+    &:focus {
+      border-color: #fff;
+      background-color: $blue1;
+      #{$borderLinkWithIcon} {
+        &__text {
+          color: #fff;
+        }
+        &__icon {
+          path {
+            stroke: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &_transparent {
+    background-color: transparent;
+    border-color: #fff;
+    #{$borderLinkWithIcon} {
+      &__icon {
+        margin-left: 25px;
+        path {
+          stroke: #fff;
+          transition: all 0.3s ease;
+        }
+      }
+      &__text {
+        color: #fff;
+      }
+    }
+    &:hover,
+    &:focus {
+      border-color: #fff;
+      background-color: #fff;
+      #{$borderLinkWithIcon} {
+        &__text {
+          color: $blue1;
+        }
+        &__icon {
+          path {
+            stroke: $blue1;
+          }
+        }
+      }
+    }
+  }
+
+  &_lg {
+    min-height: 60px;
+    padding: 11px 45px;
+    #{$borderLinkWithIcon} {
+      &__text {
+        font-size: 16px;
+        @include media('<=tablet') {
+          font-size: 14px;
         }
       }
     }

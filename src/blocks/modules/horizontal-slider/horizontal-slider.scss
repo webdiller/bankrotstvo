@@ -247,7 +247,7 @@ $horizontalSlider: '.horizontal-slider';
       
       &__bottom-addition {
         @include media('<=desktop') {
-          display: flex;
+          padding-right: 15px;
         }
         &-link {
           

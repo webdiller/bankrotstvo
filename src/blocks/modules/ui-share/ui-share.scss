@@ -1,0 +1,22 @@
+.ui-share {
+  &__container {}
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 19px;
+    color: $grey1;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 5px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

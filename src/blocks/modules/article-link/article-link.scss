@@ -53,8 +53,8 @@ $articleLink: '.article-link';
     @include media('<=tablet') {
       margin-bottom: 18px;
     }
-    &_icon-45 {
-
+    &-45 {
+      transition: all 0.3s ease;
     }
   }
 
@@ -92,6 +92,56 @@ $articleLink: '.article-link';
       }
       &__date {
         margin-left: 0;
+      }
+    }
+  }
+
+  &_article {
+    #{$articleLink} {
+      &__container {
+        padding: 40px;
+        border-left: 0;
+        @include media('<=desktop') {
+          padding: 20px;
+        }
+      }
+      &__title {
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+        @include media('<=desktop') {
+          margin-bottom: 15px;
+          font-size: 15px;
+          line-height: 23px;
+        }
+      }
+      &__description {
+        font-size: 14px;
+        margin-bottom: 30px;
+        line-height: 23px;
+        color: $grey1;
+        @include media('<=desktop') {
+          margin-bottom: 10px;
+          font-size: 12px;
+          line-height: 19px;
+        }
+      }
+      &__overlay-link {
+        &:hover,
+        &:focus {
+          ~ #{$articleLink} {
+            &__icon-45 {
+              transform: scale(1.03);
+            }
+          }
+        }
+      }
+      &__icon-45 {
+        margin-left: auto;
+        @include media('<=desktop') {
+          width: 16px;
+        }
       }
     }
   }

@@ -1,0 +1,119 @@
+$aboutProject: '.about-project';
+
+#{$aboutProject} {
+  &__container {
+  }
+
+  &__title {
+    width: 100%;
+    text-align-last: left;
+    margin-bottom: 50px;
+    max-width: 833px;
+  }
+
+  &__navigation {
+    padding-top: 30px;
+    margin-bottom: 160px;
+    border-top: 1px solid $grey3;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &::-webkit-scrollbar-track {
+      display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      display: none;
+    }
+  }
+
+  &__navigation-item {
+    margin-right: 30px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__title-features {
+    display: grid;
+    grid-template-columns: 330px minmax(550px, 770px);
+    column-gap: 30px;
+    margin-bottom: 130px;
+  }
+
+  &__features {
+  }
+
+  &__features-col {
+    
+  }
+
+  &__feature {
+  }
+
+  &__feature-number {
+    margin-bottom: 14px;
+    color: $grey1;
+  }
+
+  &__feature-text {
+  }
+
+  &__title-mission {
+  }
+
+  &__mission-head {
+  }
+
+  &__mission-title {
+  }
+
+  &__mission-description {
+  }
+
+  &__mission {
+  }
+
+  &__mission-img {
+  }
+
+  &__title-facts {
+  }
+
+  &__facts {
+  }
+
+  &__facts-img {
+    &_desktop {
+    }
+
+    &_mobile {
+    }
+  }
+
+  &__title-team {
+  }
+
+  &__teams {
+  }
+
+  &__team {
+  }
+
+  &__title-office {
+  }
+
+  &__office-head {
+  }
+
+  &__office-title {
+  }
+
+  &__office-description {
+  }
+
+  &__img {
+  }
+}
