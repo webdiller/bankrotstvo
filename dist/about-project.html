@@ -155,11 +155,10 @@
 </header>
 <div class="header-separator"></div>
  
-    <!-- TODO: Незаконченная верстка и стилизация -->
-<div class="about-project">
+    <div class="about-project">
   <div class="about-project__container">
     <div class="container about-project__head">
-      <p class="title about-project__title">СЕРВИС, КОТОРЫЙ ПОМОГАЕТ ИЗБАВИТЬСЯ ОТ КРЕДИТОВ, ЗАЙМОВ И ДОЛГОВ</p>
+      <p class="title about-project__main-title">СЕРВИС, КОТОРЫЙ ПОМОГАЕТ ИЗБАВИТЬСЯ ОТ КРЕДИТОВ, ЗАЙМОВ И ДОЛГОВ</p>
     </div>
 
     <nav class="container about-project__navigation">
@@ -173,10 +172,22 @@
     <div id="features" class="container about-project__title-features">
       <p class="title title_2 about-project__title">ЧТО МЫ ДЕЛАЕМ?</p>
       <div class="about-project__features">
-        <div class="about-project__feature-row">
-          <div class="about-project__feature-item">
-            <p class="about-project__feature-number"></p>
-            <p class="about-project__feature-text"></p>
+        <div class="about-project__feature-item">
+          <p class="about-project__feature-number">01</p>
+          <div class="about-project__feature-content">
+            <p class="about-project__feature-text">Создаем информационный портал, с качественной и достоверной информацией о банкротстве</p>
+            <p class="about-project__feature-text">
+              Справочная информация на портале подготовлена опытными юристами. Все компании и специалисты проходят тщательную проверку перед размещением на сайте
+            </p>
+          </div>
+        </div>
+        <div class="about-project__feature-item">
+          <p class="about-project__feature-number">02</p>
+          <div class="about-project__feature-content">
+            <p class="about-project__feature-text">Создаем информационный портал, с качественной и достоверной информацией о банкротстве</p>
+            <p class="about-project__feature-text">
+              Справочная информация на портале подготовлена опытными юристами. Все компании и специалисты проходят тщательную проверку перед размещением на сайте
+            </p>
           </div>
         </div>
       </div>
@@ -185,25 +196,28 @@
     <div id="mission" class="container about-project__title-mission">
       <div class="about-project__mission-head">
         <p class="title title_2 about-project__mission-title">МИССИЯ</p>
-        <p class="about-project__mission-description">
-          Мы помогаем людям развивать финансовую грамотность, избавиться от неподъемных выплат по кредитам, займам и долгам, сохранив свое имущество.
-        </p>
+        <p class="about-project__mission-description">Мы помогаем людям развивать финансовую грамотность, избавиться от неподъемных выплат по кредитам, займам и долгам, сохранив свое имущество.</p>
       </div>
       <div class="about-project__mission">
-        <img src="./img/images/mission.jpg" alt="МИССИЯ" class="about-project__mission-img" />
+        <picture>
+          <source srcset="./img/images/mission_phone.jpg" media="(max-width: 768px)" />
+          <img class="about-project__mission-img" src="./img/images/mission.jpg" alt="МИССИЯ" />
+        </picture>
       </div>
     </div>
 
     <div id="facts" class="container about-project__title-facts">
       <p class="title title_2 about-project__title">ЦИФРЫ И ФАКТЫ</p>
       <div class="about-project__facts">
-        <img src="./img/images/facts-desktop.svg" alt="ЦИФРЫ И ФАКТЫ" class="about-project__facts-img about-project__facts-img_desktop" />
-        <img src="./img/images/facts-mobile.svg" alt="ЦИФРЫ И ФАКТЫ" class="about-project__facts-img about-project__facts-img_mobile" />
+        <picture>
+          <source srcset="./img/images/facts-mobile.svg" media="(max-width: 768px)" />
+          <img class="about-project__mission-img" src="./img/images/facts-desktop.svg" alt="МИССИЯ" />
+        </picture>
       </div>
     </div>
 
     <div id="team" class="container about-project__title-team">
-      <p class="title title_2 about-project__title">КОМАНДА</p>
+      <p class="title title_2 about-project__title about-project__title_team">КОМАНДА</p>
       <div class="about-project__teams">
         <div class="ui-vertical-card ui-vertical-card_team about-project__team">
           <a href="/" class="ui-vertical-card__overlay-link"></a>
@@ -216,24 +230,70 @@
               <img src="./img/images/ui-horizontal-card-img.jpg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img" />
             </div>
             <div class="ui-vertical-card__content">
-              <div class="ui-vertical-card__date-tag">
-                <p class="text text_sm ui-vertical-card__date">12 июля 2022</p>
-                <a href="/rubrik" class="tag tag_sm ui-vertical-card__tag">Рубрика</a>
-              </div>
               <p class="title title_4 ui-vertical-card__title">Иванов Иван Иваныч</p>
-              <p class="text text_md ui-vertical-card__description">Кредит под залог автомобиля: как это работает и нужна ли регистрация на машину</p>
+              <p class="text text_md ui-vertical-card__description">Пассивность в суде — знак согласия // ВС определит судьбу требований, против которых должник не возражал</p>
+            </div>
+          </div>
+        </div>
+        <div class="ui-vertical-card ui-vertical-card_team about-project__team">
+          <a href="/" class="ui-vertical-card__overlay-link"></a>
+          <div class="ui-vertical-card__wrapper">
+            <div class="ui-vertical-card__img-wrapper">
+              <div class="ui-vertical-card__img-text-icon">
+                <span class="title title_6 ui-vertical-card__img-text">Читать интервью</span>
+                <img src="./img/icons/icon-arrow45-white.svg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img-icon" />
+              </div>
+              <img src="./img/images/ui-horizontal-card-img.jpg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img" />
+            </div>
+            <div class="ui-vertical-card__content">
+              <p class="title title_4 ui-vertical-card__title">Иванов Иван Иваныч</p>
+              <p class="text text_md ui-vertical-card__description">Пассивность в суде — знак согласия // ВС определит судьбу требований, против которых должник не возражал</p>
+            </div>
+          </div>
+        </div>
+        <div class="ui-vertical-card ui-vertical-card_team about-project__team">
+          <a href="/" class="ui-vertical-card__overlay-link"></a>
+          <div class="ui-vertical-card__wrapper">
+            <div class="ui-vertical-card__img-wrapper">
+              <div class="ui-vertical-card__img-text-icon">
+                <span class="title title_6 ui-vertical-card__img-text">Читать интервью</span>
+                <img src="./img/icons/icon-arrow45-white.svg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img-icon" />
+              </div>
+              <img src="./img/images/ui-horizontal-card-img.jpg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img" />
+            </div>
+            <div class="ui-vertical-card__content">
+              <p class="title title_4 ui-vertical-card__title">Иванов Иван Иваныч</p>
+              <p class="text text_md ui-vertical-card__description">Пассивность в суде — знак согласия // ВС определит судьбу требований, против которых должник не возражал</p>
+            </div>
+          </div>
+        </div>
+        <div class="ui-vertical-card ui-vertical-card_team about-project__team">
+          <a href="/" class="ui-vertical-card__overlay-link"></a>
+          <div class="ui-vertical-card__wrapper">
+            <div class="ui-vertical-card__img-wrapper">
+              <div class="ui-vertical-card__img-text-icon">
+                <span class="title title_6 ui-vertical-card__img-text">Читать интервью</span>
+                <img src="./img/icons/icon-arrow45-white.svg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img-icon" />
+              </div>
+              <img src="./img/images/ui-horizontal-card-img.jpg" alt="Иванов Иван Иваныч" class="ui-vertical-card__img" />
+            </div>
+            <div class="ui-vertical-card__content">
+              <p class="title title_4 ui-vertical-card__title">Иванов Иван Иваныч</p>
+              <p class="text text_md ui-vertical-card__description">Пассивность в суде — знак согласия // ВС определит судьбу требований, против которых должник не возражал</p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="office" class="container about-project__title-office">
-      <div class="about-project__office-head">
+    <div id="office" class="about-project__title-office">
+      <div class="container about-project__office-head">
         <p class="title title_2 about-project__office-title">ОФИСЫ</p>
         <p class="about-project__office-description">Представительство компании присутствует во многих городах</p>
       </div>
-      <img src="./img/images/facts-desktop.svg" alt="ОФИСЫ" class="about-project__img" />
+      <div id="officeImgWrapper" class="about-project__img-wrapper">
+        <img src="./img/images/offices.svg" alt="ОФИСЫ" class="about-project__img" />
+      </div>
     </div>
   </div>
 </div>

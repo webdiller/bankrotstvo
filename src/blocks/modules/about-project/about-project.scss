@@ -4,11 +4,27 @@ $aboutProject: '.about-project';
   &__container {
   }
 
-  &__title {
+  &__main-title {
     width: 100%;
-    text-align-last: left;
     margin-bottom: 50px;
     max-width: 833px;
+    @include media('<=desktop') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    @include media('<=desktop') {
+      margin-bottom: 20px;
+    }
+    &_team {
+      padding-top: 20px;
+      border-top: 1px solid $grey3;
+      @include media('<=desktop') {
+        padding-top: 0;
+        border: 0;
+      }
+    }
   }
 
   &__navigation {
@@ -18,6 +34,11 @@ $aboutProject: '.about-project';
     display: flex;
     align-items: center;
     overflow-x: auto;
+    @include media('<=desktop') {
+      padding-top: 0;
+      border-top: 0;
+      margin-bottom: 60px;
+    }
     &::-webkit-scrollbar {
       display: none;
     }
@@ -31,6 +52,7 @@ $aboutProject: '.about-project';
 
   &__navigation-item {
     margin-right: 30px;
+    white-space: nowrap;
     &:last-child {
       margin-right: 0;
     }
@@ -40,80 +62,218 @@ $aboutProject: '.about-project';
     display: grid;
     grid-template-columns: 330px minmax(550px, 770px);
     column-gap: 30px;
-    margin-bottom: 130px;
+    justify-content: space-between;
+    padding-bottom: 150px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid $grey3;
+    @include media('<=desktop') {
+      display: block;
+      margin-bottom: 60px;
+      border: 0;
+      padding-bottom: 0;
+    }
   }
 
   &__features {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    @include media('<=tablet') {
+      row-gap: 30px;
+    }
   }
 
-  &__features-col {
-    
-  }
-
-  &__feature {
+  &__feature-item {
+    padding-bottom: 40px;
+    border-bottom: 1px solid $grey3;
+    @include media('<=tablet') {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
   }
 
   &__feature-number {
     margin-bottom: 14px;
     color: $grey1;
   }
+  &__feature-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    justify-content: space-between;
+    @include media('<=tablet') {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+      row-gap: 15px;
+    }
+  }
 
   &__feature-text {
+    &:first-child {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 700;
+      @include media('<=tablet') {
+        font-size: 17px;
+        line-height: 25px;
+      }
+    }
+    font-size: 16px;
+    line-height: 26px;
+    @include media('<=tablet') {
+      font-size: 14px;
+      line-height: 23px;
+    }
   }
 
   &__title-mission {
+    margin-bottom: 160px;
+    @include media('<=desktop') {
+      display: block;
+      margin-bottom: 60px;
+    }
   }
 
   &__mission-head {
+    display: flex;
+    margin-bottom: 50px;
+    @include media('<=desktop') {
+      display: block;
+      margin-bottom: 20px;
+    }
   }
 
   &__mission-title {
+    margin-right: 262px;
+    @include media('<=desktop') {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
   }
 
   &__mission-description {
+    max-width: 450px;
+    @include media('<=desktop') {
+      max-width: unset;
+    }
   }
 
   &__mission {
   }
 
   &__mission-img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
   }
 
   &__title-facts {
+    display: grid;
+    grid-template-columns: 330px minmax(550px, 770px);
+    column-gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 150px;
+    @include media('<=desktop') {
+      display: block;
+      margin-bottom: 60px;
+    }
   }
 
   &__facts {
   }
 
   &__facts-img {
-    &_desktop {
-    }
-
-    &_mobile {
-    }
+    display: block;
+    max-width: 100%;
+    width: 100%;
   }
 
   &__title-team {
+    display: grid;
+    grid-template-columns: 330px minmax(550px, 770px);
+    column-gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 150px;
+    @include media('<=desktop') {
+      display: block;
+      margin-bottom: 60px;
+    }
   }
 
   &__teams {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 95px 30px;
+    @include media('<=tablet') {
+      gap: 35px 15px;
+    }
   }
 
   &__team {
   }
 
   &__title-office {
+    @include media('<=desktop') {
+      display: block;
+    }
   }
 
   &__office-head {
+    display: flex;
+    margin-bottom: 5px;
+    border-top: 1px solid $grey3;
+    padding-top: 40px;
+    @include media('<=desktop') {
+      display: block;
+      margin-bottom: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
   }
 
   &__office-title {
+    margin-right: 262px;
+    @include media('<=desktop') {
+      margin-bottom: 20px;
+    }
   }
 
   &__office-description {
+    max-width: 450px;
+    @include media('<=desktop') {
+      max-width: unset;
+    }
+  }
+
+  &__img-wrapper {
+    max-width: calc(1170px + 40px);
+    padding: 0 20px;
+    margin: 0 auto;
+    @include media('<=LGdesktop') {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @include media('<=tablet') {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &::-webkit-scrollbar-track {
+      display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      display: none;
+    }
   }
 
   &__img {
+    display: block;
   }
 }

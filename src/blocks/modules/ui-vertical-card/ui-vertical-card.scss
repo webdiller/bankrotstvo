@@ -286,6 +286,7 @@ $uiVerticalCard: '.ui-vertical-card';
       &__content {
         @include media('<=tablet') {
           display: block;
+          margin-top: 10px;
         }
       }
     }

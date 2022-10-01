@@ -13,3 +13,4 @@ import "%modules%/upload-file/upload-file";
 import "%modules%/faq/faq";
 import "%modules%/articles-page/articles-page";
 import "%modules%/ui-newslider/ui-newslider";
+import "%modules%/about-project/about-project";
