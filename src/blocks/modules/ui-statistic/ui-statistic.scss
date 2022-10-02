@@ -1,0 +1,170 @@
+$progress-bar-stroke-width: 1.8;
+$progress-bar-size: 78px;
+
+.ui-statistic {
+  &__container {
+  }
+
+  &__rating-stars {
+    display: flex;
+    align-items: center;
+
+    padding-bottom: 33px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #dbe0e4;
+    @include media('<=desktop') {
+      padding-bottom: 29px;
+    }
+  }
+
+  &__rating {
+    position: relative;
+    margin-right: 14px;
+    height: 78px;
+    @include media('<=desktop') {
+      height: 60px;
+      margin-right: 0;
+    }
+  }
+
+  &__rating-icon {
+    height: $progress-bar-size;
+    width: $progress-bar-size;
+    transform: rotate(-90deg);
+    @include media('<=desktop') {
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  &__rating-background {
+    fill: none;
+    stroke: $grey3;
+    stroke-width: $progress-bar-stroke-width;
+  }
+
+  &__rating-progress {
+    fill: none;
+    stroke: $grey3;
+    stroke: $blue1;
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: 100;
+    stroke-linecap: round;
+    stroke-width: $progress-bar-stroke-width;
+    transition: stroke-dashoffset 1s ease-in-out;
+  }
+
+  &__rating-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    line-height: 28px;
+    color: $blue1;
+    @include media('<=desktop') {
+      padding-right: 2px;
+    }
+  }
+
+  &__stars {
+    margin-left: auto;
+    @include media('<=desktop') {
+      margin-left: 20px;
+    }
+  }
+
+  &__stars-name {
+    margin-bottom: 2px;
+    line-height: 26.4px;
+  }
+
+  &__stars-items-value {
+    display: flex;
+    align-items: center;
+  }
+
+  &__stars-items {
+    margin-right: 12px;
+  }
+
+  &__stars-item {
+    margin-right: 4px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__stars-value {
+    font-weight: 600;
+    color: #525252;
+  }
+
+  &__data {
+    margin-bottom: 40px;
+    @include media('<=desktop') {
+      margin-bottom: 29px;
+    }
+  }
+
+  &__data-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    @include media('<=desktop') {
+      margin-bottom: 5px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__data-title {
+    width: 65px;
+    flex: 0 0 65px;
+    margin-right: 25px;
+    color: #adb4c6;
+    font-size: 14px;
+  }
+
+  &__data-range {
+    position: relative;
+    width: 150px;
+    flex: 0 0 150px;
+    margin-right: 13px;
+    height: 5px;
+    background: #f0f2f5;
+    @include media('<=desktop') {
+      margin-right: 26px;
+    }
+  }
+
+  &__data-range-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: $blue1;
+    z-index: 5;
+  }
+
+  &__data-count {
+    font-size: 14px;
+    color: $blue1;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: $blue1;
+      cursor: pointer;
+    }
+  }
+
+  &__submit-btn {
+    width: 100%;
+  }
+}

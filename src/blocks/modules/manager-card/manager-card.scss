@@ -1,0 +1,188 @@
+.manager-card {
+  &__container {
+  }
+
+  &__main-title {
+    margin-bottom: 50px;
+    @include media('<=desktop') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__aside-features {
+    display: grid;
+    grid-template-columns: minmax(250px, 370px) minmax(450px, 670px);
+    column-gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    @include media('<=desktop') {
+      margin-bottom: 60px;
+    }
+    @include media('<=tablet') {
+      display: block;
+    }
+  }
+
+  &__aside {
+    align-self: flex-start;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $grey3;
+    @include media('<=desktop') {
+      padding-bottom: 11px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__aside-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 100%;
+    @include media('<=desktop') {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__aside-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  &__aside-rating {
+  }
+
+  &__features {
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: minmax(200px, 270px) minmax(300px, 370px);
+    justify-content: space-between;
+    column-gap: 30px;
+    margin-bottom: 34px;
+    @include media('<=desktop') {
+      grid-template-columns: 36% 1fr;
+      margin-bottom: 25px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__col {
+  }
+
+  &__title-statictic {
+    background-color: #f9f9fb;
+    &-container {
+      display: grid;
+      grid-template-columns: minmax(300px, 465px) minmax(580px, 670px);
+      column-gap: 30px;
+      justify-content: space-between;
+
+      max-width: calc(1170px + 40px);
+      padding: 80px 20px;
+      margin: 120px auto;
+      @include media('<=LGdesktop') {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      @include media('<=desktop') {
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        margin: 60px auto;
+      }
+    }
+  }
+
+  &__title {
+    @include media('<=desktop') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__statistic {
+    display: grid;
+    grid-template-columns: minmax(300px, 367px) minmax(250px, 270px);
+    gap: 30px 32px;
+    @include media('<=desktop') {
+      display: block;
+    }
+  }
+
+  &__statistic-item {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100%;
+
+    border-radius: 50%;
+    border: 1px solid $grey2;
+    &-content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      padding: 50px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      @include media('<=tablet') {
+        padding: 10px;
+      }
+    }
+    &_first {
+      align-self: flex-start;
+      border-color: $blue1;
+      @include media('<=desktop') {
+        max-width: 69%;
+        padding-bottom: 69%;
+        margin-right: auto;
+      }
+      .manager-card__statistic-number {
+        color: $blue1;
+      }
+    }
+
+    &_second {
+      align-self: flex-end;
+      margin-top: 160px;
+      border-color: $grey2;
+      @include media('<=desktop') {
+        max-width: 62%;
+        padding-bottom: 62%;
+        margin-top: 0;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__statistic-number {
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 6px;
+    @include media('<=tablet') {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &__statistic-description {
+    font-size: 18px;
+    line-height: 25px;
+    color: $grey1;
+    @include media('<=tablet') {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}

@@ -6,6 +6,11 @@ $likes: '.likes';
     align-items: center;
   }
 
+  &__items {
+    display: flex;
+    align-items: center;
+  }
+
   &__item {
     display: flex;
     align-items: center;
@@ -48,6 +53,11 @@ $likes: '.likes';
         }
       }
     }
+  }
+
+  &__reply-btn {
+    margin-left: 25px;
+    color: $blue1;
   }
 
   &__item-icon {
