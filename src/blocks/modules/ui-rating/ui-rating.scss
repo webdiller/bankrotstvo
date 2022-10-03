@@ -46,6 +46,11 @@ $uiRating: '.ui-rating';
   &__rating-count {
   }
 
+  &__description {
+    margin-left: 60px;
+    color: #525252;
+  }
+
   &_sm {
     #{$uiRating} {
       &__rating-number {
@@ -58,6 +63,22 @@ $uiRating: '.ui-rating';
       }
       &__rating-count {
         white-space: nowrap;
+      }
+    }
+  }
+
+  &_with-description {
+    @include media('<=tablet') {
+      #{$uiRating} {
+        &__container {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        &__description {
+          margin-left: 0;
+          margin-top: 10px;
+        }
       }
     }
   }

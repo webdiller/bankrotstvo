@@ -58,4 +58,26 @@ $uiAsk: '.ui-ask';
       }
     }
   }
+
+  &_agencies-card {
+    #{$uiAsk} {
+      &__container {
+      }
+
+      &__bg-image {
+      }
+
+      &__title {
+        max-width: 560px;
+      }
+
+      &__button {
+        padding-left: 25px;
+        padding-right: 25px;
+        @include media('<=tablet') {
+          min-height: 49px;
+        }
+      }
+    }
+  }
 }

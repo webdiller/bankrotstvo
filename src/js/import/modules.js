@@ -18,3 +18,4 @@ import "%modules%/ui-statistic/ui-statistic";
 import "%modules%/ui-comments/ui-comments";
 import "%modules%/ui-accordion/ui-accordion";
 import "%modules%/ui-videos/ui-videos";
+import "%modules%/croped-slider/croped-slider";

@@ -258,6 +258,10 @@ $container: '.container';
 
   &__icon {
     margin-left: 25px;
+    transition: all 0.3s ease;
+    path {
+      transition: all 0.3s ease;
+    }
   }
 
   &:hover,
@@ -314,6 +318,9 @@ $container: '.container';
       #{$borderLink} {
         &__icon {
           stroke: #fff;
+          path {
+            stroke: #fff;
+          }
         }
       }
     }
