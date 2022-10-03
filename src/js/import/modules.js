@@ -16,3 +16,5 @@ import "%modules%/ui-newslider/ui-newslider";
 import "%modules%/about-project/about-project";
 import "%modules%/ui-statistic/ui-statistic";
 import "%modules%/ui-comments/ui-comments";
+import "%modules%/ui-accordion/ui-accordion";
+import "%modules%/ui-videos/ui-videos";

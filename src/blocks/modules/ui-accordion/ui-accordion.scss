@@ -1,0 +1,131 @@
+$uiAccordion: '.ui-accordion';
+
+#{$uiAccordion} {
+  &__container {
+  }
+
+  &__main-title {
+    margin-bottom: 18px;
+  }
+
+  &__items {
+  }
+
+  &__item {
+    &.active {
+      #{$uiAccordion} {
+        &__header {
+          border-bottom-color: $blue1;
+        }
+        &__content {
+          display: block;
+        }
+        &__icon {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    border-bottom: 1px solid #dbe0e4;
+    transition: all 0.3s ease;
+    @include media('<=desktop') {
+      padding: 20px 0;
+    }
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      #{$uiAccordion} {
+        &__title {
+          color: $blue1;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    transition: all 0.3s ease;
+    &::selection {
+      background-color: transparent;
+    }
+    @include media('<=tablet') {
+      font-size: 14px;
+      margin-right: 15px;
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    transition: all 0.3s ease;
+    &::selection {
+      background-color: transparent;
+    }
+    @include media('<=desktop') {
+      width: 18px;
+    }
+  }
+
+  &__content {
+    display: none;
+    padding: 40px 56px 50px 50px;
+    background-color: #f9f9fb;
+    @include media('<=desktop') {
+      padding: 20px;
+    }
+  }
+
+  &__content-items {
+    display: flex;
+    justify-content: space-between;
+    @include media('<=desktop') {
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+    &_title-blue {
+      #{$uiAccordion} {
+        &__content-item {
+          b {
+            color: $blue1;
+          }
+        }
+      }
+    }
+  }
+
+  &__content-item {
+    padding-left: 20px;
+    border-left: 1px solid #dbe0e4;
+    margin-right: 20px;
+    @include media('<=desktop') {
+      padding: 10px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    p {
+      margin-bottom: 6px;
+      color: #686c77;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    b {
+      color: $black1;
+      font-weight: 700;
+    }
+  }
+
+  &__content-description {
+    margin: 35px 0;
+    line-height: 26px;
+    @include media('<=desktop') {
+      line-height: 23px;
+    }
+  }
+}

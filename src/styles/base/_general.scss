@@ -483,6 +483,38 @@ $container: '.container';
     }
   }
 
+  &_transparent-blue {
+    background-color: transparent;
+    border-color: $blue1;
+    #{$borderLinkWithIcon} {
+      &__icon {
+        margin-left: 25px;
+        path {
+          stroke: $blue1;
+          transition: all 0.3s ease;
+        }
+      }
+      &__text {
+        color: $blue1;
+      }
+    }
+    &:hover,
+    &:focus {
+      border-color: #fff;
+      background-color: #fff;
+      #{$borderLinkWithIcon} {
+        &__text {
+          color: $blue1;
+        }
+        &__icon {
+          path {
+            stroke: $blue1;
+          }
+        }
+      }
+    }
+  }
+
   &_lg {
     min-height: 60px;
     padding: 11px 45px;

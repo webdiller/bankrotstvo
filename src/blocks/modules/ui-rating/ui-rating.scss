@@ -1,4 +1,6 @@
-.ui-rating {
+$uiRating: '.ui-rating';
+
+#{$uiRating} {
   &__container {
     display: flex;
     align-items: center;
@@ -42,5 +44,21 @@
   }
 
   &__rating-count {
+  }
+
+  &_sm {
+    #{$uiRating} {
+      &__rating-number {
+        margin-right: 16px;
+        padding-right: 16px;
+        @include media('<=desktop') {
+          padding-right: 10px;
+          margin-right: 10px;
+        }
+      }
+      &__rating-count {
+        white-space: nowrap;
+      }
+    }
   }
 }
