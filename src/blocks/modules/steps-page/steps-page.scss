@@ -1,0 +1,436 @@
+.steps-page {
+  @include media('<=desktop') {
+  }
+  @include media('<=tablet') {
+  }
+  &__container {
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__author-content {
+    display: grid;
+    grid-template-columns: minmax(270px, 270px) minmax(600px, 770px);
+    justify-content: space-between;
+    column-gap: 30px;
+    @include media('<=desktop') {
+      display: block;
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__author-tags {
+    @include media('<=desktop') {
+      display: none;
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__author-desktop {
+    @include media('<=desktop') {
+      display: none;
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__tags {
+    margin-top: 60px;
+    padding-top: 60px;
+    border-top: 1px solid $grey3;
+    display: grid;
+    gap: 20px 15px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__tag {
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__have-questions {
+  }
+
+  &__content {
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+    &-step {
+      position: relative;
+      margin-bottom: 120px;
+      padding-bottom: 120px;
+      border-bottom: 1px solid #dbe0e4;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -60px;
+        width: 1px;
+        height: calc(100% - 470px);
+        background-color: #dbe0e4;
+      }
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+      @include media('<=desktop') {
+        margin-bottom: 30px;
+        padding-bottom: 60px;
+      }
+    }
+  }
+
+  &__content-number {
+    position: absolute;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 100%;
+    top: -12px;
+    text-decoration: underline;
+    @include media('<=desktop') {
+      position: static;
+      color: $blue1;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__content-title {
+    margin-bottom: 40px;
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+    font-size: 14px;
+    line-height: 165%;
+    @include media('<=tablet') {
+      margin-bottom: 33px;
+      font-size: 12px;
+    }
+  }
+
+  &__content-date {
+    margin-right: 50px;
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+      margin-right: auto;
+    }
+  }
+
+  &__content-icon {
+    margin-right: 15px;
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+      margin-left: 10px;
+    }
+  }
+
+  &__content-views {
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__content-main-img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 40px;
+    height: auto;
+    @include media('<=desktop') {
+      margin-bottom: 20px;
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__content-mobile-tags {
+    display: none;
+    overflow: auto;
+    margin-bottom: 20px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &::-webkit-scrollbar-track {
+      display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      display: none;
+    }
+    @include media('<=desktop') {
+      display: flex;
+    }
+  }
+
+  &__content-mobile-tag {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+      padding: 10px 30px;
+    }
+  }
+
+  &__author-mobile {
+    display: none;
+    margin-bottom: 30px;
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+      display: block;
+    }
+  }
+
+  &__step-nav {
+    top: -1px;
+    position: sticky;
+    margin-top: 60px;
+    padding-top: 60px;
+    border-top: 1px solid #dbe0e4;
+    &_mobile {
+      padding-top: 0;
+      border-top: 0;
+      margin-top: 0;
+      display: none;
+      margin-bottom: 30px;
+      @include media('<=desktop') {
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        position: static;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        &::-webkit-scrollbar-track {
+          display: none;
+        }
+        &::-webkit-scrollbar-thumb {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__step-nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    @include media('<=desktop') {
+      margin-bottom: 0;
+      margin-right: 22px;
+    }
+    &.active {
+      &::before {
+        background-color: $blue1;
+        opacity: 1;
+        @include media('<=LGdesktop') {
+          display: none;
+        }
+      }
+      .steps-page__step-nav-number {
+        background-color: $blue1;
+        color: #fff;
+        &::before {
+          background-color: $blue1;
+        }
+      }
+      .steps-page__step-nav-text {
+        color: $blue1;
+        text-shadow: 1px 0 0 $blue1;
+      }
+    }
+    &:hover,
+    &:focus {
+      .steps-page__step-nav-text {
+        text-decoration-color: $blue1;
+        color: $blue1;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: calc(100% + 23px);
+      width: 47px;
+      height: 1px;
+      background-color: transparent;
+      opacity: 1;
+      transition: all 0.3s ease;
+    }
+    &:last-child {
+      margin-bottom: 0;
+      margin-right: 0;
+      &::before {
+        @include media('<=desktop') {
+          display: none;
+        }
+      }
+      @include media('<=desktop') {
+        margin-bottom: 0;
+        margin-right: 0;
+      }
+      .steps-page__step-nav-number::before {
+        @include media('<=desktop') {
+          display: none;
+        }
+      }
+    }
+    &:first-child {
+      .steps-page__step-nav-number::before {
+        display: none;
+        @include media('<=desktop') {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__step-nav-number {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    flex: 0 0 70px;
+    height: 70px;
+    border: 1px solid $blue1;
+    margin-right: 30px;
+
+    color: $blue1;
+    transition: all 0.3s ease;
+    @include media('<=LGdesktop') {
+      width: 50px;
+      flex: 0 0 50px;
+      height: 50px;
+      margin-right: 15px;
+    }
+    @include media('<=desktop') {
+      width: 40px;
+      flex: 0 0 40px;
+      height: 40px;
+      margin-right: 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      height: 20px;
+      width: 1px;
+      background-color: #c4c8d2;
+      transition: all 0.3s ease;
+      @include media('<=desktop') {
+        top: 50%;
+        transform: translateY(-50%);
+        left: calc(100% + 8px);
+        height: 1px;
+        width: 10px;
+      }
+    }
+  }
+
+  &__step-nav-text {
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #adb4c6;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-color: transparent;
+    transition: all 0.3s ease;
+    @include media('<=LGdesktop') {
+      font-size: 14px;
+      max-width: 150px;
+    }
+    @include media('<=desktop') {
+      display: none;
+    }
+  }
+
+  &__content-nav {
+    padding: 40px 0 40px 40px;
+    border-top: 1px solid $grey3;
+    border-bottom: 1px solid $grey3;
+    @include media('<=desktop') {
+      padding: 0;
+      border: 0;
+    }
+    ul {
+      list-style-type: none;
+      li {
+        line-height: 32px;
+        @include media('<=tablet') {
+          font-size: 12px;
+          line-height: 18px;
+        }
+        a {
+          display: inline-block;
+          color: $blue1;
+          text-decoration: underline;
+          text-decoration-color: transparent;
+          text-underline-offset: 2px;
+          transition: all 0.3s ease;
+          @include media('<=tablet') {
+            margin-bottom: 8px;
+          }
+          &:hover,
+          &:focus {
+            text-decoration-color: $blue1;
+          }
+        }
+        ul {
+          padding-left: 20px;
+          li {
+          }
+        }
+      }
+    }
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+    }
+  }
+
+  &__main {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    @include media('<=desktop') {
+    }
+    @include media('<=tablet') {
+      margin-top: 25px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__ui-reviews {
+    margin-top: 120px;
+    @include media('<=desktop') {
+      margin-top: 60px;
+    }
+    @include media('<=tablet') {
+    }
+  }
+}

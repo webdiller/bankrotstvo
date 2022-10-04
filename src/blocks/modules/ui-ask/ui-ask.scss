@@ -55,6 +55,9 @@ $uiAsk: '.ui-ask';
       }
 
       &__button {
+        @include media('<=tablet') {
+          min-height: 49px;
+        }
       }
     }
   }

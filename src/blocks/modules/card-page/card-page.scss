@@ -277,6 +277,7 @@ $articleContent: '.article-content';
       padding-left: 0;
     }
     @include media('<=tablet') {
+      margin-bottom: 20px;
     }
   }
 
@@ -417,6 +418,9 @@ $articleContent: '.article-content';
 
   &__ui-ask {
     margin-bottom: 45px;
+    @include media('<=tablet') {
+      margin-bottom: 30px;
+    }
   }
 
   &__large-links {
@@ -467,7 +471,7 @@ $articleContent: '.article-content';
     @include media('<=desktop') {
     }
     @include media('<=tablet') {
-      margin: 28px 0 ;
+      margin: 28px 0;
     }
   }
 }
