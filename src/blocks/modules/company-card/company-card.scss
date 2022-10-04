@@ -1,0 +1,269 @@
+.company-card {
+  overflow-x: hidden;
+  &__container {
+  }
+
+  &__aside-content {
+    display: grid;
+    grid-template-columns: minmax(250px, 280px) minmax(500px, 1fr);
+    column-gap: 120px;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    @include media('<=desktop') {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__aside {
+  }
+
+  &__content {
+  }
+
+  &__report {
+  }
+
+  &__report-items {
+  }
+
+  &__report-item {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__report-item-title {
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    @include media('<=tablet') {
+      font-size: 16px;
+    }
+  }
+
+  &__report-item-link {
+    width: 100%;
+    margin-bottom: 10px;
+    .border-link__icon {
+      margin-left: 10px;
+    }
+  }
+
+  &__report-item-description {
+    font-size: 14px;
+    color: #adb4c6;
+  }
+
+  &__report-bottom {
+    margin-top: 60px;
+    @include media('<=desktop') {
+      margin-top: 40px;
+      font-size: 16px;
+    }
+  }
+
+  &__report-bottom-link {
+    color: $blue1;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    @include media('<=tablet') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__navs {
+    overflow-x: auto;
+    display: flex;
+    margin-bottom: 40px;
+    @include media('<=desktop') {
+      margin-bottom: 30px;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &::-webkit-scrollbar-track {
+      display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      display: none;
+    }
+  }
+
+  &__navs-item {
+    margin-right: 20px;
+    white-space: nowrap;
+    @include media('<=desktop') {
+      margin-right: 15px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__content-rating {
+    margin-bottom: 30px;
+    @include media('<=desktop') {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__croped-slider {
+    margin-bottom: 40px;
+    @include media('<=desktop') {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__croped-slider-bottom-desktop {
+    margin-top: 60px;
+    @include media('<=tablet') {
+      display: none;
+    }
+  }
+
+  &__croped-slider-bottom-mobile {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    @include media('<=tablet') {
+      display: block;
+    }
+  }
+
+  &__description {
+    margin: 40px 0 60px 0;
+    @include media('<=desktop') {
+      margin: 30px 0 30px 0;
+    }
+    @include media('<=tablet') {
+      margin-bottom: 60px;
+    }
+    p {
+      margin-bottom: 30px;
+      line-height: 26px;
+      @include media('<=tablet') {
+        line-height: 23px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__address {
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #dbe0e4;
+    @include media('<=desktop') {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+    @include media('<=tablet') {
+      margin-top: 60px;
+    }
+  }
+
+  &__certificates {
+  }
+
+  &__prices {
+  }
+
+  &__prices-title {
+    margin-bottom: 30px;
+    font-weight: 600;
+    @include media('<=tablet') {
+      margin-bottom: 17px;
+    }
+  }
+  &__prices-items {
+    border-top: 1px solid #dbe0e4;
+    border-bottom: 1px solid #dbe0e4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include media('<=tablet') {
+      grid-template-columns: repeat(1, 1fr);
+      border-bottom: 0;
+    }
+  }
+
+  &__prices-col {
+    position: relative;
+    &:first-child {
+      .company-card__prices-item {
+        padding-left: 0;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__prices-item {
+    position: relative;
+    padding: 20px 20px 20px 10px;
+    @include media('<=tablet') {
+      padding: 20px 0;
+      border-bottom: 1px solid #dbe0e4;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: -20px;
+      width: 1px;
+      background-color: #dbe0e4;
+      height: calc(100% - 20px);
+      @include media('<=tablet') {
+        display: none;
+      }
+    }
+    b {
+      display: block;
+    }
+  }
+
+  &__info {
+    padding: 40px 40px 40px 50px;
+    background-color: #f9f9fb;
+    border-left: 1px solid $blue1;
+    @include media('<=tablet') {
+      padding: 20px;
+      line-height: 21px;
+      margin-bottom: 60px;
+    }
+    p {
+      @include media('<=tablet') {
+        margin-bottom: 10px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    b {
+      font-weight: 700;
+    }
+  }
+
+  &__ui-ask-desktop {
+    margin-top: 60px;
+    @include media('<=desktop') {
+      display: none;
+    }
+  }
+
+  &__ui-ask-mobile {
+    display: none;
+    margin-bottom: 60px;
+    @include media('<=desktop') {
+      display: block;
+    }
+  }
+
+  &__comments {
+  }
+}
